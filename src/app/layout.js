@@ -1,5 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/common/Navbar/Navbar";
+import { SmoothScrollProvider } from "@/components/providers/smooth-scroll-provider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -12,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: 'Animation Platform',
+  title: 'NAS PIXELS',
   description: 'Professional animation platform built with Next.js and GSAP',
   keywords: ['animation', 'gsap', 'nextjs', 'tailwind'],
   authors: [{ name: 'Your Team' }],
@@ -35,7 +37,14 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        {/* <main className="min-h-screen"> */}
+         <SmoothScrollProvider>
+          <Navbar />
+
+          {children}
+         </SmoothScrollProvider>
+          {/* </main> */}
+     
       </body>
     </html>
   );
