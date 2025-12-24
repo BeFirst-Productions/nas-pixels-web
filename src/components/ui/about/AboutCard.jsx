@@ -1,65 +1,58 @@
-import { forwardRef } from "react";
+import Image from "next/image";
 
-const AboutCard = forwardRef(
-  ({ title, description, icon }, ref) => {
-    return (
-      <div
-        ref={ref}
-        className="
-          relative
-          w-[260px] h-[236px]
-          flex items-center justify-center
-        "
-      >
-        {/* GREEN HOLLOW GLOW FRAME */}
-        <div
-          className="
-            absolute inset-0
-            rounded-2xl
-            bg-[#70C879]/80
-            blur-[10px]
-          "
-        />
+export default function AboutCard({
+  icon,
+  title,
+  description,
+}) {
+  return (
+    <div
+      className="
+        relative
+        w-[260px] h-[236px]
+        rounded-[16px]
+        bg-[#1C1F24]
+        overflow-hidden
+      "
+      style={{
+        border: "3px solid #70C879",
+        boxSizing: "border-box",
+        boxShadow: "0 0 18px rgba(112, 200, 121, 0.55)",
+      }}
+    >
+      {/* INNER CONTENT */}
+      <div className="relative z-10 flex h-full flex-col items-center px-4 pt-6 text-center">
 
-        {/* FRAME CUT (CREATES HOLLOW CENTER) */}
-        <div
-          className="
-            absolute inset-[6px]
-            rounded-xl
-            bg-black
-          "
-        />
-
-        {/* INNER CONTENT CARD */}
-        <div
-          className="
-            relative z-10
-            w-[92%] h-[88%]
-            rounded-xl
-            bg-[#15171B]
-            p-5
-            text-center
-            flex flex-col items-center justify-center
-          "
-        >
-          {icon && (
-            <div className="mb-3 text-[#70C879]">
-              {icon}
-            </div>
-          )}
-
-          <h4 className="mb-2 text-lg font-semibold text-white">
-            {title}
-          </h4>
-
-          <p className="text-sm leading-relaxed text-gray-400">
-            {description}
-          </p>
+        {/* ICON */}
+        <div className="mb-4">
+          <Image
+            src={icon}
+            alt={title}
+            width={48}
+            height={48}
+            className="object-contain"
+            priority
+          />
         </div>
-      </div>
-    );
-  }
-);
 
-AboutCard.displayName = "AboutCard";
-export default AboutCard;
+        {/* TITLE */}
+        <h3 className="mb-3 text-[24px] font-semibold text-white">
+          {title}
+        </h3>
+
+        {/* DESCRIPTION */}
+        <p className="text-[16px] leading-[26px] text-white/90">
+          {description}
+        </p>
+      </div>
+
+      {/* GLOW OVERLAY (soft edge like Figma) */}
+      <div
+        className="pointer-events-none absolute inset-0 rounded-[16px]"
+        style={{
+          boxShadow: "inset 0 0 22px rgba(112, 200, 121, 0.35)",
+        }}
+      />
+    </div>
+  );
+}

@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
-import Container from '../Container';
+import Container from '../layout/Container';
 import { MobileMenuButton } from './MobileMenuButton';
 import { DesktopMenu } from './DesktopMenu';
 import { MobileDropdown } from './MobileDropdown';
@@ -12,9 +12,9 @@ export default function Navbar() {
   const [isVisible, setIsVisible] = useState(true);
 
   const lastScrollY = useRef(0);
-  const navRef = useRef(null);
+  // const navRef = useRef(null);
 
-  /* ---------------- Scroll Visibility Logic ---------------- */
+
   useEffect(() => {
     const onScroll = () => {
       const currentY = window.scrollY;
@@ -35,17 +35,17 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav
-      ref={navRef}
-      className={`fixed top-0 left-0 right-0 z-50 transition-transform duration-500 ease-in-out ${
-        isVisible ? 'translate-y-0' : '-translate-y-full'
-      }`}
-    >
+<nav
+  className={`fixed top-0 left-0 right-0 z-50 transition-transform duration-500 ease-in-out ${
+    isVisible ? "translate-y-0" : "-translate-y-full"
+  }`}
+>
       {/* Background */}
+        {/* <div className="absolute inset-0 bg-gradient-to-t from-[#75C378] to-transparent backdrop-blur-[8px]" /> */}
       <div className="absolute inset-0 navbar-bg" />
 
-      {/* Main Content */}
       <Container>
+      {/* Main Content */}
         <div className="relative flex items-center justify-between pt-6 pb-4 md:pb-2 md:pt-10">
 
           {/* Logo (Desktop) */}

@@ -1,40 +1,21 @@
 'use client'
 import AnimateScrollVideo from '@/components/animation/scroll-animated-video';
-import Container from '@/components/common/Container';
-import { ModernButton } from '@/components/common/ModernButton';
 import AboutSection from '@/components/ui/about/AboutSection';
-import { FallingPattern } from '@/components/ui/falling-pattern';
+import Demo from '@/components/ui/Hero/Demo';
+import HeroSection from '@/components/ui/Hero/HeroSection';
+
 
 export default function Home() {
-  // Create sections for navigation
-  const sections = [
-    { id: 'about', title: 'About Us', color: 'bg-blue-50' },
-    { id: 'solutions', title: 'Our Solutions', color: 'bg-green-50' },
-    { id: 'products', title: 'Our Products', color: 'bg-purple-50' },
-    { id: 'contact', title: 'Contact Us', color: 'bg-yellow-50' },
-  ];
-  const handleClick = () => {
-    console.log('Button clicked!');
-    alert('Explore Solutions clicked!');
-  };
+
+
   return (
     <div className="min-h-screen ">
-
+      <Demo/>
+<HeroSection/>
       <AboutSection />
       
-      {/* <FallingPattern 
-        color="#22d3ee" // cyan
-        backgroundColor="#000000"
-        duration={100}
-        className="h-full"
-      /> */}
       <section className=''>
-
-
     <AnimateScrollVideo
-        // title="Scroll Animated Video"
-        // subtitle="A Next.js 15 Implementation"
-        // meta="Q3 • 2025"
         media={{
           mp4: "/assets/videos/screen-installation-and-configuration.mp4",
           webm: "/assets/videos/screen-installation-and-configuration.mp4"
