@@ -311,13 +311,25 @@
   }
 }
 
-
+/* Navbar */
 .navbar-bg {
   background: linear-gradient(0deg,
       rgba(55, 93, 57, 0) 0%,
       rgba(117, 195, 120, 1) 100%);
   backdrop-filter: blur(8px);
 }
+
+/* Contact Section */
+.neon-dotted {
+  border: 2px dashed #70C879;
+}
+
+.neon-glow {
+  box-shadow:
+    0 0 20px rgba(74, 222, 128, 0.35),
+    inset 0 0 30px rgba(74, 222, 128, 0.15);
+}
+
 
 
 .font-host {
