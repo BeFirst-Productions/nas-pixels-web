@@ -1,5 +1,5 @@
 import { NAV_ITEMS } from "@/data/nav";
-import Container from "../layout/Container";
+import Container from "../Layout/Container";
 import { NavLink } from "./NavLink";
 
 

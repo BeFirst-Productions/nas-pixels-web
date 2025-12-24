@@ -3,6 +3,9 @@
 import { useEffect, useRef } from "react";
 import Image from "next/image";
 import gsap from "gsap";
+import SectionTitle from "@/components/common/Headers/SectionTitle";
+import { ModernButton } from "@/components/common/Button/ModernButton";
+import { Input } from "@/components/common/Input/Input";
 
 export default function ContactSection() {
   const sectionRef = useRef(null);
@@ -30,6 +33,10 @@ export default function ContactSection() {
     return () => ctx.revert();
   }, []);
 
+  const handleClick = () => {
+    console.log("More About Us clicked!");
+  };
+
   return (
     <section
       ref={sectionRef}
@@ -37,10 +44,7 @@ export default function ContactSection() {
     >
       {/* Header */}
       <div className="max-w-7xl mx-auto mb-14">
-        <h2 className="text-3xl md:text-4xl font-semibold flex items-center gap-3">
-          Contact Us
-          <span className="w-3 h-3 rounded-full border border-green-400" />
-        </h2>
+        <SectionTitle title="Contact Us" />
         <p className="mt-4 max-w-xl text-gray-400 text-sm md:text-base">
           Morem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
           turpis molestie, dictum est a, mattis tellus.
@@ -49,7 +53,6 @@ export default function ContactSection() {
 
       {/* Main Content */}
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-        
         {/* LEFT IMAGE */}
         <div ref={leftRef} className="flex justify-center lg:justify-start">
           <div className="relative w-[300px] h-[260px] md:w-[420px] md:h-[360px] rounded-2xl overflow-hidden neon-glow">
@@ -65,7 +68,6 @@ export default function ContactSection() {
         {/* RIGHT FORM */}
         <div ref={rightRef}>
           <form className="w-full max-w-xl space-y-6">
-
             {/* Row 1 */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <Input label="Name" />
@@ -93,17 +95,13 @@ export default function ContactSection() {
                 className="w-full bg-transparent neon-dotted rounded-xl px-4 py-3 text-sm resize-none focus:outline-none"
               />
             </div>
-
-            {/* Button */}
-            <button
-              type="submit"
-              className="inline-flex items-center gap-3 bg-green-900/60 hover:bg-green-800 transition px-6 py-3 rounded-full text-sm neon-glow"
-            >
-              Send Message
-              <span className="w-7 h-7 rounded-full border border-green-400 flex items-center justify-center">
-                →
-              </span>
-            </button>
+            <div className="mt-8 flex justify-center">
+              <ModernButton
+                text="Send Message"
+                onClick={handleClick}
+                arrowClr="#fffff"
+              />
+            </div>
           </form>
         </div>
       </div>
@@ -119,16 +117,4 @@ export default function ContactSection() {
   );
 }
 
-/* ---------- Reusable Input ---------- */
 
-function Input({ label }) {
-  return (
-    <div>
-      <label className="block mb-2 text-sm">{label}</label>
-      <input
-        type="text"
-        className="w-full bg-transparent neon-dotted rounded-xl px-4 py-3 text-sm focus:outline-none"
-      />
-    </div>
-  );
-}

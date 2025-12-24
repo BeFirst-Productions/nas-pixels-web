@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Container from "../common/layout/Container";
+import Container from "../../common/Layout/Container";
 
 export default function MissionVisionSection() {
     return (
