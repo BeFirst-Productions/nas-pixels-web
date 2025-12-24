@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
-import { ModernButton } from "../common/ModernButton";
-import Container from "../common/Container";
+import { ModernButton } from "../common/button/ModernButton";
+import Container from "../common/layout/Container";
 
 const AboutSection = () => {
   return (
