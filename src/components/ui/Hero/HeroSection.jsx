@@ -19,8 +19,8 @@ const ITEMS = [
 const ITEM_WIDTH = 420;
 const ITEM_HEIGHT = 260;
 
-const SCREEN_RADIUS = 900;   // curvature width
-const SCREEN_DEPTH = 900;     // depth into screen
+const SCREEN_RADIUS = 300;   // curvature width
+const SCREEN_DEPTH = 800;     // depth into screen
 const MAX_VISIBLE = 4;
 
 /* ---------------- HERO SECTION ---------------- */

@@ -1,8 +1,10 @@
 'use client'
 import AnimateScrollVideo from '@/components/animation/scroll-animated-video';
 import AboutSection from '@/components/ui/about/AboutSection';
+import ContactSection from '@/components/ui/contact/ContactSection';
 import Demo from '@/components/ui/Hero/Demo';
 import HeroSection from '@/components/ui/Hero/HeroSection';
+import ImageRing3D from '@/components/ui/Hero/ImageRing3D';
 
 
 export default function Home() {
@@ -10,11 +12,12 @@ export default function Home() {
 
   return (
     <div className="min-h-screen ">
+      <ImageRing3D/>
       <Demo/>
 <HeroSection/>
       <AboutSection />
       
-      <section className=''>
+      {/* <section className=''>
     <AnimateScrollVideo
         media={{
           mp4: "/assets/videos/screen-installation-and-configuration.mp4",
@@ -48,8 +51,8 @@ export default function Home() {
         initialBoxSize={320}
         targetSize={{ widthVw: 90, heightVh: 90, borderRadius: 12 }}
       />
-      </section>
-      
+      </section> */}
+      <ContactSection/>
     </div>
   );
 }

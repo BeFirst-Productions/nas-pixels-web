@@ -304,7 +304,7 @@
   }
 }
 
-
+/* Navbar */
 .navbar-bg {
   background: linear-gradient(
     0deg,
@@ -312,4 +312,15 @@
     rgba(117, 195, 120, 1) 100%
   );
   backdrop-filter: blur(8px);
+}
+
+/* Contact Section */
+.neon-dotted {
+  border: 1px dashed rgba(74, 222, 128, 0.8);
+}
+
+.neon-glow {
+  box-shadow:
+    0 0 20px rgba(74, 222, 128, 0.35),
+    inset 0 0 30px rgba(74, 222, 128, 0.15);
 }
