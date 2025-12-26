@@ -10,13 +10,38 @@ export const ModernButton = ({
   return (
     <button
       onClick={onClick}
-      className={`group relative inline-flex items-center gap-0 border-0 p-0 bg-transparent cursor-pointer transition-all duration-300 ease-out hover:-translate-y-0.5 active:translate-y-0 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#70C879] focus-visible:ring-offset-4 ${className}`}
+      className={`
+        group relative inline-flex items-center gap-0 border-0 p-0 bg-transparent cursor-pointer 
+        transition-all duration-300 ease-out hover:-translate-y-0.5 active:translate-y-0 
+        focus:outline-none focus-visible:ring-2 focus-visible:ring-[#70C879] focus-visible:ring-offset-4 
+        w-full max-w-[249px] min-h-[52px] lg:w-[249px] lg:h-[64px]
+        ${className}`}
       aria-label={text}
     >
       {/* Left Text Section - Oval Shape */}
-      <span className="relative flex items-center justify-center px-8 md:px-10 lg:px-[52px] py-3 md:py-3.5 lg:py-[14px] rounded-full bg-[#16572D]/85 text-white text-base md:text-xl lg:text-[20px] font-normal tracking-wide transition-all duration-300 group-hover:bg-[#16572D] whitespace-nowrap min-h-[44px] md:min-h-[48px] lg:h-[52px]">
-        {text}
-      </span>
+<span
+  className="
+    relative
+    flex
+    items-center
+    justify-center
+    px-5 md:px-10 lg:px-[52px]
+    py-2 md:py-3.5 lg:py-[14px]
+    rounded-full
+    bg-[#16572D]/85
+    transition-all
+    duration-300
+    group-hover:bg-[#16572D]
+    whitespace-nowrap
+    min-h-[44px] md:min-h-[48px] lg:h-[52px]
+    text-base
+    md:text-[20px]
+    btn-text
+  "
+>
+  {text}
+</span>
+
 
       {/* Right Circle Section with ONLY Gradient Border (Transparent Inside) */}
       <div className="relative flex items-center justify-center w-11 h-11 md:w-12 md:h-12 lg:w-[52px] lg:h-[52px] rounded-full flex-shrink-0">

@@ -2,10 +2,10 @@
 
 export default function SectionTitle({
   title = "",
-  offset = {
-    base: "-left-[3%]",
-    lg: "-left-[0%]",
-  },
+  // offset = {
+  //   base: "-left-[10%]",
+  //   md: "-left-[0%]",
+  // },
   className = "",
 }) {
   return (
@@ -19,8 +19,9 @@ export default function SectionTitle({
       <div
         className={`
           relative
-          ${offset.base}
-          lg:${offset.lg}
+           -left-[10%]
+  md:-left-[5%]
+  lg:-left-[3%]
           flex items-center justify-center
           w-11 h-11
           md:w-12 md:h-12
@@ -48,14 +49,14 @@ export default function SectionTitle({
           </defs>
 
           <circle
-            cx="26"
+            cx="20"
             cy="26"
             r="25"
             fill="none"
             stroke="url(#borderGradient)"
             strokeWidth="1.5"
-            strokeDasharray="98.5 42.5"
-            strokeDashoffset="42.25"
+            strokeDasharray="78.5 30.5"
+            strokeDashoffset="22.25"
           />
         </svg>
       </div>

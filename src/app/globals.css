@@ -64,6 +64,10 @@
   }
 }
 
+.btn-text {
+  @apply font-button font-medium  leading-[26px] text-white/80;
+}
+
 
 .hsv-root {
   --bg: #0000;
