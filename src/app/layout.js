@@ -46,7 +46,6 @@ export default function RootLayout({ children }) {
         {/* <main className="min-h-screen"> */}
          <SmoothScrollProvider>
           <Navbar />
-
           {children}
          </SmoothScrollProvider>
           {/* </main> */}
