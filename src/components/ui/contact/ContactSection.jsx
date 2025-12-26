@@ -4,8 +4,9 @@ import { useEffect, useRef } from "react";
 import Image from "next/image";
 import gsap from "gsap";
 import SectionTitle from "@/components/common/Headers/SectionTitle";
-import { ModernButton } from "@/components/common/Button/ModernButton";
-import { Input } from "@/components/common/Input/Input";
+import { ModernButton } from "@/components/common/button/ModernButton";
+import CircuitLines from "@/components/animation/CircuitLines";
+import CircuitConnections from "@/components/animation/CircuitLines";
 
 export default function ContactSection() {
   const sectionRef = useRef(null);
@@ -33,8 +34,8 @@ export default function ContactSection() {
     return () => ctx.revert();
   }, []);
 
-  const handleClick = () => {
-    console.log("More About Us clicked!");
+    const handleClick = () => {
+    console.log('More About Us clicked!');
   };
 
   return (
@@ -44,7 +45,10 @@ export default function ContactSection() {
     >
       {/* Header */}
       <div className="max-w-7xl mx-auto mb-14">
-        <SectionTitle title="Contact Us" />
+
+       
+<SectionTitle title="Contact Us"/>
+
         <p className="mt-4 max-w-xl text-gray-400 text-sm md:text-base">
           Morem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
           turpis molestie, dictum est a, mattis tellus.
@@ -53,11 +57,12 @@ export default function ContactSection() {
 
       {/* Main Content */}
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+        
         {/* LEFT IMAGE */}
         <div ref={leftRef} className="flex justify-center lg:justify-start">
           <div className="relative w-[300px] h-[260px] md:w-[420px] md:h-[360px] rounded-2xl overflow-hidden neon-glow">
             <Image
-              src="/images/contact-card.png" // <-- replace with your image
+              src="/images/contact-card.png" 
               alt="Contact"
               fill
               className="object-cover"
@@ -68,6 +73,7 @@ export default function ContactSection() {
         {/* RIGHT FORM */}
         <div ref={rightRef}>
           <form className="w-full max-w-xl space-y-6">
+
             {/* Row 1 */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <Input label="Name" />
@@ -95,26 +101,40 @@ export default function ContactSection() {
                 className="w-full bg-transparent neon-dotted rounded-xl px-4 py-3 text-sm resize-none focus:outline-none"
               />
             </div>
-            <div className="mt-8 flex justify-center">
-              <ModernButton
-                text="Send Message"
-                onClick={handleClick}
-                arrowClr="#fffff"
-              />
-            </div>
+          <div className="mt-8 flex justify-center">
+            <ModernButton 
+              text="Send Message" 
+              onClick={handleClick}
+              arrowClr="#fffff"
+            />
+          </div>
+
           </form>
         </div>
       </div>
 
       {/* Decorative circuit lines */}
-      <div className="absolute left-0 bottom-10 opacity-40 hidden lg:block">
-        <svg width="180" height="120" fill="none">
-          <path d="M0 60 H60 V20 H120" stroke="#22c55e" strokeWidth="1" />
-          <circle cx="120" cy="20" r="3" fill="#22c55e" />
-        </svg>
-      </div>
+{/* <CircuitConnections className="absolute left-6 bottom-10 opacity-80" /> */}
+       <Image
+              src="/images/shapes/doted-line.png" 
+              alt="circuit Connections"
+              fill
+              className="object-cover"
+            />
     </section>
   );
 }
 
+/* ---------- Reusable Input ---------- */
 
+function Input({ label }) {
+  return (
+    <div>
+      <label className="block mb-2 text-sm">{label}</label>
+      <input
+        type="text"
+        className="w-full bg-transparent neon-dotted rounded-xl px-4 py-3 text-sm focus:outline-none"
+      />
+    </div>
+  );
+}

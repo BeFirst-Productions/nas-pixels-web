@@ -3,8 +3,8 @@
 export default function SectionTitle({
   title = "",
   offset = {
-    base: "-left-[8%]",
-    lg: "-left-[3%]",
+    base: "-left-[3%]",
+    lg: "-left-[0%]",
   },
   className = "",
 }) {
