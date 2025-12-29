@@ -7,6 +7,8 @@ export default function SectionTitle({
   //   md: "-left-[0%]",
   // },
   className = "",
+  ClrGradet1 = "#000",
+  ClrGradet2 = "#70C879",
 }) {
   return (
     <div className={`flex items-center gap-3 ${className}`}>
@@ -19,9 +21,9 @@ export default function SectionTitle({
       <div
         className={`
           relative
-           -left-[10%]
-  md:-left-[5%]
-  lg:-left-[3%]
+          -left-[10%]
+          md:-left-[5%]
+          lg:-left-[3%]
           flex items-center justify-center
           w-11 h-11
           md:w-12 md:h-12
@@ -43,8 +45,8 @@ export default function SectionTitle({
               x2="100%"
               y2="100%"
             >
-              <stop offset="0%" stopColor="#000" stopOpacity="1" />
-              <stop offset="100%" stopColor="#70C879" stopOpacity="1" />
+              <stop offset="0%" stopColor={ClrGradet1} stopOpacity="1" />
+              <stop offset="100%" stopColor={ClrGradet2} stopOpacity="1" />
             </linearGradient>
           </defs>
 

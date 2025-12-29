@@ -5,8 +5,6 @@ import Image from "next/image";
 import gsap from "gsap";
 import SectionTitle from "@/components/common/Headers/SectionTitle";
 import { ModernButton } from "@/components/common/button/ModernButton";
-import CircuitLines from "@/components/animation/CircuitLines";
-import CircuitConnections from "@/components/animation/CircuitLines";
 import Container from "@/components/common/Layout/Container";
 import { Input } from "@/components/common/Input/Input";
 
@@ -67,9 +65,9 @@ export default function ContactSection() {
     <>
       <section
         ref={sectionRef}
-        className="relative w-full bg-black text-white py-20 px-6 md:px-16 overflow-hidden"
+        className="relative w-full bg-black text-white py-20  overflow-hidden"
       >
-        {/* Circuit lines - bottom left (Figma accurate) */}
+        {/* Circuit lines */}
         <div className="absolute hidden md:block -bottom-10 lg:bottom-0 left-0 z-0 pointer-events-none">
           <Image
             src="/assets/images/shapes/doted-line.png"
@@ -85,8 +83,6 @@ export default function ContactSection() {
           />
         </div>
         <Container>
-          {/* Decorative circuit background */}
-
           {/* Header */}
           <div className="max-w-7xl mx-auto mb-14">
             <SectionTitle title="Contact Us" />
@@ -162,5 +158,3 @@ export default function ContactSection() {
     </>
   );
 }
-
-

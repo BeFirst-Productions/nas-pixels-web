@@ -2,9 +2,11 @@
 import AnimateScrollVideo from '@/components/animation/scroll-animated-video';
 import AboutSection from '@/components/ui/about/AboutSection';
 import ContactSection from '@/components/ui/contact/ContactSection';
+import FaqSection from '@/components/ui/faq/FaqSection';
 import Demo from '@/components/ui/Hero/Demo';
 import HeroSection from '@/components/ui/Hero/HeroSection';
 import ImageRing3D from '@/components/ui/Hero/ImageRing3D';
+import TestimonialsSection from '@/components/ui/testimonials/TestimonialsSection';
 
 
 export default function Home() {
@@ -52,6 +54,8 @@ export default function Home() {
         targetSize={{ widthVw: 90, heightVh: 90, borderRadius: 12 }}
       />
       </section> */}
+      <TestimonialsSection/>
+      <FaqSection/>
       <ContactSection/>
     </div>
   );
