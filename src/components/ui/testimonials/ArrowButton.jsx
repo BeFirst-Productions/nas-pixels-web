@@ -4,10 +4,15 @@ export default function ArrowButton({
   direction = "right",
   onClick,
   clborder = "#000",
-  arrowClr = "#70C879",
+  arrowClr = "#ffffff",
 }) {
-  const rotate =
-    direction === "left" ? "-rotate-90" : "";
+  const baseRotate =
+    direction === "left" ? "-rotate-90" : "rotate-0";
+
+  const hoverRotate =
+    direction === "left"
+      ? "group-hover:rotate-[-135deg]"
+      : "group-hover:rotate-45";
 
   return (
     <button
@@ -26,21 +31,30 @@ export default function ArrowButton({
     >
       {/* Gradient Ring */}
       <svg
-        className={`absolute inset-0 w-full h-full -rotate-45 transition-all duration-300 group-hover:opacity-100 ${rotate}`}
+        className="absolute inset-0 w-full h-full -rotate-45 transition-all duration-300 group-hover:opacity-100"
         viewBox="0 0 52 52"
         style={{ opacity: 0.7 }}
       >
         <defs>
-          <linearGradient
-            id={`borderGradient-${direction}`}
-            x1="0%"
-            y1="0%"
-            x2="100%"
-            y2="100%"
-          >
-            <stop offset="0%" stopColor={clborder} />
-            <stop offset="100%" stopColor="#70C879" />
-          </linearGradient>
+<linearGradient
+  id={`borderGradient-${direction}`}
+  x1={direction === "left" ? "100%" : "0%"}
+  y1={direction === "left" ? "100%" : "100%"}
+  x2={direction === "left" ? "100%" : "100%"}
+  y2={direction === "left" ? "0%" : "80%"}
+>
+  {/* neutral stroke */}
+  <stop offset="0%" stopColor={clborder} />
+  <stop offset="70%" stopColor={clborder} />
+
+  {/* concentrated green highlight */}
+  <stop offset="88%" stopColor="#70C879" />
+  <stop offset="100%" stopColor="#70C879" />
+</linearGradient>
+
+
+
+
         </defs>
 
         <circle
@@ -63,9 +77,9 @@ export default function ArrowButton({
           w-4 h-4
           md:w-5 md:h-5
           text-[${arrowClr}]
-          transition-all duration-300
-          group-hover:rotate-45
-          ${rotate}
+          transition-transform duration-300
+          ${baseRotate}
+          ${hoverRotate}
         `}
       >
         <path

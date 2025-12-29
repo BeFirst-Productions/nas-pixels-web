@@ -3,45 +3,17 @@ import Container from "../../common/Layout/Container";
 
 export default function MissionVisionSection() {
     return (
-        <section className="relative w-full   py-10 md:py-72">
+        <section className="relative w-full   py-10 md:py-20">
             <div className="hidden md:block absolute inset-y-0 left-0 w-[90px] 
-    bg-[linear-gradient(180deg,rgba(112,200,121,0.5)_0%,rgba(112,200,121,0.15)_50%,rgba(112,200,121,0.5)_100%)]
+    bg-[linear-gradient(180deg,rgba(112,200,121,0.5)_50%,rgba(112,200,121,0.15)_100%,rgba(112,200,121,0.5)_100%)]
     blur-2xl pointer-events-none">
             </div>
 
             {/* RIGHT GLOW */}
             <div className="hidden md:block absolute inset-y-0 right-0 w-[90px] 
-    bg-[linear-gradient(180deg,rgba(112,200,121,0.5)_0%,rgba(112,200,121,0.15)_50%,rgba(112,200,121,0.5)_100%)]
+    bg-[linear-gradient(180deg,rgba(112,200,121,0.5)_50%,rgba(112,200,121,0.15)_100%,rgba(112,200,121,0.5)_100%)]
     blur-2xl pointer-events-none">
             </div>
-            {/* LEFT bottom background image */}
-          {/* LEFT bottom background image */}
-<div className="absolute bottom-0 left-0 
-    w-[320px] h-[320px] 
-    md:w-[420px] md:h-[420px] 
-    lg:w-[520px] lg:h-[520px] 
-    opacity-40 pointer-events-none">
-    <Image
-        src="/assets/images/mission_vision/bg02.png"
-        alt="Background left"
-        fill
-        className="object-contain"
-    />
-</div>
-
-{/* RIGHT bottom background image */}
-<div className="absolute bottom-0 right-0 
-    w-[320px] h-[320px] 
-    md:w-[420px] md:h-[420px] 
-    lg:w-[520px] lg:h-[520px] 
-    opacity-40 pointer-events-none">
-    <Image
-        src="/assets/images/mission_vision/bg01.png"
-        alt="Background right"
-        fill
-        className="object-contain"
-    />
-</div>
 
 
             <Container>
@@ -88,8 +60,8 @@ export default function MissionVisionSection() {
                             </p>
 
                             <div className="w-full flex justify-start">
-                                <div className="relative w-full lg:w-[65%] h-64 rounded-xl overflow-hidden group">
-                                    <div className="absolute inset-0 rounded-xl border-2 border-dashed border-green-400/50 pointer-events-none"></div>
+                                <div className="relative w-full lg:w-[60%] h-64 rounded-xl overflow-hidden group">
+                                    <div className="absolute inset-0 rounded-xl border-2 border-dashed border-[#70C879] pointer-events-none"></div>
 
                                     <Image
                                         src="/assets/images/mission_vision/01.png"
@@ -145,8 +117,8 @@ export default function MissionVisionSection() {
                             </p>
 
                             <div className="w-full flex justify-start">
-                                <div className="relative w-full lg:w-[65%] h-64 rounded-xl overflow-hidden group">
-                                    <div className="absolute inset-0 rounded-xl border-2 border-dashed border-green-400/50 pointer-events-none"></div>
+                                <div className="relative w-full lg:w-[60%] h-64 rounded-xl overflow-hidden group">
+                                    <div className="absolute inset-0 rounded-xl border-2 border-dashed border-[#70C879] pointer-events-none"></div>
 
                                     <Image
                                         src="/assets/images/mission_vision/01.png"
@@ -159,10 +131,38 @@ export default function MissionVisionSection() {
                             </div>
 
                         </div>
+
                     </div>
+
 
                 </div>
             </Container>
+            <div className=" hidden lg:flex">
+                <div className="w-full  flex  justify-start">
+                    <div className="relative w-[80%]  h-96 rounded-xl overflow-hidden group">
+
+                        <Image
+                            src="/assets/images/mission_vision/bg02.png"
+                            alt="Mission"
+                            fill
+                            className="object-cover   rounded-3xl transition-transform duration-500"
+                        />
+                    </div>
+
+                </div>
+                <div className="w-full flex justify-end">
+                    <div className="relative w-[80%]  h-96 rounded-xl overflow-hidden group">
+
+                        <Image
+                            src="/assets/images/mission_vision/bg01.png"
+                            alt="Mission"
+                            fill
+                            className="object-cover  rounded-3xl transition-transform duration-500"
+                        />
+                    </div>
+
+                </div>
+            </div>
         </section>
     );
 }

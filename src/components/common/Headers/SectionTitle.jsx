@@ -11,7 +11,7 @@ export default function SectionTitle({
   ClrGradet2 = "#70C879",
 }) {
   return (
-    <div className={`flex items-center gap-2 ${className}`}>
+    <div className={`flex items-center gap-3 ${className}`}>
       {/* Title */}
       <h2 className="font-host inline-block text-3xl md:text-4xl xl:text-[2.625rem] font-semibold py-1 rounded-full">
         {title}
@@ -21,9 +21,9 @@ export default function SectionTitle({
       <div
         className={`
           relative
-           -left-[10%]
-  md:-left-[5%]
-  lg:-left-[3%]
+          -left-[10%]
+          md:-left-[5%]
+          lg:-left-[3%]
           flex items-center justify-center
           w-11 h-11
           md:w-12 md:h-12

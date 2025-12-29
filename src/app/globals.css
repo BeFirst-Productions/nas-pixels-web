@@ -6,6 +6,8 @@
   :root {
     --background: #000000;
     --foreground: #ffffff;
+      --navbar-h: 80px;
+
   }
 
   body {
@@ -13,7 +15,14 @@
     overflow-x: hidden;
   }
 }
-
+@media (min-width: 768px) {
+  :root {
+    --navbar-h: 135px;
+  }
+}
+.app-content {
+  padding-top: var(--navbar-h);
+}
 @layer components {
   .container-custom {
     @apply mx-auto w-full max-w-[1920px] px-4 sm:px-6 lg:px-8 xl:px-[120px];
@@ -360,4 +369,11 @@
     stroke-dashoffset: 0;
     opacity: 0;
   }
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }

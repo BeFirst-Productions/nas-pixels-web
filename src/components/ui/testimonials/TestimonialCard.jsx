@@ -1,42 +1,41 @@
-export default function TestimonialCard() {
+export default function TestimonialCard({data}) {
   return (
     <div
       className="
         relative
         w-full
-        max-w-[822px]
+        max-w-[92%]
+        sm:max-w-[520px]
         md:max-w-[638px]
-        h-auto
-        border
+        lg:max-w-[822px]
+        border-2
         border-dotted
         border-[#70C879]
         rounded-xl
-        px-6
-        py-8
+        px-4 sm:px-6
+        py-6 sm:py-8
         text-center
       "
     >
       {/* Name */}
-      <h3 className="text-[#E9C46A] font-semibold text-lg">
-        Stella
+      <h3 className="text-[#E9C05F] font-semibold text-xl md:text-2xl">
+       {data.name}
       </h3>
 
       {/* Role */}
-      <p className="text-xs text-gray-400 mb-3">
-        Business Owner
+      <p className=" text-xs md:text-[14px] text-white/70 mb-3 font-normal">
+        {data.role}
       </p>
 
       {/* Testimonial */}
-      <p className="text-sm md:text-base text-gray-200 leading-relaxed max-w-[520px] mx-auto">
-        Morem ipsum dolor sit amet, consectetur adipiscing elit.
-        Etiam euest turpis turpis molestie, dictum est.
-        Etiam euest
+      <p className="text-base sm:text-[22px] text-gray-200 leading-5 md:leading-7 font-normal max-w-[520px] mx-auto">
+        {data.testimonial}
       </p>
 
       {/* Stars */}
       <div className="flex justify-center gap-1 mt-4">
-        {Array.from({ length: 5 }).map((_, i) => (
-          <span key={i} className="text-[#70C879] text-sm">
+        {Array.from({ length: data.stars }).map((_, i) => (
+          <span key={i} className="text-[#70C879] text-sm md:text-[22px]">
             ★
           </span>
         ))}
