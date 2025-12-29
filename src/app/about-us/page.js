@@ -4,6 +4,8 @@ import Navbar from "@/components/common/Navbar/Navbar";
 import Herosection from "@/components/TitleBanner/TitleBanner";
 import React from "react";
 import ContactSection from "@/components/ui/contact/ContactSection";
+import TestFooter from "@/components/common/Footer/TestFooter";
+import Footer from "@/components/common/Footer/Footer";
 
 const page = () => {
   return (
@@ -17,6 +19,7 @@ const page = () => {
       <AboutSection />
       <MissionVisionSection />
       <ContactSection/>
+      <Footer/>
     </div>
   );
 };
