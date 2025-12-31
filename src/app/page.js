@@ -11,6 +11,7 @@ import WhyChooseUs from '@/components/ui/home/WhyChooseUs';
 import LatestNewsSection from '@/components/ui/home/LatestNewsSection';
 import OurProjectsSection from '@/components/ui/home/OurProjectsSection';
 import ProjectsSection from '@/components/ui/home/ProjectsSection';
+import ProductsSection from '@/components/ui/home/ProductsSection';
 
 
 export default function Home() {
@@ -58,6 +59,7 @@ export default function Home() {
         targetSize={{ widthVw: 90, heightVh: 90, borderRadius: 12 }}
       />
       </section> */}
+      <ProductsSection/>
       <WhyChooseUs/>
       <ProjectsSection/>
       <LatestNewsSection/>
