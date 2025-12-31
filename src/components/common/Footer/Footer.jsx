@@ -166,7 +166,7 @@ export default function Footer() {
                         href="mailto:Nisam@naslixels.com"
                         className="hover:underline"
                       >
-                        Nisam@naslixels.com
+                        nizam@naspixels.com
                       </a>
                     </div>
                   </li>

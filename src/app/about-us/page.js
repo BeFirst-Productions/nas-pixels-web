@@ -9,6 +9,7 @@ import Footer from "@/components/common/Footer/Footer";
 import AboutNasPixels from "@/components/ui/AboutPage/AboutNasPixels";
 import CoreServices from "@/components/ui/AboutPage/CoreServices";
 import BottomBanner from "@/components/ui/AboutPage/BottomBanner";
+import StorySection from "@/components/ui/AboutPage/StorySection";
 
 const page = () => {
   return (
@@ -21,6 +22,7 @@ const page = () => {
       />
       <AboutSection />
       <MissionVisionSection />
+      <StorySection/>
       <AboutNasPixels/>
       <CoreServices/>
       <BottomBanner/>

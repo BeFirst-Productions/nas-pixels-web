@@ -2,6 +2,7 @@ import { Geist, Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/common/Navbar/Navbar";
 import { SmoothScrollProvider } from "@/components/providers/smooth-scroll-provider";
+import ScrollToTop from "@/components/common/Scroll/ScrollToTop";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -55,6 +56,8 @@ export default function RootLayout({ children }) {
           <Navbar />
           <main className="app-content">
             {children}
+                   <ScrollToTop />
+
           </main>
         </SmoothScrollProvider>
       </body>

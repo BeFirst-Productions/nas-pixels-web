@@ -54,7 +54,7 @@ export default function MissionVisionSection() {
                                     <div className="absolute inset-0 rounded-xl border-2 border-dashed border-[#70C879] pointer-events-none"></div>
 
                                     <Image
-                                        src="/assets/images/mission_vision/01.png"
+                                        src="/assets/images/mission_vision/mission.png"
                                         alt="Mission"
                                         fill
                                         className="object-cover group-hover:scale-105 p-4 rounded-3xl transition-transform duration-500"
@@ -111,7 +111,7 @@ export default function MissionVisionSection() {
                                     <div className="absolute inset-0 rounded-xl border-2 border-dashed border-[#70C879] pointer-events-none"></div>
 
                                     <Image
-                                        src="/assets/images/mission_vision/01.png"
+                                        src="/assets/images/mission_vision/vision.png"
                                         alt="Mission"
                                         fill
                                         className="object-cover group-hover:scale-105 p-4 rounded-3xl transition-transform duration-500"

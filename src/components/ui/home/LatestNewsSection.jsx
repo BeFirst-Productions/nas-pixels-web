@@ -10,25 +10,25 @@ const NEWS = [
     title: "Digital Signage Trends Transforming Brand Communication in Dubai",
     desc:
       "Discover how digital signage solutions transform brand communication across retail corporate hospitality environments worldwide today",
-    img: "/assets/images/news/news-1.png",
+    img:"/assets/images/blog/digital.png",
   },
   {
     title: "Smart Home Automation Trends 2026 in UAE",
     desc:
       "Explore smart home automation trends enhancing comfort security energy efficiency modern residential living spaces globally",
-    img: "/assets/images/news/news-2.png",
+    img: "/assets/images/blog/smart.png",
   },
   {
     title: "Advanced Audiovisual Integration for Modern Workspaces in UAE",
     desc:
       "Learn how advanced audiovisual integration improves collaboration engagement performance workplaces education venues and large environments",
-    img: "/assets/images/news/news-3.png",
+    img: "/assets/images/blog/advanced.png",
   },
   {
     title: "Innovative Lighting Technologies for Architectural Spaces in Dubai",
     desc:
       "Understand innovative lighting technologies shaping architectural aesthetics sustainability intelligent indoor outdoor spaces for future projects",
-    img: "/assets/images/news/news-4.png",
+    img: "/assets/images/blog/innovative.png",
   },
 ];
 

@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { ModernButton } from "../../common/Button/ModernButton";
 import Container from "../../common/Layout/Container";
+import Image from "next/image";
 
 const AboutSection = () => {
   return (
@@ -55,9 +56,17 @@ const AboutSection = () => {
         </div>
 
         {/* Right Image/Card */}
-        <div className="flex justify-center md:justify-end">
-          <div className="w-full max-w-lg h-[300px] bg-gray-300 rounded-xl shadow-lg" />
-        </div>
+       <div className="flex justify-center md:justify-end">
+  <div className="w-full max-w-lg h-[300px] relative rounded-xl overflow-hidden shadow-lg">
+    <Image
+      src="/assets/images/mission_vision/about.png"   // put your image inside /public
+      alt="Hero image"
+      fill
+      className="object-cover"
+      priority
+    />
+  </div>
+</div>
 
       </div>
    </Container>
