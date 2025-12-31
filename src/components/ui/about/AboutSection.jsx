@@ -83,7 +83,7 @@ const AboutSection = () => {
   return (
     <section
       ref={sectionRef}
-      className="min-h-screen bg-black px-6 py-20 md:px-16 lg:px-24"
+      className="min-h-auto bg-black px-6 py-20 md:px-16 lg:px-24"
     >
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-12 lg:grid-cols-[1fr_1.2fr] lg:gap-16">
         

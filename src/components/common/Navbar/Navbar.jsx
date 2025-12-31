@@ -46,7 +46,7 @@ export default function Navbar() {
 
       <Container>
       {/* Main Content */}
-        <div className="relative max-w-7xl mx-auto flex items-center justify-between pt-6 pb-4 md:pb-2 md:pt-10">
+        <div className="mx-auto max-w-7xl relative flex items-center justify-between pt-6 pb-4 md:pb-2 md:pt-10">
 
           {/* Logo (Desktop) */}
           <div className="hidden md:block">

@@ -7,6 +7,10 @@ import Demo from '@/components/ui/Hero/Demo';
 import HeroSection from '@/components/ui/Hero/HeroSection';
 import ImageRing3D from '@/components/ui/Hero/ImageRing3D';
 import TestimonialsSection from '@/components/ui/testimonials/TestimonialsSection';
+import WhyChooseUs from '@/components/ui/home/WhyChooseUs';
+import LatestNewsSection from '@/components/ui/home/LatestNewsSection';
+import OurProjectsSection from '@/components/ui/home/OurProjectsSection';
+import ProjectsSection from '@/components/ui/home/ProjectsSection';
 
 
 export default function Home() {
@@ -14,9 +18,9 @@ export default function Home() {
 
   return (
     <div className="min-h-screen ">
-      <ImageRing3D/>
+      {/* <ImageRing3D/>
       <Demo/>
-<HeroSection/>
+<HeroSection/> */}
       <AboutSection />
       
       {/* <section className=''>
@@ -54,6 +58,9 @@ export default function Home() {
         targetSize={{ widthVw: 90, heightVh: 90, borderRadius: 12 }}
       />
       </section> */}
+      <WhyChooseUs/>
+      <ProjectsSection/>
+      <LatestNewsSection/>
       <TestimonialsSection/>
       <FaqSection/>
       <ContactSection/>
