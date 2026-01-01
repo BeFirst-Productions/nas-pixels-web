@@ -6,6 +6,7 @@ import Container from '../Layout/Container';
 import { MobileMenuButton } from './MobileMenuButton';
 import { DesktopMenu } from './DesktopMenu';
 import { MobileDropdown } from './MobileDropdown';
+import Link from 'next/link';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -49,16 +50,19 @@ export default function Navbar() {
         <div className="mx-auto max-w-7xl relative flex items-center justify-between pt-6 pb-4 md:pb-2 md:pt-10">
 
           {/* Logo (Desktop) */}
-          <div className="hidden md:block">
-            <Image
-              src="/assets/images/logos/logo.png"
-              alt="NAS Pixels Logo"
-              width={135}
-              height={87}
-              className="object-contain"
-              priority
-            />
-          </div>
+  <div className="hidden md:block">
+  <Link href="/" aria-label="Go to home page">
+    <Image
+      src="/assets/images/logos/logo.png"
+      alt="NAS Pixels Logo"
+      width={135}
+      height={87}
+      className="object-contain cursor-pointer"
+      priority
+    />
+  </Link>
+</div>
+
 
           {/* Desktop Menu */}
           <div className="hidden md:flex absolute left-1/2 -translate-x-1/2">

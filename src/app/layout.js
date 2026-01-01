@@ -44,7 +44,11 @@ export const metadata = {
     "qatar kuwait oman bahrain led screens",
     "nas pixels",
   ],
-
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
   authors: [{ name: "NAS Pixels" }],
 
   creator: "NAS Pixels",
