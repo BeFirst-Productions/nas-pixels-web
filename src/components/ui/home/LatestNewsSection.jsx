@@ -105,9 +105,9 @@ export default function LatestNewsSection() {
         </div>
 
         {/* Button */}
-        <div className="mt-16 flex justify-center items-center gap-4">
+        {/* <div className="mt-16 flex justify-center items-center gap-4">
    <ModernButton text="Button"/>
-        </div>
+        </div> */}
       </Container>
     </section>
   );

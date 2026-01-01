@@ -79,10 +79,7 @@ export default function WhyChooseUs() {
             </div>
 
             <p className="text-gray-300 max-w-[520px] mb-10 text-sm md:text-base leading-relaxed">
-              Morem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
-              turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus
-              nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum
-              tellus elit sed risus.
+            We supply high-performance commercial display solutions built for clarity, reliability, and long-term use. From offices and retail spaces to control rooms and large installations, our screens are designed to deliver consistent visual impact. With certified products, expert installation, and responsive after-sales support, we ensure your display systems perform at their best.
             </p>
 
             <div

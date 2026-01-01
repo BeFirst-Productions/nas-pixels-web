@@ -83,7 +83,7 @@ export default function Footer() {
                   </li>
 
                   <li>
-                    <Link href="/faq" className="cube-link">
+                    <Link href="#faq" className="cube-link">
                       <span className="cube-text">
                         <span className="front">FAQ</span>
                         <span className="top">FAQ</span>
@@ -92,7 +92,7 @@ export default function Footer() {
                   </li>
 
                   <li>
-                    <Link href="/privacy-policy" className="cube-link">
+                    <Link href="/" className="cube-link">
                       <span className="cube-text">
                         <span className="front">Privacy & Policy</span>
                         <span className="top">Privacy & Policy</span>
@@ -101,7 +101,7 @@ export default function Footer() {
                   </li>
 
                   <li>
-                    <Link href="/blog" className="cube-link">
+                    <Link href="/" className="cube-link">
                       <span className="cube-text">
                         <span className="front">Blog</span>
                         <span className="top">Blog</span>

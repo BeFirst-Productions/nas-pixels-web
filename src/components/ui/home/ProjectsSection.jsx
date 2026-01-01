@@ -8,6 +8,7 @@ import Container from "@/components/common/Layout/Container";
 import ProjectsCarousel from "./ProjectsCarousel";
 import { ModernButton } from "@/components/common/button/ModernButton";
 import SectionTitle from "@/components/common/Headers/SectionTitle";
+import { useRouter } from "next/navigation";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -20,6 +21,7 @@ export default function ProjectsSection() {
   const sectionRef = useRef(null);
   const headingRef = useRef(null);
   const descRef = useRef(null);
+   const router = useRouter();
 
   /* ---------------- AURORA (UNCHANGED) ---------------- */
   useEffect(() => {
@@ -141,7 +143,7 @@ export default function ProjectsSection() {
         <ProjectsCarousel />
 
         <div className="mt-12 md:mt-16 flex justify-center">
-          <ModernButton text="Button" />
+          <ModernButton text="View more" onClick={()=>router.push("/projects")} />
         </div>
       </div>
     </section>

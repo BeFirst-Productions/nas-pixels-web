@@ -185,6 +185,7 @@ useEffect(() => {
       <section ref={faqSectionRef} className="relative z-10 py-12 lg:pb-24 lg:pt-36 overflow-hidden">
      <Container>
             <div
+            id="faq"
             //   ref={cardRef}
               className=" mx-w-7xl mx-auto bg-transparent rounded-3xl  pt-6 pb-10 sm:pb-24"
             >
