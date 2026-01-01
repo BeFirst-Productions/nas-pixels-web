@@ -1,5 +1,6 @@
 import { ModernButton } from "@/components/common/Button/ModernButton";
 import { useRouter } from "next/navigation";
+import SectionTitle from "@/components/common/Headers/SectionTitle";
 import React, { useEffect, useRef, forwardRef } from "react";
 
 
@@ -93,10 +94,7 @@ const AboutSection = () => {
         
         {/* LEFT CONTENT */}
         <div ref={textRef} className="flex flex-col justify-center">
-          <h2 className="flex items-center gap-3 text-3xl font-semibold text-white md:text-4xl lg:text-5xl">
-            About NAS Pixels
-            <span className="inline-block h-3 w-3 md:h-4 md:w-4 rounded-full border-2 border-[#70C879] flex-shrink-0" />
-          </h2>
+       <SectionTitle title="About NAS Pixels" ClrGradet1="#70C879" />
 
           <p className="mt-6 text-sm leading-relaxed text-gray-400 md:text-base lg:text-lg">
             Morem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum

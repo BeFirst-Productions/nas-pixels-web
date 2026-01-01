@@ -91,7 +91,7 @@ export default function WhyChooseUs() {
                   src="/assets/images/whyChoose/why-choose-us.png"
                   alt="Why Choose Us"
                   fill
-                  className="object-cover"
+                  className="object-cover p-2 rounded-xl"
                 />
               </div>
             </div>

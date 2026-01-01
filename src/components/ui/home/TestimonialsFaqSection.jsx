@@ -21,13 +21,26 @@ export default function TestimonialsFaqSection() {
   const cardRef = useRef(null);
   const timerRef = useRef(null);
 
-  const animateCard = (direction = 1) => {
-    gsap.fromTo(
-      cardRef.current,
-      { x: direction * 60, opacity: 0 },
-      { x: 0, opacity: 1, duration: 0.6, ease: "power3.out" }
-    );
-  };
+const animateCard = (direction = 1) => {
+  const el = cardRef.current;
+
+  // Lock height before changing content to avoid layout jump
+  const height = el.offsetHeight;
+  el.style.height = height + "px";
+
+  gsap.fromTo(
+    el,
+    { x: direction * 60, opacity: 0 },
+    {
+      x: 0,
+      opacity: 1,
+      duration: 0.6,
+      ease: "power3.out",
+      clearProps: "height", // unlock height after animation
+    }
+  );
+};
+
 
   const next = () => {
     setIndex((prev) => (prev + 1) % TESTIMONIALS.length);
@@ -42,7 +55,7 @@ export default function TestimonialsFaqSection() {
   };
 
   useEffect(() => {
-    timerRef.current = setInterval(next, 5000);
+    timerRef.current = setInterval(next, 2000);
     return () => clearInterval(timerRef.current);
   }, []);
 

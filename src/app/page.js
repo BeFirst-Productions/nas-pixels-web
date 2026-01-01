@@ -16,6 +16,7 @@ import CurvedHeroArc from '@/components/ui/Hero/CurvedHeroArc';
 import Footer from '@/components/common/Footer/Footer';
 import ProductsSection from '@/components/ui/home/ProductsSection';
 import TestimonialsFaqSection from '@/components/ui/home/TestimonialsFaqSection';
+import TrustedBrandsSection from '@/components/ui/Hero/TrustedBrandsSection';
 
 
 export default function Home() {
@@ -66,6 +67,7 @@ export default function Home() {
       />
       </section> */}
       <ProductsSection/>
+      <TrustedBrandsSection/>
       <WhyChooseUs/>
       <ProjectsSection/>
       <LatestNewsSection/>

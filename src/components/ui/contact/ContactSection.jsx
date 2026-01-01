@@ -143,8 +143,7 @@ ${message}
         <div className="max-w-7xl mx-auto mb-14">
           <SectionTitle title="Contact Us" />
           <p className="mt-4 max-w-xl text-gray-400">
-            Morem ipsum dolor sit amet, consectetur adipiscing elit.
-          </p>
+Have questions or need help choosing the right display solution? Fill out the form and our team will get back to you shortly.          </p>
         </div>
 
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-5">
