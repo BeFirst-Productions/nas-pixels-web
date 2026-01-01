@@ -99,7 +99,7 @@ export default function AboutSection() {
   const textRef = useRef(null);
   const buttonRef = useRef(null);
   const cardRefs = useRef([]);
-
+const router =useRouter()
   useEffect(() => {
     const ctx = gsap.context(() => {
 
@@ -214,12 +214,11 @@ export default function AboutSection() {
               ref={textRef}
               className="mt-6 text-sm leading-relaxed text-gray-400 md:text-base lg:text-lg"
             >
-              Morem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis
-              molestie, dictum est a, mattis tellus.
+            NAS Pixels is a Dubai-based digital innovation company delivering advanced LED screen and digital signage solutions across the Middle East. Backed by strong technical expertise and proven business capabilities, we provide reliable, scalable, and performance-driven visual communication systems tailored to diverse industries.
             </p>
 
             <div ref={buttonRef} className="mt-8">
-              <ModernButton text="More About Us" />
+              <ModernButton text="More About Us" onClick={()=>router.push("/about-us")} />
             </div>
           </div>
 
@@ -230,26 +229,22 @@ export default function AboutSection() {
               title: "Innovation",
               icon: <InnovationIcon />,
               description:
-                "Maecenas eget condimentum velit, sit amet feugiat lectus. Sed dignissim metus nec fringilla.",
-            },
+"We deliver forward-looking digital display solutions that enhance communication, audience engagement, and brand visibility across diverse environments."            },
             {
               title: "Technology",
               icon: <TechnologyIcon />,
               description:
-                "Maecenas eget condimentum velit, sit amet feugiat lectus. Sed dignissim metus nec fringilla.",
-            },
+  "Our solutions are powered by advanced LED and AV technologies, ensuring high performance, long-term reliability, and scalable system design."            },
             {
               title: "Support",
               icon: <SupportIcon />,
               description:
-                "Maecenas eget condimentum velit, sit amet feugiat lectus. Sed dignissim metus nec fringilla.",
-            },
+   "We offer continuous pre- and post-deployment support to ensure seamless operation, minimal downtime, and lasting client satisfaction.",            },
             {
               title: "Quality",
               icon: <QualityIcon />,
               description:
-                "Maecenas eget condimentum velit, sit amet feugiat lectus. Sed dignissim metus nec fringilla.",
-            },
+ "Every project adheres to strict quality standards, covering design, installation, testing, and ongoing system optimization.",            },
             ].map((item, i) => (
               <AboutCard
                 key={item.title}
