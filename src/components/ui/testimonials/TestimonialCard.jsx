@@ -26,7 +26,7 @@ export default function TestimonialCard({data}) {
       </p>
 
       {/* Testimonial */}
-      <p className="text-base sm:text-[22px] text-gray-200 leading-5 md:leading-7 font-normal max-w-[520px] mx-auto">
+      <p className="text-base sm:text-[22px] text-gray-200 leading-5 md:leading-7 font-normal max-w-[550px] mx-auto">
         {data.testimonial}
       </p>
 

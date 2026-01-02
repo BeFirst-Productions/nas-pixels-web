@@ -1,6 +1,7 @@
 import React from 'react'
 import Antigravity from '../animation/bg'
 import { SparklesCore } from '../animation/HeroBg'
+import { AnimatedText } from '../animation/AnimatedText'
 
 const Herosection = ({ title, description }) => {
   return (
@@ -43,9 +44,14 @@ const Herosection = ({ title, description }) => {
   //   </div>
     <div className="py-28 lg:py-56   w-full  flex flex-col items-center justify-center overflow-hidden rounded-md">
      
-      <h2 className="md:text-7xl text-3xl mb-2 font-bold text-center text-white relative z-20">
+      {/* <h2 className="md:text-7xl text-3xl mb-2 font-bold text-center relative z-20">
         {title}
-      </h2>
+      </h2> */}
+       <AnimatedText 
+      text={title} 
+      textClassName="md:text-7xl text-3xl mb-2 font-bold text-center relative z-20"
+    
+    />
       <div className="w-[40rem] h-40 relative ">
         {/* Gradients */}
         <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-green-500 to-transparent h-[2px] w-3/4 blur-sm" />
