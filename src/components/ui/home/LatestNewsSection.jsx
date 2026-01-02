@@ -10,7 +10,7 @@ const NEWS = [
     title: "Digital Signage Trends Transforming Brand Communication in Dubai",
     desc:
       "Discover how digital signage solutions transform brand communication across retail corporate hospitality environments worldwide today",
-    img:"/assets/images/blog/digital.png",
+    img: "/assets/images/blog/digital.png",
   },
   {
     title: "Smart Home Automation Trends 2026 in UAE",
@@ -39,22 +39,22 @@ export default function LatestNewsSection() {
         {/* Header */}
         <div className="mb-14 md:mb-24 max-w-7xl mx-auto">
           <div className=" mb-4">
-        <SectionTitle title="Latest News"/>
+            <SectionTitle title="Latest News" />
           </div>
 
           <p className="text-gray-300 text-sm md:text-[20px] max-w-2xl  font-medium leading-relaxed">
-          Explore updates, trends, and expert insights in digital signage, AV systems, smart automation, lighting, and content technologies.
+            Explore updates, trends, and expert insights in digital signage, AV systems, smart automation, lighting, and content technologies.
           </p>
         </div>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {NEWS.map((item, idx) => (
             <div key={idx} className="flex flex-col gap-4">
-              
-        {/* IMAGE CARD — WITH 10px GREEN INSIDE GAP */}
-<div
-  className="
+
+              {/* IMAGE CARD — WITH 10px GREEN INSIDE GAP */}
+              <div
+                className="
     w-full
    
    
@@ -65,10 +65,10 @@ export default function LatestNewsSection() {
     rounded-[12px]
     box-border
   "
->
-  {/* INNER GREEN GAP */}
-  <div
-    className="
+              >
+                {/* INNER GREEN GAP */}
+                <div
+                  className="
       w-full
       h-full
       p-[10px]
@@ -76,19 +76,19 @@ export default function LatestNewsSection() {
       rounded-xl
       box-border
     "
-  >
-    {/* IMAGE */}
-    <div className="relative w-full h-full rounded-xl overflow-hidden">
-      <Image
-        src={item.img}
-        alt={item.title}
-        fill
-        className="object-cover"
-        sizes="(max-width: 640px) 90vw, (max-width: 1024px) 260px, 280px"
-      />
-    </div>
-  </div>
-</div>
+                >
+                  {/* IMAGE */}
+                  <div className="relative w-full h-full rounded-xl overflow-hidden">
+                    <Image
+                      src={item.img}
+                      alt={item.title}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 640px) 90vw, (max-width: 1024px) 260px, 280px"
+                    />
+                  </div>
+                </div>
+              </div>
 
 
               {/* Text */}

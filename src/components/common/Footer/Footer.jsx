@@ -9,20 +9,20 @@ export default function Footer() {
 
       {/* Section 1: Gradient Arc Section - Top */}
 
-    <div className="relative h-40 pointer-events-none z-0">
-  
-  {/* Blurred green glow */}
-  <div className="absolute inset-0 
+      <div className="relative h-40 pointer-events-none z-0">
+
+        {/* Blurred green glow */}
+        <div className="absolute inset-0 
     bg-[linear-gradient(0deg,rgba(112,200,121,0.95)_0%,rgba(112,200,121,0.8)_30%,rgba(112,200,121,0.45)_60%,rgba(112,200,121,0.12)_100%)]
     blur-md">
-  </div>
+        </div>
 
-  {/* Sharp black cutout */}
-  <div className="absolute top-20 left-1/2 transform -translate-x-1/2 
+        {/* Sharp black cutout */}
+        <div className="absolute top-20 left-1/2 transform -translate-x-1/2 
     w-[107%] h-40 bg-black rounded-t-[90%] z-10">
-  </div>
+        </div>
 
-</div>
+      </div>
 
 
 
@@ -132,20 +132,15 @@ export default function Footer() {
                     </span>
 
                     <div className="flex flex-col">
-                      <a
-                        href="tel:0567792681"
-                        className="hover:underline"
-                      >
-                        0567792681
+                      <a href="tel:+971567792681" className="hover:underline">
+                        +971 56 779 2681
                       </a>
 
-                      <a
-                        href="tel:0523209987"
-                        className="hover:underline"
-                      >
-                        0523209987
+                      <a href="tel:+971523209987" className="hover:underline">
+                        +971 52 320 9987
                       </a>
                     </div>
+
                   </li>
 
 
@@ -240,13 +235,23 @@ https://www.linkedin.com/company/nas-pixels-technologies/"
         </Container>
         <div className="border-t border-white/10">
           <p className="text-xs text-white/50 text-center py-6">
-            © 2025 Nas Pixels. Published by Next Media Group. All Rights Reserved.
+            © 2026 Nas Pixels. Published by{" "}
+            <a
+              href="https://nextmedia.ae/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="  hover:text-[#70C879] text-[#70C879]/60   transition"
+            >
+              Next Media
+            </a>
+            . All Rights Reserved.
           </p>
-      </div>
+        </div>
+
       </div>
 
       {/* Section 3: Copyright Section - Bottom */}
-      
+
 
       {/* Circuit Lines */}
       <div className=" hidden md:block absolute right-0 bottom-[13%] opacity-70 pointer-events-none">

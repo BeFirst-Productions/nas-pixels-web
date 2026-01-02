@@ -100,7 +100,7 @@ useEffect(() => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: faqSectionRef.current,
-        start: "top 75%",
+        start: "top 90%",
         end: "bottom 25%",
         toggleActions: "restart none restart none",
       },
@@ -110,13 +110,13 @@ useEffect(() => {
       y: 0,
       scale: 1,
       autoAlpha: 1,
-      duration: 0.9,
+      duration: 0.6,
       ease: "power3.out",
     })
       .to(faqTitleRef.current, {
         y: 0,
         autoAlpha: 1,
-        duration: 0.5,
+        duration: 0.4,
         ease: "power3.out",
       })
       .to(faqItemsRef.current, {
@@ -161,7 +161,7 @@ useEffect(() => {
 
       {/* ================= TESTIMONIALS ================= */}
       <Container className="relative z-10 py-16 sm:py-20 md:py-24">
-        <div className="mb-7 md:mb-24">
+        <div className="mb-7 md:mb-24 max-w-7xl mx-auto">
           <SectionTitle title="Testimonials" />
         </div>
 
@@ -173,7 +173,7 @@ useEffect(() => {
           }
         >
           {/* Desktop */}
-          <div className="hidden md:flex items-center justify-center gap-6 w-full">
+          <div className="hidden md:flex items-center  justify-center max-w-7xl mx-auto gap-6 w-full">
             <ArrowButton direction="left" onClick={prev} />
             <div ref={cardRef}>
               <TestimonialCard data={TESTIMONIALS[index]} />
@@ -200,9 +200,9 @@ useEffect(() => {
             <div
             id="faq"
             //   ref={cardRef}
-              className=" mx-w-7xl mx-auto bg-transparent rounded-3xl  pt-6 pb-10 sm:pb-24"
+              className=" max-w-7xl mx-auto  bg-transparent rounded-3xl  pt-6 pb-10 sm:pb-24"
             >
-              <div ref={faqTitleRef} className="pb-7">
+              <div ref={faqTitleRef} className="pb-7 ">
                 <SectionTitle title="FAQ" ClrGradet1="#70C879" />
               </div>
     

@@ -11,102 +11,168 @@ const ROW_HEIGHT = 120;
 
 const products = [
   {
-    title: "Outdoor & Indoor Screens",
-    image: "/assets/images/home-products/outdoor.png",
+    title: "Digital Signage Solutions",
+    image: "/assets/images/home-products/Digital Signage Solutions.jpg",
     row: 0,
     side: "left",
     category: "Commercial LED",
-    subCategories: ["Retail", "Shopping Mall", "Billboards", "Corporate"],
-    description: "Display World’s high-grade outdoor LED screens deliver unmatched brightness, vivid color, and long-lasting durability—perfect for capturing attention, promoting your brand, and maximizing outdoor impact.",
-    pixelPitch: [ "P3", "P4", "P5", "P6","P8","P10"],
+    subCategories: [
+      "Indoor & Outdoor LED Screens",
+      "Video Walls (Fine Pitch, COB, LCD)",
+      "Interactive Digital Kiosks & Touch Displays",
+      "Transparent & Flexible LED Displays",
+      "Drive-Thru / QSR Menu Boards",
+      "Centralized Content Management & Scheduling",
+    ],
+    description:
+      "We deliver advanced digital signage systems that transform communication and customer engagement.",
+    pixelPitch: ["P3", "P4", "P5", "P6", "P8", "P10"],
     cabinet: " Customized, 960mm x 960mm",
     brightness: "4500-10000 Nits",
   },
+
   {
-    title: "Digital Signage Solutions",
-    image: "/assets/images/home-products/digital.png",
+    title: "Static Signage & Wayfinding",
+    image: "/assets/images/home-products/Static Signage & Wayfinding.jpg",
     row: 0,
     side: "right",
     category: "Signage",
-    subCategories: ["Retail", "Airports", "Hospitals", "Corporate"],
-    description: "Professional digital signage displays for retail, corporate & public spaces.",
+    subCategories: [
+      "Architectural & Branding Signage",
+      "Illuminated & Non-Illuminated Solutions",
+      "Wayfinding & Directional Signage Systems",
+      "Safety & Compliance Signage",
+      "Environmental & Decorative Graphics",
+    ],
+    description:
+      "We design and implement effective static signage and wayfinding systems to guide, inform, and inspire.",
     pixelPitch: ["LCD", "4K", "FHD"],
     cabinet: "Various sizes",
     brightness: "700 – 2500 nits",
   },
+
   {
-    title: "Stadium & Sports LED",
-    image: "/assets/images/home-products/stadium.jpg",
+    title: "Audio-Visual System Integration",
+    image: "/assets/images/home-products/Audio-Visual System Integration.jpg",
     row: 1,
     side: "left",
     category: "Sports Display",
-    subCategories: ["Cricket", "Football", "Athletics", "Arenas"],
-    description: "Display World’s Perimeter LED Screen delivers durable, high-impact outdoor performance with vibrant, clear visuals—perfect for showcasing your brand at sports and live events.",
+    subCategories: [
+      "Professional Audio & Public Address Systems",
+      "Video Conferencing & Collaboration Solutions",
+      "Projection & Interactive Display Systems",
+      "Control Rooms & Command Centers",
+      "IPTV & Broadcast Solutions",
+      "Structured Cabling & Networking",
+    ],
+    description:
+      "From boardrooms to large venues, we integrate cutting-edge AV solutions that enhance communication and experiences.",
     pixelPitch: ["P6", "P8", "P10"],
     cabinet: "960 x 960mm",
     brightness: "6000 – 10000 nits",
   },
+
   {
-    title: "Interactive Touch Screens",
-    image: "/assets/images/home-products/interactive.png",
+    title: "Content Creation & Management",
+    image: "/assets/images/home-products/Content Creation & Management.jpg",
     row: 1,
     side: "right",
     category: "Interactive",
-    subCategories: ["Education", "Meeting Rooms", "Collaboration"],
-    description: "Touch-enabled displays for education, meetings and collaboration.",
+    subCategories: [
+      "Motion Graphics & Animations (2D/3D)",
+      "Digital Menu Design & Management",
+      "Interactive & Experiential Content Development",
+      "Dynamic Scheduling & Cloud-Based Updates",
+      "Branding & Creative Consultation",
+    ],
+    description:
+      "We offer creative and technical expertise to keep your screens dynamic and engaging.",
     pixelPitch: ["4K UHD"],
     cabinet: "55\" – 86\"",
     brightness: "400 – 600 nits",
   },
+
   {
-    title: "Rental & Event Screens",
-    image: "/assets/images/home-products/rental.png",
+    title: "Maintenance & Support",
+    image: "/assets/images/home-products/Maintenance & Support.jpg",
     row: 2,
     side: "left",
     category: "Rental",
-    subCategories: ["Concerts", "Exhibitions", "Stage Shows"],
-    description: "Lightweight and modular LED screens for stage, concerts and events.",
+    subCategories: [
+      "Annual Maintenance Contracts (AMC)",
+      "Preventive & Corrective Maintenance",
+      "Remote Monitoring & Support",
+      "Spare Parts & Replacement Services",
+      "On-Site Technical Training",
+    ],
+    description:
+      "Our dedicated support ensures your systems run seamlessly with minimal downtime.",
     pixelPitch: ["P2.9", "P3.9", "P4.8"],
     cabinet: "500 × 500 mm",
     brightness: "4500 – 6000 nits",
   },
+
   {
-    title: "Fine Pixel / UHD Display",
-    image: "/assets/images/home-products/fine-pixel.png",
+    title: "Lighting Solutions",
+    image: "/assets/images/home-products/Stage & Event Lighting Systems.jpg",
     row: 2,
     side: "right",
     category: "Ultra HD",
-    subCategories: ["Control Rooms", "Broadcast", "Boardrooms"],
-    description: "Ultra fine pixel pitch displays for control rooms and premium spaces.",
+    subCategories: [
+      "Architectural & Decorative Lighting",
+      "Facade & Outdoor LED Illumination",
+      "Stage & Event Lighting Systems",
+      "Smart Lighting Controls (DALI, DMX, KNX)",
+      "Energy-Efficient LED Solutions",
+    ],
+    description:
+      "We provide innovative lighting designs that enhance aesthetics and functionality.",
     pixelPitch: ["P0.9", "P1.2", "P1.5"],
     cabinet: "600 × 337.5 mm",
     brightness: "600 – 1000 nits",
   },
+
   {
-    title: "Transparent LED",
-    image: "/assets/images/home-products/transparent.png",
+    title: "Home Cinema & Smart Home Automation",
+    image: "/assets/images/home-products/Home Cinema & Smart Home Automation.jpg",
     row: 3,
     side: "left",
     category: "Architectural",
-    subCategories: ["Showrooms", "Glass Facades", "Retail"],
-    description: "See-through LED screens for showrooms and glass facades.",
+    subCategories: [
+      "Dedicated Home Cinema & Theater Rooms",
+      "Multiroom Audio & Video Distribution",
+      "Smart Home Automation (Lighting, Curtains, HVAC, Security)",
+      "Voice Control Integration (Alexa, Google, Siri)",
+      "Security & Surveillance Systems",
+      "Networking & Wi-Fi Optimization",
+    ],
+    description:
+      "We bring technology and lifestyle together with personalized smart home solutions.",
     pixelPitch: ["P3.9", "P6"],
     cabinet: "1000 × 500 mm",
     brightness: "3000 – 5000 nits",
   },
+
   {
-    title: "Control Room / Command Center",
-    image: "/assets/images/home-products/control-room.png",
+    title: "Consultation & Project Management",
+    image: "/assets/images/home-products/Consultation & Project Management.jpg",
     row: 3,
     side: "right",
     category: "Control Systems",
-    subCategories: ["Monitoring", "Security", "Traffic Control"],
-    description: "Mission-critical display walls for control rooms and monitoring centers.",
+    subCategories: [
+      "Site Surveys & Feasibility Studies",
+      "End-to-End Project Management",
+      "Digital Transformation & Signage Strategy",
+      "Custom Solutions for Corporate, Retail, Hospitality, Healthcare, Education & Government",
+    ],
+    description:
+      "We work with clients at every stage, from concept to completion.",
     pixelPitch: ["P1.2", "P1.5", "P1.8"],
     cabinet: "600 × 337.5 mm",
     brightness: "600 – 1200 nits",
   },
 ];
+
 
 
 export default function ProductsSection() {
@@ -135,9 +201,9 @@ export default function ProductsSection() {
             </div>
 
             {/* CENTER IMAGE */}
-<div className="relative flex flex-col items-center">
-  <CenterImage active={active} />
-</div>
+            <div className="relative flex flex-col items-center">
+              <CenterImage active={active} />
+            </div>
 
             {/* RIGHT */}
             <div className="space-y-[120px] pt-2 text-right">
@@ -148,41 +214,39 @@ export default function ProductsSection() {
           </div>
 
           {/* MOBILE VIEW (Accordion) */}
-        {/* MOBILE VIEW (Accordion) */}
-<div className="md:hidden space-y-4">
-  {products.map((p, i) => {
-    const isOpen = active.title === p.title;
+          {/* MOBILE VIEW (Accordion) */}
+          <div className="md:hidden space-y-4">
+            {products.map((p, i) => {
+              const isOpen = active.title === p.title;
 
-    return (
-      <div key={i} className="rounded-lg border border-[#70C879]/20 overflow-hidden">
-        <button
-          onClick={() => setActive(p)}
-          className={`w-full px-4 py-3 text-left transition ${
-            isOpen ? "text-[#70C879]" : "text-white/80"
-          }`}
-        >
-          {p.title}
-        </button>
+              return (
+                <div key={i} className="rounded-lg border border-[#70C879]/20 overflow-hidden">
+                  <button
+                    onClick={() => setActive(p)}
+                    className={`w-full px-4 py-3 text-left transition ${isOpen ? "text-[#70C879]" : "text-white/80"
+                      }`}
+                  >
+                    {p.title}
+                  </button>
 
-        <div
-          className={`grid transition-all duration-300 ${
-            isOpen ? "grid-rows-[1fr] p-4" : "grid-rows-[0fr]"
-          }`}
-        >
-          <div className="overflow-hidden space-y-4">
+                  <div
+                    className={`grid transition-all duration-300 ${isOpen ? "grid-rows-[1fr] p-4" : "grid-rows-[0fr]"
+                      }`}
+                  >
+                    <div className="overflow-hidden space-y-4">
 
-            {/* Image */}
-            <div className="relative w-full h-[220px] rounded-lg overflow-hidden border border-[#70C879]/30">
-              <Image src={p.image} alt={p.title} fill className="object-contain" />
-            </div>
+                      {/* Image */}
+                      <div className="relative w-full h-[220px] rounded-lg overflow-hidden border border-[#70C879]/30">
+                        <Image src={p.image} alt={p.title} fill className="object-contain rounded-2xl" />
+                      </div>
 
-            {/* Category */}
-            {/* <div className="text-[#70C879] text-xs uppercase tracking-wider">
+                      {/* Category */}
+                      {/* <div className="text-[#70C879] text-xs uppercase tracking-wider">
               {p.category}
             </div> */}
 
-            {/* Sub Categories */}
-            {/* <div className="flex flex-wrap gap-2">
+                      {/* Sub Categories */}
+                      {/* <div className="flex flex-wrap gap-2">
               {p.subCategories.map((s, i) => (
                 <span
                   key={i}
@@ -193,34 +257,34 @@ export default function ProductsSection() {
               ))}
             </div> */}
 
-            {/* Description */}
-            <p className="text-sm text-white/80">{p.description}</p>
+                      {/* Description */}
+                      <p className="text-sm text-white/80">{p.description}</p>
 
-            {/* Specs */}
-            <div className="grid grid-cols-2 gap-3 text-xs text-white/80">
-              <div>
-                <span className="text-white/50">Pixel Pitch</span>
-                <div><span className="text-base">{p.pixelPitch.join(", ")}</span></div>
-              </div>
-              <div>
-                <span className="text-white/50">Cabinet Size</span>
-                <div>{p.cabinet}</div>
-              </div>
-              <div>
-                <span className="text-white/50">Brightness</span>
-                <div>{p.brightness}</div>
-              </div>
-            </div>
- <div>
-             <ModernButton text="View More" onClick={() => router.push("/products")} />
-            </div> 
+                      {/* Specs */}
+                      <div className="grid grid-cols-2 gap-3 text-xs text-white/80">
+                        <div>
+                          <span className="text-white/50">Pixel Pitch</span>
+                          <div><span className="text-base">{p.pixelPitch.join(", ")}</span></div>
+                        </div>
+                        <div>
+                          <span className="text-white/50">Cabinet Size</span>
+                          <div>{p.cabinet}</div>
+                        </div>
+                        <div>
+                          <span className="text-white/50">Brightness</span>
+                          <div>{p.brightness}</div>
+                        </div>
+                      </div>
+                      <div>
+                        <ModernButton text="View More" onClick={() => router.push("/products")} />
+                      </div>
 
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
           </div>
-        </div>
-      </div>
-    );
-  })}
-</div>
 
 
         </div>
@@ -232,18 +296,18 @@ export default function ProductsSection() {
 /* ---------- Desktop Helpers ---------- */
 
 function CenterImage({ active }) {
-    const router = useRouter();
+  const router = useRouter();
   return (
     <div className="w-[380px] flex flex-col">
 
       {/* IMAGE FIXED AT TOP */}
       <div className="sticky top-24 z-20 ">
-        <div className="w-full h-[300px] rounded-xl overflow-hidden  ">
+        <div className="w-full h-[300px]  overflow-hidden  ">
           <Image
             src={active.image}
             alt={active.title}
             fill
-            className="object-contain"
+            className="object-cover rounded-2xl p-2 "
           />
         </div>
       </div>
@@ -272,7 +336,7 @@ function CenterImage({ active }) {
         <p className="text-xl">{active.description}</p>
 
         {/* Specs */}
-        <div className="grid grid-cols-2 gap-3 text-xs">
+        <div className="grid grid-cols-2 gap-3 text-xs p-2">
           <div>
             <span className="text-white/50 text-xl">Pixel Pitch</span>
             <div className="text-white"><span className="text-xl">{active.pixelPitch.join(", ")}</span></div>
@@ -289,8 +353,8 @@ function CenterImage({ active }) {
           </div>
         </div>
         <div>
-             <ModernButton text="View More" onClick={() => router.push("/products")} />
-            </div> 
+          <ModernButton text="View More" onClick={() => router.push("/products")} />
+        </div>
 
       </div>
     </div>
@@ -309,12 +373,11 @@ function Row({ row, side, active, setActive }) {
   return (
     <div
       onMouseEnter={() => setActive(item)}
-      className={`cursor-pointer transition ${
-        isActive ? "text-[#70C879]" : "text-white/70"
-      }`}
+      className={`cursor-pointer transition ${isActive ? "text-[#70C879]" : "text-white/70"
+        }`}
     >
-      <div className={`flex items-center gap-6 ${side === "right" ? "justify-end" : ""}`}>
-        <span className="text-3xl hover:text-[#70C879]">{item.title}</span>
+      <div className={`flex items-center gap-6 max-w-md ${side === "right" ? "justify-end" : ""}`}>
+        <span className="text-2xl hover:text-[#70C879]">{item.title}</span>
       </div>
     </div>
   );

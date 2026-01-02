@@ -152,7 +152,7 @@ Have questions or need help choosing the right display solution? Fill out the fo
             <div className="relative w-[300px] h-[260px] md:w-[500px] md:h-[410px] rounded-2xl overflow-hidden">
               <video
                 ref={videoRef}
-                src="/assets/videos/contact.mp4"
+                src="/assets/videos/Contact.mp4"
                 muted
                 playsInline
                 preload="auto"

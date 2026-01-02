@@ -6,7 +6,7 @@ export default function StorySection() {
     <section className="relative py-24 overflow-hidden bg-[#050B0A]">
 
       {/* Soft background glow */}
-      <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[900px] h-[900px] bg-[#70C879]/10 blur-[140px] rounded-full" />
+      <div id="our-story" className="absolute -top-40 left-1/2 -translate-x-1/2 w-[900px] h-[900px] bg-[#70C879]/10 blur-[140px] rounded-full" />
 
       <div className="relative max-w-6xl mx-auto px-6">
 

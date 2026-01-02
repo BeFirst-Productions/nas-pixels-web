@@ -12,88 +12,88 @@ export default function AboutNasPixels() {
   const imgRef = useRef(null);
 
 
-useEffect(() => {
-  const img = imgRef.current;
+  useEffect(() => {
+    const img = imgRef.current;
 
-  const startAnimation = () => {
-  const ctx = gsap.context(() => {
+    const startAnimation = () => {
+      const ctx = gsap.context(() => {
 
-    // Force image start position BEFORE animation
-    gsap.set(imgRef.current, {
-      x: 160,
-      opacity: 0,
-    });
-
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: sectionRef.current,
-        start: "top 75%",
-        toggleActions: "play reset play reset",
-      },
-    });
-
-    tl.from(".about-text", {
-      x: -120,
-      opacity: 0,
-      duration: 1.2,
-      ease: "power4.out",
-    })
-      .from(
-        ".about-list li",
-        {
-          x: -40,
+        // Force image start position BEFORE animation
+        gsap.set(imgRef.current, {
+          x: 160,
           opacity: 0,
-          stagger: 0.15,
-          duration: 0.6,
-        },
-        "-=0.6"
-      )
-      .to(
-        imgRef.current,
-        {
-          x: 0,
-          opacity: 1,
-          duration: 0.8,
-          ease: "power3.out",
-        },
-        "-=0.4"
-      )
-      .from(
-        ".about-border",
-        {
-          scaleX: 0,
-          transformOrigin: "left center",
-          duration: 1,
-          ease: "power2.out",
-        },
-        "-=0.6"
-      );
+        });
 
-    gsap.to(".about-glow", {
-      opacity: 0.5,
-      scale: 1.2,
-      repeat: -1,
-      yoyo: true,
-      duration: 5,
-      ease: "sine.inOut",
-    });
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: "top 75%",
+            toggleActions: "play reset play reset",
+          },
+        });
 
-  }, sectionRef);
+        tl.from(".about-text", {
+          x: -120,
+          opacity: 0,
+          duration: 1.2,
+          ease: "power4.out",
+        })
+          .from(
+            ".about-list li",
+            {
+              x: -40,
+              opacity: 0,
+              stagger: 0.15,
+              duration: 0.6,
+            },
+            "-=0.6"
+          )
+          .to(
+            imgRef.current,
+            {
+              x: 0,
+              opacity: 1,
+              duration: 0.8,
+              ease: "power3.out",
+            },
+            "-=0.4"
+          )
+          .from(
+            ".about-border",
+            {
+              scaleX: 0,
+              transformOrigin: "left center",
+              duration: 1,
+              ease: "power2.out",
+            },
+            "-=0.6"
+          );
 
-  return () => ctx.revert();
-};
+        gsap.to(".about-glow", {
+          opacity: 0.5,
+          scale: 1.2,
+          repeat: -1,
+          yoyo: true,
+          duration: 5,
+          ease: "sine.inOut",
+        });
 
-  // If image already cached
-  if (img.complete) {
-    startAnimation();
-  } else {
-    img.addEventListener("load", startAnimation);
-  }
+      }, sectionRef);
 
-  return () => {
-    img?.removeEventListener("load", startAnimation);
-  };
-}, []);
+      return () => ctx.revert();
+    };
+
+    // If image already cached
+    if (img.complete) {
+      startAnimation();
+    } else {
+      img.addEventListener("load", startAnimation);
+    }
+
+    return () => {
+      img?.removeEventListener("load", startAnimation);
+    };
+  }, []);
 
 
   return (
@@ -143,11 +143,11 @@ useEffect(() => {
           <div className="relative about-image">
             <div className="about-border relative border-dashed border-[#70C879] border-2 rounded-2xl p-8 max-w-[420px] mx-auto">
               <img
-  ref={imgRef}
-  src="/assets/images/test.png"
-  alt="NAS Pixels Visual Systems"
-  className="about-img w-full h-[380px] object-cover rounded-xl"
-/>
+                ref={imgRef}
+                src="/assets/images/mission_vision/about-nas.png"
+                alt="NAS Pixels Visual Systems"
+                className="about-img w-full h-[380px] object-cover rounded-xl"
+              />
             </div>
           </div>
 

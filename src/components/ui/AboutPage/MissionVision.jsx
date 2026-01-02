@@ -43,10 +43,7 @@ export default function MissionVisionSection() {
                             </div>
 
                             <p className=" text-lg md:text-xl max-w-xl  font-medium leading-relaxed  py-4">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
-                                turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus
-                                nec fringilla accumsan. Maecenas eget condimentum velit, sit amet
-                                feugiat lectus.
+                            Our mission is to deliver high-quality commercial display solutions that help businesses communicate, collaborate, and operate more effectively. We focus on providing reliable, certified screens with expert installation and support to ensure every project performs at the highest standard.
                             </p>
 
                             <div className="w-full flex justify-start">
@@ -100,10 +97,7 @@ export default function MissionVisionSection() {
                             </div>
 
                             <p className=" text-lg md:text-xl max-w-xl font-medium leading-relaxed  py-4">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
-                                turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus
-                                nec fringilla accumsan. Maecenas eget condimentum velit, sit amet
-                                feugiat lectus.
+                               Our vision is to become a trusted leader in display technology by providing innovative, dependable, and future-ready screen solutions. We aim to support businesses worldwide with cutting-edge visual systems that enhance engagement, productivity, and decision-making.
                             </p>
 
                             <div className="w-full flex justify-start">
