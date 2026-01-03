@@ -13,7 +13,7 @@ const page = () => {
        
       />
       <IndoorSlider/>
-      <OutdoorSection/>
+      {/* <OutdoorSection/> */}
       <Footer/>
      
     </div>

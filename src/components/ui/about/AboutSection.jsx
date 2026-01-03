@@ -157,11 +157,11 @@ const router =useRouter()
           opacity: 1,
           x: 0,
           y: 0,
-          duration: 0.8,
+          duration: 0.38,
           ease: "power3.out",
-          stagger: 0.15,
+          stagger: 0.05,
         },
-        "-=0.2"
+        "-=0.85"
       );
   },
 

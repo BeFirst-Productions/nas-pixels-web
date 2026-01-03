@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/common/Navbar/Navbar";
 import { SmoothScrollProvider } from "@/components/providers/smooth-scroll-provider";
 import ScrollToTop from "@/components/common/Scroll/ScrollToTop";
+import EcoPopup from "@/components/common/popup/EcoPopup";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -102,6 +103,8 @@ export default function RootLayout({ children }) {
         <SmoothScrollProvider>
           <Navbar />
           <main className="app-content">
+          <EcoPopup />
+
             {children}
                    <ScrollToTop />
 

@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Image from "next/image";
 import SectionTitle from "@/components/common/Headers/SectionTitle";
 import Container from "@/components/common/layout/Container";
@@ -179,6 +179,7 @@ export default function ProductsSection() {
   const [active, setActive] = useState(products[0]);
 
   const rows = [...new Set(products.map((p) => p.row))];
+const flipRef = useRef(null);
 
   return (
     <section className="relative py-10 md:pt-8  overflow-hidden">
@@ -186,7 +187,7 @@ export default function ProductsSection() {
         <PillerAnimation/>
       <Container>
         <div className="flex justify-center pb-8">
-          <SectionTitle title="Our Products" />
+          <SectionTitle ref={flipRef} title="Our Products" />
         </div>
 
         <div className="max-w-7xl mx-auto">

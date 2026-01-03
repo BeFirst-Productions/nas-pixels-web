@@ -44,7 +44,7 @@ const PillerAnimation = () => {
     <>
       <div
         ref={left}
-        className="hidden md:block absolute inset-y-0 left-0 w-[90px] blur-xl pointer-events-none"
+        className="hidden md:block absolute inset-y-0 left-0 w-[90px]  blur-xl pointer-events-none"
         style={{
           backgroundImage: gradient,
           backgroundSize: "300% 100%",

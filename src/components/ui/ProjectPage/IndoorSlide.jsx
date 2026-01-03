@@ -12,45 +12,67 @@ const slides = [
 ];
 
 export default function IndoorSlider() {
-  const sliderRef = useRef(null);
+  const slider1 = useRef(null);
+  const slider2 = useRef(null);
+
+  // Drag support
   const isDragging = useRef(false);
   const startX = useRef(0);
   const scrollLeft = useRef(0);
+  const activeSlider = useRef(null);
 
-  useEffect(() => {
-    const slider = sliderRef.current;
-    let rafId;
-    const speed = 0.5; // scrolling speed
+ useEffect(() => {
+  const s1 = slider1.current;
+  const s2 = slider2.current;
 
-    // Start in the middle
-    slider.scrollLeft = slider.scrollWidth / 3;
+  const speed = 0.6;
+  let raf;
 
-    const autoScroll = () => {
-      if (!isDragging.current) {
-        slider.scrollLeft += speed;
-      }
+  const width1 = s1.scrollWidth / 3;
+  const width2 = s2.scrollWidth / 3;
 
-      const max = slider.scrollWidth / 3;
+  // Start both in the middle copy
+  s1.scrollLeft = width1;
+  s2.scrollLeft = width2;
 
-      // Infinite teleport
-      if (slider.scrollLeft >= max * 2) {
-        slider.scrollLeft -= max;
-      }
-      if (slider.scrollLeft <= 0) {
-        slider.scrollLeft += max;
-      }
+  const animate = () => {
+    if (!isDragging.current) {
+      // top → right
+      s1.scrollLeft += speed;
 
-      rafId = requestAnimationFrame(autoScroll);
-    };
+      // bottom → left
+      s2.scrollLeft -= speed;
+    }
 
-    autoScroll();
-    return () => cancelAnimationFrame(rafId);
-  }, []);
+    /* TOP (normal direction) */
+    if (s1.scrollLeft >= width1 * 2) {
+      s1.scrollLeft -= width1;
+    }
+    if (s1.scrollLeft <= 0) {
+      s1.scrollLeft += width1;
+    }
 
-  const startDrag = (e) => {
+    /* BOTTOM (reverse direction — IMPORTANT) */
+    if (s2.scrollLeft <= 0) {
+      s2.scrollLeft += width2;
+    }
+    if (s2.scrollLeft >= width2 * 2) {
+      s2.scrollLeft -= width2;
+    }
+
+    raf = requestAnimationFrame(animate);
+  };
+
+  animate();
+  return () => cancelAnimationFrame(raf);
+}, []);
+
+
+  const startDrag = (e, slider) => {
     isDragging.current = true;
+    activeSlider.current = slider;
     startX.current = e.pageX || e.touches[0].pageX;
-    scrollLeft.current = sliderRef.current.scrollLeft;
+    scrollLeft.current = slider.scrollLeft;
   };
 
   const stopDrag = () => {
@@ -62,51 +84,76 @@ export default function IndoorSlider() {
     e.preventDefault();
     const x = e.pageX || e.touches[0].pageX;
     const walk = (x - startX.current) * 1.5;
-    sliderRef.current.scrollLeft = scrollLeft.current - walk;
+    activeSlider.current.scrollLeft = scrollLeft.current - walk;
   };
 
   return (
     <section className="w-full py-10 md:py-20 overflow-hidden">
-          <div className="flex justify-center mb-12">
-                               <SectionTitle title={"Indoor"}/>
-                            </div>
+      <div className="flex justify-center mb-12">
+        <SectionTitle title={"Indoor"} />
+      </div>
+
+      {/* TOP ROW */}
       <div
-        ref={sliderRef}
-        className="w-full overflow-x-scroll overflow-y-hidden scrollbar-hide cursor-grab"
-        onMouseDown={startDrag}
+        ref={slider1}
+        className="w-full overflow-x-scroll scrollbar-hide cursor-grab"
+        onMouseDown={(e) => startDrag(e, slider1.current)}
         onMouseUp={stopDrag}
         onMouseLeave={stopDrag}
         onMouseMove={onDrag}
-        onTouchStart={startDrag}
+        onTouchStart={(e) => startDrag(e, slider1.current)}
         onTouchEnd={stopDrag}
         onTouchMove={onDrag}
       >
         <div className="flex w-max">
           {[...slides, ...slides, ...slides].map((item, i) => (
-            <div
-              key={i}
-              className="w-[400px]  lg:w-[600px] mx-6 flex-shrink-0 backdrop-blur-lg rounded-2xl p-6"
-            >
-              <div className="mb-4 flex justify-center">
-                <div className="relative w-full h-82 rounded-xl p-4 border-2 border-dashed border-[#70C879] flex items-center justify-center">
-                  <div className="w-full h-full flex items-center justify-center">
-                    <Image
-                      src={item.img}
-                      alt={item.title}
-                      width={500}
-                      height={300}
-                      className="max-w-full max-h-full object-cover hover:scale-105"
-                    />
-                  </div>
-                </div>
-              </div>
+            <SlideCard key={i} item={item} />
+          ))}
+        </div>
+      </div>
 
-              <h3 className="text-xl md:text-2xl font-semibold">{item.title}</h3>
-              <p className="text-base md:text-lg leading-relaxed font-medium">{item.desc}</p>
-            </div>
+      {/* BOTTOM ROW (reverse direction) */}
+      <div
+        ref={slider2}
+        className="w-full overflow-x-scroll scrollbar-hide cursor-grab mt-12"
+        onMouseDown={(e) => startDrag(e, slider2.current)}
+        onMouseUp={stopDrag}
+        onMouseLeave={stopDrag}
+        onMouseMove={onDrag}
+        onTouchStart={(e) => startDrag(e, slider2.current)}
+        onTouchEnd={stopDrag}
+        onTouchMove={onDrag}
+      >
+        <div className="flex w-max">
+          {[...slides, ...slides, ...slides].map((item, i) => (
+            <SlideCard key={i} item={item} />
           ))}
         </div>
       </div>
     </section>
+  );
+}
+
+/* Slide Card Component */
+function SlideCard({ item }) {
+  return (
+    <div className="w-[400px] lg:w-[600px] mx-6 flex-shrink-0 backdrop-blur-lg rounded-2xl p-6">
+      <div className="mb-4 flex justify-center">
+        <div className="relative w-full h-82 rounded-xl p-4 border-2 border-dashed border-[#70C879] flex items-center justify-center">
+          <Image
+            src={item.img}
+            alt={item.title}
+            width={500}
+            height={300}
+            className="max-w-full max-h-full object-cover hover:scale-105 transition-transform"
+          />
+        </div>
+      </div>
+
+      <h3 className="text-xl md:text-2xl font-semibold">{item.title}</h3>
+      <p className="text-base md:text-lg leading-relaxed font-medium">
+        {item.desc}
+      </p>
+    </div>
   );
 }
