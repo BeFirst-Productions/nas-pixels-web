@@ -12,6 +12,8 @@ import TrustedBrandsSection from '@/components/ui/home/TrustedBrandsSection';
 import { myImages } from '@/data/HeroSectionData';
 import PartnersSection from '@/components/ui/home/PartnersSection';
 import SolutionsSection from '@/components/ui/home/SolutionsSection';
+import StarProjectSection from '@/components/ui/home/StarProjectSection';
+import StarToSolutionsScene from '@/components/ui/home/StarToSolutionsScene';
 
 
 
@@ -34,7 +36,9 @@ export default function Home() {
       />
       {/* <ProductsSection/> */}
       {/* <TrustedBrandsSection/> */}
-      {/* <SolutionsSection/> */}
+      {/* <StarProjectSection/>
+      <SolutionsSection/> */}
+      <StarToSolutionsScene/>
       <WhyChooseUs/>
       <ProjectsSection/>
       <LatestNewsSection/>
