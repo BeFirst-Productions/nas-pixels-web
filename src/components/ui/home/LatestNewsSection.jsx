@@ -56,11 +56,9 @@ export default function LatestNewsSection() {
               <div
                 className="
     w-full
-   
-   
     aspect-square
     border-2
-    border-dotted
+    border-dashed
     border-[#70C879]
     rounded-[12px]
     box-border

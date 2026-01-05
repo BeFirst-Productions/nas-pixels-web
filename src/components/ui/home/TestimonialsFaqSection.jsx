@@ -211,7 +211,7 @@ useEffect(() => {
                   <div
                     key={idx}
                     ref={(el) => (faqItemsRef.current[idx] = el)}
-                    className="rounded-2xl border-2 border-[#70C879] border-dotted w-full max-w-[1050px] mx-auto"
+                    className="rounded-2xl border-2 border-[#70C879] border-dashed w-full max-w-[1050px] mx-auto"
                   >
                     <button
                       onClick={() =>

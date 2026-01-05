@@ -179,12 +179,12 @@ export default function ProductsSection() {
   const [active, setActive] = useState(products[0]);
 
   const rows = [...new Set(products.map((p) => p.row))];
-const flipRef = useRef(null);
+  const flipRef = useRef(null);
 
   return (
-    <section className="relative py-10 md:pt-8  overflow-hidden">
-         
-        <PillerAnimation/>
+<section className="relative py-10 md:pt-8 overflow-visible md:overflow-hidden min-h-screen">
+
+      <PillerAnimation />
       <Container>
         <div className="flex justify-center pb-8">
           <SectionTitle ref={flipRef} title="Our Products" />
@@ -216,7 +216,7 @@ const flipRef = useRef(null);
 
           {/* MOBILE VIEW (Accordion) */}
           {/* MOBILE VIEW (Accordion) */}
-          <div className="md:hidden space-y-4">
+          <div className="md:hidden space-y-4 ">
             {products.map((p, i) => {
               const isOpen = active.title === p.title;
 
@@ -237,8 +237,8 @@ const flipRef = useRef(null);
                     <div className="overflow-hidden space-y-4">
 
                       {/* Image */}
-                      <div className="relative w-full h-[220px] rounded-lg overflow-hidden border border-[#70C879]/30">
-                        <Image src={p.image} alt={p.title} fill className="object-contain rounded-2xl" />
+                      <div className="relative w-full h-[220px] rounded-lg overflow-hidden ">
+                        <Image src={p.image} alt={p.title} fill className="object-cover rounded-2xl" />
                       </div>
 
                       {/* Category */}
@@ -304,12 +304,16 @@ function CenterImage({ active }) {
       {/* IMAGE FIXED AT TOP */}
       <div className="sticky top-24 z-20 ">
         <div className="w-full h-[300px]  overflow-hidden  ">
-          <Image
-            src={active.image}
-            alt={active.title}
-            fill
-            className="object-cover rounded-2xl p-2 "
-          />
+          <div className="relative w-full h-full overflow-hidden rounded-2xl">
+            <Image
+              key={active.image}
+              src={active.image}
+              alt={active.title}
+              fill
+              className="object-cover p-2 animate-reveal rounded-3xl"
+            />
+          </div>
+
         </div>
       </div>
 

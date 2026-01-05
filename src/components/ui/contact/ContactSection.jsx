@@ -34,7 +34,7 @@ export default function ContactSection() {
       ([entry]) => {
         if (entry.isIntersecting) {
           video.currentTime = 0;
-          video.play().catch(() => {});
+          video.play().catch(() => { });
         } else {
           video.pause();
         }
@@ -69,9 +69,19 @@ export default function ContactSection() {
 
   /* ------------------ Handlers ------------------ */
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-    setErrors({ ...errors, [e.target.name]: "" }); // clear error on change
+    const { name, value } = e.target;
+
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+
+    setErrors((prev) => ({
+      ...prev,
+      [name]: "", // clear only this field’s error
+    }));
   };
+
 
   const validateForm = () => {
     const newErrors = {};
@@ -96,9 +106,9 @@ export default function ContactSection() {
       newErrors.email = "Enter a valid email address";
     }
 
-    if (!formData.product) {
-      newErrors.product = "Please select a product";
-    }
+    // if (!formData.product) {
+    //   newErrors.product = "Please select a product";
+    // }
 
     if (!formData.message.trim()) {
       newErrors.message = "Message is required";
@@ -115,23 +125,36 @@ export default function ContactSection() {
 
     const { name, phone, email, company, product, message } = formData;
 
-    const whatsappMessage = `
+    const whatsappMessage = `NEW INQUIRY FROM  WEBSITE
+
 Name: ${name}
 Phone: ${phone}
 Email: ${email}
-Company & Location: ${company}
-Product: ${product}
+Company & Location: ${company || "N/A"}
+Message: ${message}
+------------------------
+Sent from Website Contact Form`;
 
-Message:
-${message}
-    `;
 
-    const whatsappURL = `https://wa.me/0567792681?text=${encodeURIComponent(
+    const whatsappURL = `https://wa.me/971567792681?text=${encodeURIComponent(
       whatsappMessage
     )}`;
 
     window.open(whatsappURL, "_blank");
+
+    // Clear form after sending
+    setFormData({
+      name: "",
+      phone: "",
+      email: "",
+      company: "",
+      product: "",
+      message: "",
+    });
+
+    setErrors({});
   };
+
 
   return (
     <section
@@ -143,7 +166,7 @@ ${message}
         <div className="max-w-7xl mx-auto mb-14">
           <SectionTitle title="Contact Us" />
           <p className="mt-4 max-w-xl text-gray-400">
-Have questions or need help choosing the right display solution? Fill out the form and our team will get back to you shortly.          </p>
+            Have questions or need help choosing the right display solution? Fill out the form and our team will get back to you shortly.          </p>
         </div>
 
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-5">
@@ -212,7 +235,7 @@ Have questions or need help choosing the right display solution? Fill out the fo
                 onChange={handleChange}
               />
 
-              <div>
+              {/* <div>
                 <label className="block mb-2 text-sm">Select Your Product</label>
                 <select
                   name="product"
@@ -227,7 +250,7 @@ Have questions or need help choosing the right display solution? Fill out the fo
                 {errors.product && (
                   <p className="text-red-400 text-xs mt-1">{errors.product}</p>
                 )}
-              </div>
+              </div> */}
 
               <div>
                 <label className="block mb-2 text-sm">Text your message</label>

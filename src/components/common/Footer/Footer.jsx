@@ -92,7 +92,7 @@ export default function Footer() {
                   </li>
 
                   <li>
-                    <Link href="/" className="cube-link">
+                    <Link href="/privacy-policy" className="cube-link">
                       <span className="cube-text">
                         <span className="front">Privacy & Policy</span>
                         <span className="top">Privacy & Policy</span>

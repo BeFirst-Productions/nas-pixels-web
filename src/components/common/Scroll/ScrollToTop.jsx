@@ -27,8 +27,8 @@ export default function ScrollToTop() {
   return (
     <button
       onClick={scrollToTop}
-    className={`fixed bottom-6 right-6 z-50 
-  w-10 h-10 md:w-14 md:h-14 
+    className={`fixed bottom-14 right-6 z-50 
+  w-14 h-14 
   flex items-center justify-center 
   rounded-full 
   bg-black 

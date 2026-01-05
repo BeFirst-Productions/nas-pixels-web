@@ -38,7 +38,7 @@ export default function Home() {
       {/* <TrustedBrandsSection/> */}
       {/* <StarProjectSection/>
       <SolutionsSection/> */}
-      <StarToSolutionsScene/>
+      {/* <StarToSolutionsScene/> */}
       <WhyChooseUs/>
       <ProjectsSection/>
       <LatestNewsSection/>
