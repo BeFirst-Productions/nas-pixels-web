@@ -4,33 +4,9 @@ import Image from "next/image";
 import Container from "@/components/common/Layout/Container";
 import { ModernButton } from "@/components/common/Button/ModernButton";
 import SectionTitle from "@/components/common/Headers/SectionTitle";
+import { blogs } from "@/data/blogs";
+import Link from "next/link";
 
-const NEWS = [
-  {
-    title: "Digital Signage Trends Transforming Brand Communication in Dubai",
-    desc:
-      "Discover how digital signage solutions transform brand communication across retail corporate hospitality environments worldwide today",
-    img: "/assets/images/blog/digital.png",
-  },
-  {
-    title: "Smart Home Automation Trends 2026 in UAE",
-    desc:
-      "Explore smart home automation trends enhancing comfort security energy efficiency modern residential living spaces globally",
-    img: "/assets/images/blog/smart.png",
-  },
-  {
-    title: "Advanced Audiovisual Integration for Modern Workspaces in UAE",
-    desc:
-      "Learn how advanced audiovisual integration improves collaboration engagement performance workplaces education venues and large environments",
-    img: "/assets/images/blog/advanced.png",
-  },
-  {
-    title: "Innovative Lighting Technologies for Architectural Spaces in Dubai",
-    desc:
-      "Understand innovative lighting technologies shaping architectural aesthetics sustainability intelligent indoor outdoor spaces for future projects",
-    img: "/assets/images/blog/innovative.png",
-  },
-];
 
 export default function LatestNewsSection() {
   return (
@@ -49,8 +25,9 @@ export default function LatestNewsSection() {
 
         {/* Cards */}
         <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {NEWS.map((item, idx) => (
-            <div key={idx} className="flex flex-col gap-4">
+          {blogs.map((item, idx) => (
+            <Link key={idx}               href={`/blog/${item.slug}`}
+ className="flex flex-col gap-4">
 
               {/* IMAGE CARD — WITH 10px GREEN INSIDE GAP */}
               <div
@@ -98,7 +75,7 @@ export default function LatestNewsSection() {
                   {item.desc}
                 </p>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
 

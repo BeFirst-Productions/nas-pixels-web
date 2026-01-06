@@ -30,151 +30,138 @@ export default function Footer() {
       <div className="relative  -mt-4">
         <Container>
           <div className=" pt-4 pb-8">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-12 ">
+           <div className="flex flex-col md:flex-row gap-12">
 
-              {/* Newsletter */}
-              <div className="md:col-span-2">
-                <p className="text-base md:text-xl text-white/80 mb-4 max-w-md">
-                  Ready to turn your vision into reality? Join our newsletter for weekly design insights.
-                </p>
+  {/* Newsletter */}
+  <div className="w-full md:w-1/2">
+    <p className="text-base md:text-xl text-white/80 mb-4 max-w-md">
+      Ready to turn your vision into reality? Join our newsletter for weekly design insights.
+    </p>
 
-                <div className="relative max-w-md">
-                  <input
-                    type="email"
-                    placeholder="Email Address"
-                    className="w-full bg-transparent border-2 border-dashed border-[#70C879] rounded-full pl-5 pr-[130px] py-3 outline-none text-sm text-white placeholder:text-white/40"
-                  />
+    <div className="relative max-w-md">
+      <input
+        type="email"
+        placeholder="Email Address"
+        className="w-full bg-transparent border-2 border-dashed border-[#70C879] rounded-full pl-5 pr-[130px] py-3 outline-none text-sm text-white placeholder:text-white/40"
+      />
 
-                  <button
-                    className="absolute right-4 top-2 bottom-2
-             bg-[#70C879] text-black px-6
-             rounded-md font-semibold text-sm
-             flex items-center justify-center
-             hover:opacity-90 transition"
-                  >
+      <button
+        className="absolute right-4 top-2 bottom-2
+          bg-[#70C879] text-black px-6
+          rounded-md font-semibold text-sm
+          flex items-center justify-center
+          hover:opacity-90 transition"
+      >
+        Subscribe
+      </button>
+    </div>
+  </div>
 
-                    Subscribe
-                  </button>
-                </div>
-              </div>
+  {/* Quick Links */}
+  <div className="w-full md:w-1/4">
+    <h4 className="text-base md:text-lg font-semibold mb-4">Quick Links</h4>
+    <ul className="space-y-3 text-sm text-white/70">
+      <li>
+        <Link href="/about-us" className="cube-link hover:text-white transition">
+          <span className="cube-text">
+            <span className="front">About</span>
+            <span className="top">About</span>
+          </span>
+        </Link>
+      </li>
 
+      <li>
+        <Link href="/projects" className="cube-link">
+          <span className="cube-text">
+            <span className="front">Projects</span>
+            <span className="top">Projects</span>
+          </span>
+        </Link>
+      </li>
 
+      <li>
+        <Link href="/#faq" className="cube-link">
+          <span className="cube-text">
+            <span className="front">FAQ</span>
+            <span className="top">FAQ</span>
+          </span>
+        </Link>
+      </li>
 
+      <li>
+        <Link href="/privacy-policy" className="cube-link">
+          <span className="cube-text">
+            <span className="front">Privacy & Policy</span>
+            <span className="top">Privacy & Policy</span>
+          </span>
+        </Link>
+      </li>
 
-              <div>
-                <h4 className="text-base md:text-lg font-semibold mb-4">Quick Links</h4>
-                <ul className="space-y-3 text-sm text-white/70">
-                  <li>
-                    <Link href="/about-us" className="cube-link hover:text-white transition">
-                      <span className="cube-text">
-                        <span className="front">About</span>
-                        <span className="top">About</span>
-                      </span>
-                    </Link>
-                  </li>
+      <li>
+        <Link href="/blogs" className="cube-link">
+          <span className="cube-text">
+            <span className="front">Blog</span>
+            <span className="top">Blog</span>
+          </span>
+        </Link>
+      </li>
 
-                  <li>
-                    <Link href="/projects" className="cube-link">
-                      <span className="cube-text">
-                        <span className="front">Projects</span>
-                        <span className="top">Projects</span>
-                      </span>
-                    </Link>
-                  </li>
+      <li>
+        <Link href="/#contact" className="cube-link">
+          <span className="cube-text">
+            <span className="front">Contact</span>
+            <span className="top">Contact</span>
+          </span>
+        </Link>
+      </li>
+    </ul>
+  </div>
 
-                  <li>
-                    <Link href="#faq" className="cube-link">
-                      <span className="cube-text">
-                        <span className="front">FAQ</span>
-                        <span className="top">FAQ</span>
-                      </span>
-                    </Link>
-                  </li>
+  {/* Contact */}
+  <div className="w-full md:w-1/4">
+    <h4 className="text-base md:text-lg font-semibold mb-4">Contact Us</h4>
+    <ul className="space-y-4 text-sm text-white/70">
 
-                  <li>
-                    <Link href="/privacy-policy" className="cube-link">
-                      <span className="cube-text">
-                        <span className="front">Privacy & Policy</span>
-                        <span className="top">Privacy & Policy</span>
-                      </span>
-                    </Link>
-                  </li>
+      <li className="flex gap-3 items-center">
+        <span className="w-8 h-8 rounded-full bg-[#70C879] flex items-center justify-center text-[#231F20]">
+          <FaPhoneAlt size={14} />
+        </span>
+        <div className="flex flex-col">
+          <a href="tel:+971567792681" className="hover:underline">
+            +971 56 779 2681
+          </a>
+          <a href="tel:+971523209987" className="hover:underline">
+            +971 52 320 9987
+          </a>
+        </div>
+      </li>
 
-                  <li>
-                    <Link href="/" className="cube-link">
-                      <span className="cube-text">
-                        <span className="front">Blog</span>
-                        <span className="top">Blog</span>
-                      </span>
-                    </Link>
-                  </li>
+      <li className="flex gap-3 items-center">
+        <span className="w-8 h-8 rounded-full bg-[#70C879] flex items-center justify-center text-[#231F20]">
+          <FaEnvelope size={14} />
+        </span>
+        <div className="flex flex-col">
+          <a href="mailto:admin@naspixels.com" className="hover:underline">
+            admin@naspixels.com
+          </a>
+          <a href="mailto:nizam@naspixels.com" className="hover:underline">
+            nizam@naspixels.com
+          </a>
+        </div>
+      </li>
 
-                  <li>
-                    <Link href="/#contact" className="cube-link">
-                      <span className="cube-text">
-                        <span className="front">Contact</span>
-                        <span className="top">Contact</span>
-                      </span>
-                    </Link>
-                  </li>
+      <li className="flex gap-3 items-center">
+        <span className="w-8 h-8 rounded-full bg-[#70C879] flex items-center justify-center text-[#231F20]">
+          <FaMapMarkerAlt size={14} />
+        </span>
+        ARZOO BUILDING, 101 - Al Nahda St - <br /> Al Twar 5 - Dubai
+      </li>
 
-                </ul>
-              </div>
+    </ul>
+  </div>
 
+</div>
 
-              {/* Contact */}
-              <div>
-                <h4 className="text-base md:text-lg font-semibold mb-4">Contact Us</h4>
-                <ul className="space-y-4 text-sm text-white/70">
-                  <li className="flex gap-3 items-center">
-                    <span className="w-8 h-8 rounded-full bg-[#70C879] flex items-center justify-center text-[#231F20]">
-                      <FaPhoneAlt size={14} />
-                    </span>
-
-                    <div className="flex flex-col">
-                      <a href="tel:+971567792681" className="hover:underline">
-                        +971 56 779 2681
-                      </a>
-
-                      <a href="tel:+971523209987" className="hover:underline">
-                        +971 52 320 9987
-                      </a>
-                    </div>
-
-                  </li>
-
-
-                  <li className="flex gap-3 items-center">
-                    <span className="w-8 h-8 rounded-full bg-[#70C879] flex items-center justify-center text-[#231F20]">
-                      <FaEnvelope size={14} />
-                    </span>
-
-                    <div className="flex flex-col">
-                      <a
-                        href="mailto:admin@naspixels.com"
-                        className="hover:underline"
-                      >
-                        admin@naspixels.com
-                      </a>
-
-                      <a
-                        href="mailto:Nisam@naslixels.com"
-                        className="hover:underline"
-                      >
-                        nizam@naspixels.com
-                      </a>
-                    </div>
-                  </li>
-
-                  <li className="flex gap-3 items-center">
-                    <span className="w-8 h-8 rounded-full bg-[#70C879] flex items-center justify-center text-[#231F20]">
-                      <FaMapMarkerAlt size={14} />
-                    </span>
-                    ARZOO BUILDING, 101 - Al Nahda St - <br /> Al Twar 5 - Dubai
-                  </li>
-                </ul>
-              </div>
-            </div>
 
             {/* Bottom Row */}
             <div className="flex flex-col md:flex-row items-center justify-between mt-6 gap-6">

@@ -7,7 +7,7 @@ export default function MissionVisionSection() {
         <section className="relative w-full   py-10 md:py-20">
          <PillerAnimation/>
             <Container>
-                <div className=" grid grid-cols-1 md:grid-cols-2 gap-10">
+                <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
 
                     {/* MISSION CARD */}
                     <div className="relative rounded-2xl  ">

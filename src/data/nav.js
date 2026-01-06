@@ -4,5 +4,6 @@ export const NAV_ITEMS = [
   { label: "SOLUTIONS", href: "/solutions" },
   { label: "PRODUCTS", href: "/products" },
   { label: "PROJECTS", href: "/projects" },
+  { label: "BLOGS", href: "/blogs" },
   { label: "CONTACT", href: "/#contact" },
 ]

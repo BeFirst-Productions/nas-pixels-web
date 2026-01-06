@@ -1,4 +1,5 @@
 "use client";
+import Container from "@/components/common/layout/Container";
 import Image from "next/image";
 
 export default function StorySection() {
@@ -6,7 +7,8 @@ export default function StorySection() {
     <section className="relative py-24 overflow-hidden bg-[#050B0A]">
 
       {/* Soft background glow */}
-      <div id="our-story" className="absolute -top-40 left-1/2 -translate-x-1/2 w-[900px] h-[900px] bg-[#70C879]/10 blur-[140px] rounded-full" />
+   <Container>
+       <div id="our-story" className="max-w-7xl mx-auto absolute -top-40 left-1/2 -translate-x-1/2 w-[900px] h-[900px] bg-[#70C879]/10 blur-[140px] rounded-full" />
 
       <div className="relative max-w-6xl mx-auto px-6">
 
@@ -67,6 +69,7 @@ export default function StorySection() {
         </div>
 
       </div>
+   </Container>
     </section>
   );
 }

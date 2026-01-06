@@ -11,7 +11,7 @@ const AboutSection = () => {
   return (
     <section className="w-full  py-10 md:py-20  flex items-center">
       <Container>
-        <div className=" grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div className=" max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 
           {/* Left Content */}
           <div className="">

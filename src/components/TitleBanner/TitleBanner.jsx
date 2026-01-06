@@ -2,6 +2,7 @@ import React from 'react'
 import Antigravity from '../animation/bg'
 import { SparklesCore } from '../animation/HeroBg'
 import { AnimatedText } from '../animation/AnimatedText'
+import Container from '../common/layout/Container'
 
 const Herosection = ({ title, description }) => {
   return (
@@ -42,12 +43,13 @@ const Herosection = ({ title, description }) => {
   //     </div>
 
   //   </div>
-    <div className="py-28 lg:py-56   w-full  flex flex-col items-center justify-center overflow-hidden rounded-md">
+      <Container>
+    <div className="py-28 lg:py-56   max-w-7xl  flex flex-col items-center justify-center mx-auto overflow-hidden rounded-md">
      
       {/* <h2 className="md:text-7xl text-3xl mb-2 font-bold text-center relative z-20">
         {title}
       </h2> */}
-       <AnimatedText 
+        <AnimatedText 
       text={title} 
       textClassName="md:text-7xl text-3xl mb-2 font-bold text-center relative z-20"
     
@@ -74,6 +76,7 @@ const Herosection = ({ title, description }) => {
         <div className="absolute inset-0 w-full h-full bg-black [mask-image:radial-gradient(350px_200px_at_top,transparent_20%,white)]"></div>
       </div>
     </div>
+     </Container>
   )
 }
 

@@ -76,11 +76,11 @@ export default function CoreServices() {
   }, []);
 
   return (
-    <section ref={sectionRef} className=" py-32 relative overflow-hidden">
-      <div className="glow absolute inset-0  rounded-full" />
-
+    <section ref={sectionRef} className=" py-10 md:py-20 relative overflow-hidden">
       <Container>
-        <div className="text-center mb-24">
+      <div className="glow absolute inset-0  rounded-full max-w-7xl mx-auto" />
+
+        <div className=" text-center mb-24">
           <h2 className="text-5xl font-bold text-white">
             NAS PIXELS <span className="text-[#70C879]">Ecosystem</span>
           </h2>

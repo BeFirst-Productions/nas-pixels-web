@@ -102,7 +102,7 @@ export default function AboutNasPixels() {
       <div className="about-glow absolute inset-0 bg-green-500/10 blur-[140px] rounded-full" />
 
       <Container>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
           {/* LEFT – TEXT */}
           <div className="about-text space-y-6">

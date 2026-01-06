@@ -64,10 +64,10 @@ export default function BottomBanner() {
       className="relative py-10 md:py-20 overflow-hidden"
     >
       {/* Glow background */}
-      <div className="cta-glow absolute inset-0 bg-green-500/10 blur-[140px] rounded-full" />
+      <div className="cta-glow absolute inset-0 rounded-full" />
 
       <Container>
-        <div className="relative z-10 border border-[#70C879] rounded-3xl px-10 py-20 text-center bg-[#06140b]">
+        <div className="relative z-10 max-w-7xl mx-auto  border border-[#70C879] rounded-3xl px-10 py-20 text-center bg-[#06140b]">
 
           <h2 className="cta-title text-4xl md:text-5xl font-bold text-white mb-6">
             Let’s <span className="text-[#70C879]">Work Together</span>

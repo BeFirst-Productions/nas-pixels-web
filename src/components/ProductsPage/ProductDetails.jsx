@@ -5,9 +5,9 @@ import Container from "@/components/common/layout/Container";
 
 export default function ProductDetails({product}) {
   
-  const images = product.images
+  // const images = product.images
 
-  const [activeImage, setActiveImage] = useState(images[0]);
+  // const [activeImage, setActiveImage] = useState(images[0]);
 
   return (
     <section className="  py-16">
@@ -17,13 +17,13 @@ export default function ProductDetails({product}) {
           {/* LEFT — IMAGE GALLERY */}
           <div className="lg:col-span-5 space-y-4">
             <div className="bg-[#06140b] border border-green-500/40 rounded-xl p-4">
-              <img
+              {/* <img
                 src={activeImage}
                 className="w-full h-[420px] object-cover rounded-lg transition-all duration-300"
-              />
+              /> */}
             </div>
 
-            <div className="grid grid-cols-4 gap-3">
+            {/* <div className="grid grid-cols-4 gap-3">
               {images.map((img) => (
                 <img
                   key={img}
@@ -37,7 +37,7 @@ export default function ProductDetails({product}) {
                     }`}
                 />
               ))}
-            </div>
+            </div> */}
           </div>
 
           {/* CENTER — PRODUCT DETAILS */}
