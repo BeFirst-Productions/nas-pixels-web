@@ -1,7 +1,7 @@
 // components/projects/ProjectCard.jsx
 import Image from "next/image";
 
-export default function ProjectCard({ title, location, image }) {
+export default function ProjectCard({ title, location, img }) {
   return (
     <div
       className="
@@ -36,7 +36,7 @@ export default function ProjectCard({ title, location, image }) {
         "
       >
         <Image
-          src={image}
+          src={img}
           alt={title}
           fill
           className="object-cover"

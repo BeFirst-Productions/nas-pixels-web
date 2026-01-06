@@ -4,6 +4,9 @@ import Navbar from "@/components/common/Navbar/Navbar";
 import { SmoothScrollProvider } from "@/components/providers/smooth-scroll-provider";
 import ScrollToTop from "@/components/common/Scroll/ScrollToTop";
 import EcoPopup from "@/components/common/popup/EcoPopup";
+import Footer from "@/components/common/Footer/Footer";
+import GlobalCursor from "@/components/animation/GlobalCursor";
+import FluidSmokeCursor from "@/components/animation/FluidSmokeCursor";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -17,12 +20,12 @@ const geistMono = Geist_Mono({
 
 const inter = Inter({
   subsets: ["latin"],
-  weight: ["500"], 
+  weight: ["500"],
   variable: "--font-inter",
 });
 
 export const metadata = {
-  metadataBase: new URL("https://naspixels.com"), 
+  metadataBase: new URL("https://naspixels.com"),
 
   title: {
     default: "NAS Pixels | Digital Signage & LED Screen Solutions Middle East",
@@ -85,11 +88,10 @@ export const metadata = {
   },
 };
 
-
 export default function RootLayout({ children }) {
   return (
-    <html 
-      lang="en" 
+    <html
+      lang="en"
       suppressHydrationWarning
       className={`${geistSans.variable} ${geistMono.variable} ${inter.variable}`}
     >
@@ -103,12 +105,13 @@ export default function RootLayout({ children }) {
         <SmoothScrollProvider>
           <Navbar />
           <main className="app-content">
-          <EcoPopup />
-
+            <EcoPopup />
+            {/* <FluidSmokeCursor /> */}
+{/* <GlobalCursor /> */}
             {children}
-                   <ScrollToTop />
-
+            <ScrollToTop />
           </main>
+          <Footer />
         </SmoothScrollProvider>
       </body>
     </html>

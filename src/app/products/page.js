@@ -11,7 +11,6 @@ const page = () => {
                 title={"PRODUCTS"} />
             <ShowcaseSection />
             <ContactSection />
-            <Footer />
 
         </div>
     )

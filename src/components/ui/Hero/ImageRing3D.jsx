@@ -7,24 +7,27 @@ import { ModernButton } from "@/components/common/Button/ModernButton";
 
 const DEPTH = 800;
 
-// Default images defined outside component to prevent recreation
-const defaultImages = Array.from({ length: 10 }, (_, i) => 
-  `https://picsum.photos/id/${i + 32}/600/400/`
+// Default media (images still work exactly the same)
+const defaultImages = Array.from(
+  { length: 10 },
+  (_, i) => `https://picsum.photos/id/${i + 32}/600/400/`
 );
 
-export default function ImageRing3D({ 
+const isVideo = (url = "") => url.endsWith(".mp4") || url.endsWith(".webm");
+
+export default function ImageRing3D({
   images = defaultImages,
-  title = "Dorem ipsum dolor sit amet, consectetur adipiscing elit. aliquet mattis.",
+  title = "Transform Visual Communication with Enterprise-Grade LED Display Solutions",
   buttonText = "Our Products",
   onButtonClick = () => {},
-  backgroundImage = ""
+  backgroundImage = "",
 }) {
   const IMAGE_COUNT = images.length;
   const ROTATION_STEP = 360 / IMAGE_COUNT;
 
   const ringRef = useRef(null);
   const imgsRef = useRef([]);
-  const xPos = useRef(0); 
+  const xPos = useRef(0);
   const autoRotateTween = useRef(null);
   const heroRef = useRef(null);
 
@@ -67,7 +70,6 @@ export default function ImageRing3D({
       rotateY: (i) => i * -ROTATION_STEP,
       transformOrigin: `50% 50% ${DEPTH}px`,
       z: -DEPTH,
-      backgroundImage: (i) => `url(${images[i]})`,
       backgroundSize: "cover",
       backgroundPosition: (i) => getBgPos(i),
       backfaceVisibility: "hidden",
@@ -84,19 +86,28 @@ export default function ImageRing3D({
 
     /* ---------------- HOVER ---------------- */
     imgs.forEach((img) => {
-      img.addEventListener("mouseenter", () => {
+      if (!img) return;
+
+      const onEnter = () => {
         gsap.to(imgs, {
           opacity: (i, t) => (t === img ? 1 : 0.5),
           ease: "power3.out",
         });
-      });
+      };
 
-      img.addEventListener("mouseleave", () => {
+      const onLeave = () => {
         gsap.to(imgs, {
           opacity: 1,
           ease: "power2.inOut",
         });
-      });
+      };
+
+      img.addEventListener("mouseenter", onEnter);
+      img.addEventListener("mouseleave", onLeave);
+
+      // cleanup (important)
+      img._onEnter = onEnter;
+      img._onLeave = onLeave;
     });
 
     /* ---------------- DRAG ---------------- */
@@ -142,15 +153,17 @@ export default function ImageRing3D({
       window.removeEventListener("mouseup", dragEnd);
       window.removeEventListener("touchstart", dragStart);
       window.removeEventListener("touchend", dragEnd);
-      if (autoRotateTween.current) {
-        autoRotateTween.current.kill();
-      }
+      autoRotateTween.current?.kill();
+      imgsRef.current.forEach((img) => {
+        if (!img) return;
+        img.removeEventListener("mouseenter", img._onEnter);
+        img.removeEventListener("mouseleave", img._onLeave);
+      });
     };
   }, [images, IMAGE_COUNT, ROTATION_STEP]);
 
   /* ---------------- HELPERS ---------------- */
-  const getClientX = (e) =>
-    e.touches ? e.touches[0].clientX : e.clientX;
+  const getClientX = (e) => (e.touches ? e.touches[0].clientX : e.clientX);
 
   const getBgPos = (i) => {
     const rotY = gsap.getProperty(ringRef.current, "rotationY");
@@ -161,19 +174,15 @@ export default function ImageRing3D({
   };
 
   return (
-    <div 
+    <div
       className="relative w-screen h-screen overflow-hidden"
-      style={{
-        backgroundImage: backgroundImage ? `url(${backgroundImage})` : 'none',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundColor: backgroundImage ? 'transparent' : '#000'
-      }}
+      // style={{
+      //   backgroundImage: backgroundImage ? `url(${backgroundImage})` : "none",
+      //   backgroundSize: "cover",
+      //   backgroundPosition: "center",
+      //   backgroundColor: backgroundImage ? "transparent" : "#000",
+      // }}
     >
-      {/* Background overlay for better text readability */}
-      {/* {backgroundImage && (
-        <div className="absolute inset-0 bg-black/10 z-0" />
-      )} */}
       {/* Hero Section */}
       <div
         ref={heroRef}
@@ -182,16 +191,10 @@ export default function ImageRing3D({
         <h1 className="text-xl md:text-4xl font-bold text-white text-center max-w-2xl mb-8">
           {title}
         </h1>
-{/* <ModernButton text={buttonText}/> */}
       </div>
 
       {/* 3D Carousel */}
-      <div
-        className="absolute inset-0"
-        style={{
-          perspective: "2000px",
-        }}
-      >
+      <div className="absolute inset-0" style={{ perspective: "2000px" }}>
         <div
           ref={ringRef}
           className="absolute left-1/2 top-1/2 w-full h-full"
@@ -204,8 +207,26 @@ export default function ImageRing3D({
             <div
               key={i}
               ref={(el) => (imgsRef.current[i] = el)}
-              className="absolute left-1/2 top-1/2 w-[450px] h-[300px] -ml-[225px] -mt-[150px] rounded-lg"
-            />
+              className="absolute left-1/2 top-1/2 w-[500px] h-[350px] -ml-[225px] -mt-[150px] rounded-lg overflow-hidden"
+            >
+              {isVideo(images[i]) ? (
+                <video
+                  src={images[i]}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  className="w-full h-full object-cover pointer-events-none"
+                />
+              ) : (
+                <img
+                  src={images[i]}
+                  alt=""
+                  draggable={false}
+                  className="w-full h-full object-cover pointer-events-none"
+                />
+              )}
+            </div>
           ))}
         </div>
       </div>

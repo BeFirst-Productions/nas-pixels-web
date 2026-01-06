@@ -128,14 +128,15 @@ export default function ProjectsSection() {
               </div>
 
               {/* DESCRIPTION (use <br> for line control) */}
-              <p
-                ref={descRef}
-                className="text-white text-sm md:text-xl font-medium leading-relaxed"
-              >
-                Morem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus.
-                Sed dignissim, metus nec fringilla accumsan.Risus sem sollicitudin lacus, ut interdum tellus elit sed risus.
-                
-              </p>
+<p
+  ref={descRef}
+  className="text-white text-sm md:text-xl font-medium leading-relaxed"
+>
+  We craft impactful visual solutions that elevate brands, engage audiences,
+  and communicate messages with clarity.Every project reflects our focus on innovation, precision, and design excellence.
+</p>
+
+
             </div>
           </div>
         </Container>

@@ -444,3 +444,14 @@
 .animate-reveal {
   animation: revealFromInside 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
+
+
+
+.fluid-smoke {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(26px);
+  mix-blend-mode: screen;
+  will-change: transform, opacity;
+}
+

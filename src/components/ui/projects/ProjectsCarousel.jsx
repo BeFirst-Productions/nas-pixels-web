@@ -4,7 +4,7 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import ProjectCard from "./ProjectCard";
-import { PROJECTS } from "@/data/projects";
+import { PROJECTS, slides } from "@/data/projects";
 
 export default function ProjectsCarousel() {
   const trackRef = useRef(null);
@@ -57,7 +57,7 @@ export default function ProjectsCarousel() {
         ref={trackRef}
         className="flex gap-6 will-change-transform"
       >
-        {[...PROJECTS, ...PROJECTS].map((item, index) => (
+        {[...slides, ...slides].map((item, index) => (
           <ProjectCard key={index} {...item} />
         ))}
       </div>

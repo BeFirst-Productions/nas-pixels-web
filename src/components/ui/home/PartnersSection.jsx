@@ -40,6 +40,7 @@ const BRANDS = [
   { name: "Dubai International Financial Cenetre", src: "/assets/images/partners/partner-28.png" },
   { name: "DUBAI FITNESS CHALLENGE", src: "/assets/images/partners/partner-29.png" },
 ];
+
 /* Gentle curvature */
 const ARC_Y = [-6, -3, 0, 3, 6, 3, 0, -3];
 
@@ -159,7 +160,7 @@ const PartnersSection = () => {
           ref={pillRef}
           className="
             relative mx-auto
-            max-w-6xl
+            max-w-7xl
           
             bg-white
             rounded-[28px]

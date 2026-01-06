@@ -1,44 +1,7 @@
 "use client";
+import { slides } from "@/data/projects";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
-
-const slides = [
-  {
-    img: "/assets/images/projects/1.5 cob.jpeg",
-    title: "P1.5 Cob HD Screen at Bahrain",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-  },
-  {
-    img: "/assets/images/projects/1.8 Flexible.jpg",
-    title: "P1.8 Flexible Indoor Led screen at Qatar",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris."
-  },
-  {
-    img: "/assets/images/projects/2.5 indoor.jpeg",
-    title: "P2.5 Outdoor LED screen at Abudhabi",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aute irure dolor in reprehenderit in voluptate velit esse."
-  },
-  {
-    img: "/assets/images/projects/3.9 transparent.jpeg",
-    title: "P3.9 outdoor Transparent led screen at Difc Dubai",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa."
-  },
-  {
-    img: "/assets/images/projects/p5 Outdoor.jpeg",
-    title: "P5 7000 nits outdoor led screen at Umm ul qain",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste natus error sit voluptatem."
-  },
-  {
-    img: "/assets/images/projects/P1.5 Riyadh.jpeg",
-    title: "P1.5 Cob at Riyadh",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nemo enim ipsam voluptatem quia voluptas sit aspernatur."
-  },
-  {
-    img: "/assets/images/projects/P1.8 Kuwait.jpeg",
-    title: "P1.8 SMD led Screen at Kuwait",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque porro quisquam est qui dolorem ipsum quia dolor sit."
-  },
-];
 
 
 export default function IndoorSlider() {
@@ -114,7 +77,7 @@ export default function IndoorSlider() {
   };
 
   return (
-    <section className="w-full py-10 md:py-20 overflow-hidden">
+    <section className="w-full py-10 md:py-20 overflow-hidden max-w-[100rem] mx-auto">
       {/* TOP SLIDER */}
       <div
         ref={slider1}
@@ -129,7 +92,7 @@ export default function IndoorSlider() {
       >
         <div className="flex w-max">
           {[...slides, ...slides, ...slides].map((item, i) => (
-            <SlideCard key={i} item={item}  />
+            <SlideCard key={i} item={item} />
           ))}
         </div>
         {/* <div className="flex w-max">
@@ -206,13 +169,28 @@ function SlideCard({ item, onClick }) {
         className="mb-4 flex justify-center cursor-pointer"
         onClick={onClick}
       >
-        <div className="relative w-full h-82 rounded-xl p-4 border-2 border-dashed border-[#70C879] flex items-center justify-center">
+        <div
+          className="
+      relative w-full
+      rounded-xl p-4
+      border-2 border-dashed border-[#70C879]
+      flex items-center justify-center
+      aspect-[16/9]
+    "
+        >
           <Image
             src={item.img}
             alt={item.title}
-            width={500}
-            height={300}
-            className="max-w-full max-h-full object-cover hover:scale-105 transition-transform"
+            fill
+            sizes="(max-width: 768px) 90vw, 600px"
+            className="
+        object-cover
+        p-2
+        md:p-3
+        rounded-2xl
+        transition-transform duration-300
+        hover:scale-105
+      "
           />
         </div>
       </div>

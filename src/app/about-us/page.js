@@ -57,7 +57,6 @@ const page = () => {
       <CoreServices/>
       <BottomBanner/>
       <ContactSection/>
-      <Footer/>
     </div>
   );
 };

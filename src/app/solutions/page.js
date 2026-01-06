@@ -13,7 +13,6 @@ const page = () => {
         title={"SOLUTIONS"}
       />
       <SolutionsSection/>  
-      <Footer/>
      
     </div>
   )
