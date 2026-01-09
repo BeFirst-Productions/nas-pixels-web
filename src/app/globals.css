@@ -6,7 +6,7 @@
   :root {
     --background: #000000;
     --foreground: #ffffff;
-      --navbar-h: 80px;
+    --navbar-h: 80px;
 
   }
 
@@ -15,14 +15,17 @@
     overflow-x: hidden;
   }
 }
+
 @media (min-width: 768px) {
   :root {
     --navbar-h: 135px;
   }
 }
+
 .app-content {
   padding-top: var(--navbar-h);
 }
+
 @layer components {
   .container-custom {
     @apply mx-auto w-full max-w-[1920px] px-4 sm:px-6 lg:px-8 xl:px-[120px];
@@ -74,7 +77,7 @@
 }
 
 .btn-text {
-  @apply font-button font-medium  leading-[26px] text-white/80;
+  @apply font-button font-medium leading-[26px] text-white/80;
 }
 
 
@@ -362,21 +365,26 @@
     stroke-dashoffset: 80;
     opacity: 0;
   }
+
   15% {
     opacity: 1;
   }
+
   100% {
     stroke-dashoffset: 0;
     opacity: 0;
   }
 }
+
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
+
 .scrollbar-hide {
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
+
 .cube-link {
   perspective: 800px;
   display: inline-block;
@@ -387,21 +395,26 @@
   display: inline-block;
   transform-style: preserve-3d;
   transition: transform 0.6s ease;
-  line-height: 1;               /* 👈 prevents vertical shift */
+  line-height: 1;
+  /* 👈 prevents vertical shift */
 }
+
 .cube-text::before {
-  content: attr(data-text);    /* 👈 keeps layout height */
+  content: attr(data-text);
+  /* 👈 keeps layout height */
   visibility: hidden;
   display: block;
   white-space: nowrap;
 }
+
 .cube-text span {
   position: absolute;
   left: 0;
   top: 0;
   width: 100%;
   backface-visibility: hidden;
-  white-space: nowrap;   /* 👈 forces one line */
+  white-space: nowrap;
+  /* 👈 forces one line */
 }
 
 
@@ -421,19 +434,23 @@
   0% {
     background-position: 0% 50%;
   }
+
   100% {
     background-position: 100% 50%;
   }
 }
+
 @keyframes revealFromInside {
   0% {
-    transform: scale(0.85);
-    clip-path: inset(40% 40% 40% 40%);
+    transform: scale(0.95);
+    clip-path: inset(15% 15% 15% 15%);
     opacity: 0;
   }
+
   60% {
     opacity: 1;
   }
+
   100% {
     transform: scale(1);
     clip-path: inset(0 0 0 0);
@@ -442,7 +459,7 @@
 }
 
 .animate-reveal {
-  animation: revealFromInside 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation: revealFromInside 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 
@@ -454,4 +471,3 @@
   mix-blend-mode: screen;
   will-change: transform, opacity;
 }
-

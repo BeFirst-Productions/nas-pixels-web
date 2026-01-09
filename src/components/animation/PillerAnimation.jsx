@@ -6,23 +6,23 @@ const PillerAnimation = () => {
   const left = useRef(null)
   const right = useRef(null)
 
-useEffect(() => {
-  gsap.set([left.current, right.current], {
-    backgroundPositionX: "50%",
-  })
+  useEffect(() => {
+    gsap.set([left.current, right.current], {
+      backgroundPositionX: "50%",
+    })
 
-  const wave = {
-    backgroundPositionX: "80%",
-    duration: 0.9,
-    ease: "sine.inOut",
-    repeat: -1,
-    yoyo: true,
-  }
+    const wave = {
+      backgroundPositionX: "80%",
+      duration: 0.9,
+      ease: "sine.inOut",
+      repeat: -1,
+      yoyo: true,
+    }
 
-  // Both sides move identically
-  gsap.to(left.current, wave)
-  gsap.to(right.current, wave)
-}, [])
+    // Both sides move identically
+    gsap.to(left.current, wave)
+    gsap.to(right.current, wave)
+  }, [])
 
 
 
@@ -42,7 +42,7 @@ useEffect(() => {
     <div className="">
       <div
         ref={left}
-className="hidden md:block absolute inset-y-0 left-0 w-[100px] blur-xl pointer-events-none
+        className="hidden md:block absolute inset-y-0 left-0 w-[100px] blur-xl pointer-events-none
 + rounded-r-[999px]"
         style={{
           backgroundImage: gradient,
@@ -52,7 +52,7 @@ className="hidden md:block absolute inset-y-0 left-0 w-[100px] blur-xl pointer-e
 
       <div
         ref={right}
-className="hidden md:block absolute inset-y-0 right-0 w-[100px] blur-xl pointer-events-none
+        className="hidden md:block absolute inset-y-0 right-0 w-[100px] blur-xl pointer-events-none
 + rounded-l-[999px]"
         style={{
           backgroundImage: gradient,

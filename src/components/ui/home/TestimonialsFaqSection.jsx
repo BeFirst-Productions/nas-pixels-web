@@ -8,7 +8,6 @@ import { ChevronDown } from "lucide-react";
 
 import Container from "@/components/common/Layout/Container";
 import SectionTitle from "@/components/common/Headers/SectionTitle";
-
 import { TESTIMONIALS } from "@/data/TestimonialsSection";
 import TestimonialCard from "../testimonials/TestimonialCard";
 import ArrowButton from "../testimonials/ArrowButton";
@@ -16,54 +15,60 @@ import ArrowButton from "../testimonials/ArrowButton";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function TestimonialsFaqSection() {
-  /* ---------------- TESTIMONIAL STATE ---------------- */
+  /* ================= TESTIMONIALS ================= */
   const [index, setIndex] = useState(0);
   const cardRef = useRef(null);
   const timerRef = useRef(null);
 
-const animateCard = (direction = 1) => {
-  const el = cardRef.current;
+  const slideCard = (direction = 1, callback) => {
+    const el = cardRef.current;
+    if (!el) return;
 
-  // Lock height before changing content to avoid layout jump
-  const height = el.offsetHeight;
-  el.style.height = height + "px";
+    const height = el.offsetHeight;
+    el.style.height = height + "px";
 
-  gsap.fromTo(
-    el,
-    { x: direction * 60, opacity: 0 },
-    {
-      x: 0,
-      opacity: 1,
-      duration: 0.6,
-      ease: "power3.out",
-      clearProps: "height", // unlock height after animation
-    }
-  );
-};
+    const tl = gsap.timeline({
+      onComplete: () => {
+        el.style.height = "auto";
+        callback?.();
+      },
+    });
 
+    tl.to(el, {
+      x: -direction * 80,
+      opacity: 0,
+      duration: 0.45,
+      ease: "power3.inOut",
+    })
+      .set(el, { x: direction * 80 })
+      .to(el, {
+        x: 0,
+        opacity: 1,
+        duration: 0.6,
+        ease: "power3.out",
+      });
+  };
 
   const next = () => {
-    setIndex((prev) => (prev + 1) % TESTIMONIALS.length);
-    animateCard(1);
+    slideCard(1, () => {
+      setIndex((i) => (i + 1) % TESTIMONIALS.length);
+    });
   };
 
   const prev = () => {
-    setIndex((prev) =>
-      prev === 0 ? TESTIMONIALS.length - 1 : prev - 1
-    );
-    animateCard(-1);
+    slideCard(-1, () => {
+      setIndex((i) => (i === 0 ? TESTIMONIALS.length - 1 : i - 1));
+    });
   };
 
   useEffect(() => {
-    timerRef.current = setInterval(next, 2000);
+    timerRef.current = setInterval(next, 5000);
     return () => clearInterval(timerRef.current);
   }, []);
 
-  /* ---------------- FAQ STATE ---------------- */
+  /* ================= FAQ ================= */
   const [openIndex, setOpenIndex] = useState(null);
-
   const faqSectionRef = useRef(null);
-  const faqCardRef = useRef(null);
   const faqTitleRef = useRef(null);
   const faqItemsRef = useRef([]);
   const answerRefs = useRef([]);
@@ -76,64 +81,38 @@ const animateCard = (direction = 1) => {
     { q: "Do you offer ongoing support and annual maintenance after project completion?", a: "Yes, we provide AMC contracts, preventive maintenance, remote monitoring, and dedicated technical support." },
   ];
 
-  /* ---------------- FAQ ENTRY ANIMATION ---------------- */
-useEffect(() => {
-  const ctx = gsap.context(() => {
+  /* FAQ Entrance */
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.set(faqTitleRef.current, { y: -40, opacity: 0 });
+      gsap.set(faqItemsRef.current, { y: 60, opacity: 0 });
 
-    // Initial state (ONLY ONCE)
-    gsap.set(faqCardRef.current, {
-      y: 100,
-      scale: 0.9,
-      autoAlpha: 0,
-    });
-
-    gsap.set(faqTitleRef.current, {
-      y: -40,
-      autoAlpha: 0,
-    });
-
-    gsap.set(faqItemsRef.current, {
-      x: window.innerWidth,
-      autoAlpha: 0,
-    });
-
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: faqSectionRef.current,
-        start: "top 90%",
-        end: "bottom 25%",
-        toggleActions: "restart none restart none",
-      },
-    });
-
-    tl.to(faqCardRef.current, {
-      y: 0,
-      scale: 1,
-      autoAlpha: 1,
-      duration: 0.6,
-      ease: "power3.out",
-    })
-      .to(faqTitleRef.current, {
-        y: 0,
-        autoAlpha: 1,
-        duration: 0.4,
-        ease: "power3.out",
+      gsap.timeline({
+        scrollTrigger: {
+          trigger: faqSectionRef.current,
+          start: "top 85%",
+          toggleActions: "restart none restart none",
+        },
       })
-      .to(faqItemsRef.current, {
-        x: 0,
-        autoAlpha: 1,
-        duration: 0.7,
-        ease: "power3.out",
-        stagger: 0.15,
-      });
+        .to(faqTitleRef.current, {
+          y: 0,
+          opacity: 1,
+          duration: 0.7,
+          ease: "power3.out",
+        })
+        .to(faqItemsRef.current, {
+          y: 0,
+          opacity: 1,
+          duration: 0.8,
+          stagger: 0.15,
+          ease: "power3.out",
+        }, "-=0.4");
+    }, faqSectionRef);
 
-  }, faqSectionRef);
+    return () => ctx.revert();
+  }, []);
 
-  return () => ctx.revert();
-}, []);
-
-
-  /* ---------------- FAQ TOGGLE ANIMATION ---------------- */
+  /* FAQ Toggle Animation */
   useEffect(() => {
     answerRefs.current.forEach((el, idx) => {
       if (!el) return;
@@ -141,110 +120,94 @@ useEffect(() => {
       gsap.to(el, {
         height: openIndex === idx ? "auto" : 0,
         opacity: openIndex === idx ? 1 : 0,
-        duration: 0.4,
-        ease: "power3.out",
+        duration: 0.6,
+        ease: "power4.out",
       });
     });
   }, [openIndex]);
 
   return (
-    <section className="relative w-full overflow-hidden">
-      {/* SHARED BACKGROUND IMAGE */}
-      <div className="absolute inset-0 z-0 pointer-events-none">
-        <Image
-          src="/assets/images/testimonials/testimonial-bg.png"
-          alt="Testimonials & FAQ background"
-          fill
-          className="object-cover object-center"
-        />
-      </div>
+    <section className="relative overflow-hidden">
+      <Image
+        src="/assets/images/testimonials/testimonial-bg.png"
+        alt="bg"
+        fill
+        className="object-cover"
+      />
 
       {/* ================= TESTIMONIALS ================= */}
-      <Container className="relative z-10 py-16 sm:py-20 md:py-24">
-        <div className="mb-7 md:mb-24 max-w-7xl mx-auto">
-          <SectionTitle title="Testimonials" />
-        </div>
-
+      <Container className="relative z-10 py-20">
+        <div className="mb-7 md:mb-24 max-w-7xl mx-auto"> <SectionTitle title="Testimonials" /> </div>
         <div
-          className="relative flex flex-col items-center"
+          className="flex justify-center items-center mt-12"
           onMouseEnter={() => clearInterval(timerRef.current)}
-          onMouseLeave={() =>
-            (timerRef.current = setInterval(next, 5000))
-          }
+          onMouseLeave={() => (timerRef.current = setInterval(next, 5000))}
         >
-          {/* Desktop */}
-          <div className="hidden md:flex items-center  justify-center max-w-7xl mx-auto gap-6 w-full">
-            <ArrowButton direction="left" onClick={prev} />
-            <div ref={cardRef}>
-              <TestimonialCard data={TESTIMONIALS[index]} />
-            </div>
-            <ArrowButton direction="right" onClick={next} />
+          <ArrowButton direction="left" onClick={prev} />
+          <div ref={cardRef} className="mx-6">
+            <TestimonialCard data={TESTIMONIALS[index]} />
           </div>
-
-          {/* Mobile */}
-          <div className="mt-6 w-full flex flex-col items-center md:hidden">
-            <div ref={cardRef}>
-              <TestimonialCard data={TESTIMONIALS[index]} />
-            </div>
-            <div className="flex gap-10 mt-6">
-              <ArrowButton direction="left" onClick={prev} />
-              <ArrowButton direction="right" onClick={next} />
-            </div>
-          </div>
+          <ArrowButton direction="right" onClick={next} />
         </div>
       </Container>
 
       {/* ================= FAQ ================= */}
-      <section ref={faqSectionRef} className="relative z-10 py-12 lg:pb-24 lg:pt-36 overflow-hidden">
-     <Container>
-            <div
+      <section
+        ref={faqSectionRef}
+        className="relative z-10 py-12 lg:pb-24 lg:pt-36 overflow-hidden"
+      >
+        <Container>
+          <div
             id="faq"
-            //   ref={cardRef}
-              className=" max-w-7xl mx-auto  bg-transparent rounded-3xl  pt-6 pb-10 sm:pb-24"
-            >
-              <div ref={faqTitleRef} className="pb-7 ">
-                <SectionTitle title="FAQ" ClrGradet1="#70C879" />
-              </div>
-    
-              <div className="space-y-3">
-                {faqs.map((item, idx) => (
-                  <div
-                    key={idx}
-                    ref={(el) => (faqItemsRef.current[idx] = el)}
-                    className="rounded-2xl border-2 border-[#70C879] border-dashed w-full max-w-[1050px] mx-auto"
+            className="max-w-7xl mx-auto bg-transparent rounded-3xl pt-6 pb-10 sm:pb-24"
+          >
+            {/* Title */}
+            <div ref={faqTitleRef} className="pb-7">
+              <SectionTitle title="FAQ" ClrGradet1="#70C879" />
+            </div>
+
+            {/* FAQ Items */}
+            <div className="space-y-3">
+              {faqs.map((item, idx) => (
+                <div
+                  key={idx}
+                  ref={(el) => (faqItemsRef.current[idx] = el)}
+                  className="rounded-2xl border-2 border-[#70C879] border-dashed w-full max-w-[1050px] mx-auto overflow-hidden"
+                >
+                  <button
+                    onClick={() =>
+                      setOpenIndex(openIndex === idx ? null : idx)
+                    }
+                    className="w-full py-3 md:h-[64px] flex items-center justify-between px-5 sm:px-6 text-left text-white text-sm sm:text-base"
                   >
-                    <button
-                      onClick={() =>
-                        setOpenIndex(openIndex === idx ? null : idx)
-                      }
-                      className="w-full py-3 md:h-[64px] flex items-center justify-between px-5 sm:px-6 text-left text-white text-sm sm:text-base"
-                    >
-                      <span className="pr-4 leading-relaxed">{item.q}</span>
-                      <ChevronDown
-                        className={`w-5 h-5 transition-transform duration-300 ${
-                          openIndex === idx ? "rotate-180" : ""
+                    <span className="pr-4 leading-relaxed">
+                      {item.q}
+                    </span>
+                    <ChevronDown
+                      className={`w-5 h-5 transition-transform duration-300 ${openIndex === idx ? "rotate-180" : ""
                         }`}
-                      />
-                    </button>
-    
-                    {/* Animated Answer */}
-                    <div
-                      ref={(el) => (answerRefs.current[idx] = el)}
-                      className="overflow-hidden h-0 opacity-0"
-                    >
-                      <div className="px-5 sm:px-6 pb-5">
-                        <div className="border-t border-dashed border-[#70C879]/40 mb-4" />
-                        <p className="text-white/90 text-sm leading-relaxed">
-                          {item.a}
-                        </p>
-                      </div>
+                    />
+                  </button>
+
+                  {/* Animated Answer */}
+                  <div
+                    ref={(el) => (answerRefs.current[idx] = el)}
+                    className="overflow-hidden h-0 opacity-0"
+                  >
+                    <div className="px-5 sm:px-6 pb-5">
+                      <div className="border-t border-dashed border-[#70C879]/40 mb-4" />
+                      <p className="text-white/90 text-sm leading-relaxed">
+                        {item.a}
+                      </p>
                     </div>
                   </div>
-                ))}
-              </div>
+                </div>
+              ))}
             </div>
-          </Container>
+          </div>
+        </Container>
       </section>
+
     </section>
   );
 }
