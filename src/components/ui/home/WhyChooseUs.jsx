@@ -91,7 +91,7 @@ export default function WhyChooseUs() {
                   src="/assets/images/whyChoose/why-choose-us.png"
                   alt="Why Choose Us"
                   fill
-                  className="object-cover p-2 rounded-xl"
+                  className="object-cover p-2 rounded-xl hover:scale-105 transition-all duration-300"
                 />
               </div>
             </div>
@@ -134,11 +134,13 @@ export default function WhyChooseUs() {
                     </button>
 
                     <div
-                      className={`overflow-hidden transition-all duration-300 ${isOpen ? "max-h-40 opacity-100" : "max-h-0 opacity-0"
+                      className={`grid overflow-hidden transition-all duration-500 ease-in-out ${isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
                         }`}
                     >
-                      <div className="px-5 pb-5 text-gray-300 text-sm leading-relaxed">
-                        {item.description}
+                      <div className="overflow-hidden">
+                        <div className="px-5 pb-5 text-gray-300 text-sm leading-relaxed">
+                          {item.description}
+                        </div>
                       </div>
                     </div>
                   </div>

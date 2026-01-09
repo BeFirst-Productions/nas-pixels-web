@@ -182,7 +182,7 @@ export default function ProductsSection() {
   const flipRef = useRef(null);
 
   return (
-<section className="relative py-10 md:pt-8 overflow-visible md:overflow-hidden min-h-screen">
+    <section className="relative py-10 md:pt-8 overflow-visible md:overflow-hidden min-h-screen">
 
       <PillerAnimation />
       <Container>
@@ -318,7 +318,7 @@ function CenterImage({ active }) {
       </div>
 
       {/* DETAILS SCROLL BELOW IMAGE */}
-      <div className="mt-6 space-y-4 text-sm text-white/80">
+      <div className="mt-3 space-y-4 text-sm text-white/80">
 
         {/* Category */}
         {/* <div className="text-[#70C879] text-xs uppercase tracking-wider">
@@ -326,22 +326,22 @@ function CenterImage({ active }) {
         </div> */}
 
         {/* Sub Categories */}
-        {/* <div className="flex flex-wrap gap-2">
-          {active.subCategories.map((s, i) => (
+
+        {/* Description */}
+        <p className="text-xl">{active.description}</p>
+        <div className="flex flex-wrap gap-2">
+          {active.subCategories.slice(0, 3).map((s, i) => (
             <span
               key={i}
-              className="px-3 py-1 text-xs rounded-full border border-[#70C879]/40 text-[#70C879]"
+              className="px-3 py-1 text-sm rounded-full border border-[#70C879]/60 bg-[#70C879]/10 text-[#70C879]"
             >
               {s}
             </span>
           ))}
-        </div> */}
-
-        {/* Description */}
-        <p className="text-xl">{active.description}</p>
+        </div>
 
         {/* Specs */}
-        <div className="grid grid-cols-2 gap-3 text-xs p-2">
+        {/* <div className="grid grid-cols-2 gap-2 text-xs p-1">
           <div>
             <span className="text-white/50 text-xl">Pixel Pitch</span>
             <div className="text-white"><span className="text-xl">{active.pixelPitch.join(", ")}</span></div>
@@ -356,7 +356,7 @@ function CenterImage({ active }) {
             <span className="text-white/50 text-xl">Brightness</span>
             <div className="text-white "><span className="text-xl">{active.brightness}</span></div>
           </div>
-        </div>
+        </div> */}
         <div>
           <ModernButton text="View More" onClick={() => router.push("/products")} />
         </div>
