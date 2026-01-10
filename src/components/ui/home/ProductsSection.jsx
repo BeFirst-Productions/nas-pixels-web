@@ -182,7 +182,7 @@ export default function ProductsSection() {
   const flipRef = useRef(null);
 
   return (
-    <section className="relative py-10 md:pt-8 overflow-visible md:overflow-hidden min-h-screen">
+    <section className="relative  py-10 md:pt-8 overflow-visible md:overflow-hidden min-h-screen">
 
       <PillerAnimation />
       <Container>
@@ -215,7 +215,7 @@ export default function ProductsSection() {
           </div>
 
           {/* MOBILE VIEW (Accordion) */}
-          {/* MOBILE VIEW (Accordion) */}
+         
           <div className="md:hidden space-y-4 ">
             {products.map((p, i) => {
               const isOpen = active.title === p.title;
@@ -260,9 +260,18 @@ export default function ProductsSection() {
 
                       {/* Description */}
                       <p className="text-sm text-white/80">{p.description}</p>
-
+ <div className="flex flex-wrap gap-2">
+          {active.subCategories.slice(0, 3).map((s, i) => (
+            <span
+              key={i}
+              className="px-3 py-1 text-sm rounded-full border border-[#70C879]/60 bg-[#70C879]/10 text-[#70C879]"
+            >
+              {s}
+            </span>
+          ))}
+        </div>
                       {/* Specs */}
-                      <div className="grid grid-cols-2 gap-3 text-xs text-white/80">
+                      {/* <div className="grid grid-cols-2 gap-3 text-xs text-white/80">
                         <div>
                           <span className="text-white/50">Pixel Pitch</span>
                           <div><span className="text-base">{p.pixelPitch.join(", ")}</span></div>
@@ -275,7 +284,7 @@ export default function ProductsSection() {
                           <span className="text-white/50">Brightness</span>
                           <div>{p.brightness}</div>
                         </div>
-                      </div>
+                      </div> */}
                       <div>
                         <ModernButton text="View More" onClick={() => router.push("/products")} />
                       </div>

@@ -17,45 +17,54 @@ export default function WhyChooseUs() {
   const sectionRef = useRef(null);
   const titleBlockRef = useRef(null);
   const imageRef = useRef(null);
-  const rightRef = useRef(null);
+  const featureRefs = useRef([]);
 
   const toggle = (index) => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
-  /* ---------------- PROFESSIONAL GSAP ---------------- */
+  /* ================= GSAP SCROLL ANIMATION ================= */
   useEffect(() => {
     const ctx = gsap.context(() => {
+      gsap.set(featureRefs.current, {
+        x: 120,       // slightly more distance
+        opacity: 0,
+      });
+
       gsap.timeline({
         scrollTrigger: {
           trigger: sectionRef.current,
           start: "top bottom",
           end: "center center",
-          scrub: 0.8,                 // 👈 smooth & view-based
+          scrub: 1.5,                // ⬅ slower scroll response
           toggleActions: "play reverse play reverse",
         },
       })
         .from(titleBlockRef.current, {
-          y: -80,
+          y: -120,
           opacity: 0,
-          ease: "power3.out",
+          duration: 1.2,             // ⬅ slower
+          ease: "power2.out",
         })
         .from(
           imageRef.current,
           {
-            y: 80,
-            scale: 0.88,
+            y: 120,
+            scale: 0.85,
             opacity: 0,
-            ease: "power3.out",
+            duration: 1.3,           // ⬅ slower
+            ease: "power2.out",
           },
           "<"
         )
-        .from(
-          rightRef.current,
+        .to(
+          featureRefs.current,
           {
-            x: 100,
-            opacity: 0,
-            ease: "power3.out",
+            x: 0,
+            opacity: 1,
+            duration: 1.1,           // ⬅ slower per item
+            stagger: 0.35,           // ⬅ slow elegant stagger
+            ease: "power2.out",
           },
           "<"
         );
@@ -63,6 +72,7 @@ export default function WhyChooseUs() {
 
     return () => ctx.revert();
   }, []);
+
 
   return (
     <section
@@ -91,17 +101,14 @@ export default function WhyChooseUs() {
                   src="/assets/images/whyChoose/why-choose-us.png"
                   alt="Why Choose Us"
                   fill
-                  className="object-cover p-2 rounded-xl hover:scale-105 transition-all duration-300"
+                  className="object-cover p-2 rounded-xl hover:scale-105 transition-all duration-500"
                 />
               </div>
             </div>
           </div>
 
           {/* RIGHT */}
-          <div
-            ref={rightRef}
-            className="w-full max-w-[500px] flex flex-col justify-self-center lg:justify-self-end"
-          >
+          <div className="w-full max-w-[500px] flex flex-col justify-self-center lg:justify-self-end">
             <div className="flex flex-col gap-4 flex-1 justify-end">
               {FEATURES.map((item, idx) => {
                 const isOpen = openIndex === idx;
@@ -109,6 +116,7 @@ export default function WhyChooseUs() {
                 return (
                   <div
                     key={idx}
+                    ref={(el) => (featureRefs.current[idx] = el)}
                     className="rounded-[14px] border-2 border-dashed border-[#70C879]"
                   >
                     <button
@@ -134,7 +142,9 @@ export default function WhyChooseUs() {
                     </button>
 
                     <div
-                      className={`grid overflow-hidden transition-all duration-500 ease-in-out ${isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
+                      className={`grid overflow-hidden transition-all duration-500 ease-in-out ${isOpen
+                        ? "grid-rows-[1fr] opacity-100"
+                        : "grid-rows-[0fr] opacity-0"
                         }`}
                     >
                       <div className="overflow-hidden">

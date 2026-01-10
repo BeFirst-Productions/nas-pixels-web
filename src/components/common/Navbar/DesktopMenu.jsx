@@ -41,7 +41,7 @@ export function DesktopMenu({ isOpen, onToggle }) {
       {/* CENTER ZONE — Nav Items (only when open) */}
       <div className="flex-1 flex items-center justify-center">
         {isOpen && (
-          <div className="flex items-center gap-6">
+          <div className="flex items-center gap-5">
             {NAV_ITEMS.map(item => (
               <NavLink key={item} label={item} />
             ))}
@@ -50,34 +50,34 @@ export function DesktopMenu({ isOpen, onToggle }) {
       </div>
 
       {/* RIGHT ZONE — Menu Icon (always visible) */}
-   
 
-<div className="flex items-center w-[32px] shrink-0">
-  <button
-    onClick={onToggle}
-    aria-label="Menu toggle"
-    className="flex items-center justify-center rounded-lg hover:bg-white/10 transition"
-    style={{ width: 32, height: 32 }}
-  >
-    {isOpen ? (
-      <Image
-        src="/assets/images/icons/menu-close.png"
-        alt="Close menu"
-        width={20}
-        height={20}
-        priority
-      />
-    ) : (
-      <Image
-        src="/assets/images/icons/menu-icon.png"
-        alt="Open menu"
-        width={20}
-        height={20}
-        priority
-      />
-    )}
-  </button>
-</div>
+
+      <div className="flex items-center w-[32px] shrink-0">
+        <button
+          onClick={onToggle}
+          aria-label="Menu toggle"
+          className="flex items-center justify-center rounded-lg hover:bg-white/10 transition"
+          style={{ width: 32, height: 32 }}
+        >
+          {isOpen ? (
+            <Image
+              src="/assets/images/icons/menu-close.png"
+              alt="Close menu"
+              width={20}
+              height={20}
+              priority
+            />
+          ) : (
+            <Image
+              src="/assets/images/icons/menu-icon.png"
+              alt="Open menu"
+              width={20}
+              height={20}
+              priority
+            />
+          )}
+        </button>
+      </div>
 
     </div>
   );

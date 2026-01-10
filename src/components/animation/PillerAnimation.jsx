@@ -1,5 +1,5 @@
 "use client"
-import React, { useEffect, useRef } from "react"
+import { useEffect, useRef } from "react"
 import gsap from "gsap"
 
 const PillerAnimation = () => {
@@ -7,56 +7,49 @@ const PillerAnimation = () => {
   const right = useRef(null)
 
   useEffect(() => {
+    // Initial soft state
     gsap.set([left.current, right.current], {
-      backgroundPositionX: "50%",
+      opacity: 0.15,
     })
 
-    const wave = {
-      backgroundPositionX: "80%",
-      duration: 0.9,
+    // Glow breathing animation
+    gsap.to([left.current, right.current], {
+      opacity: 0.6,
+      duration: 1.2,
       ease: "sine.inOut",
       repeat: -1,
       yoyo: true,
-    }
-
-    // Both sides move identically
-    gsap.to(left.current, wave)
-    gsap.to(right.current, wave)
+    })
   }, [])
-
-
 
   const gradient = `
     linear-gradient(
-      90deg,
-      rgba(112,200,121,0.1) 0%,
-      rgba(112,200,121,0.6) 20%,
-      rgba(112,200,121,0.2) 40%,
-      rgba(112,200,121,0.7) 60%,
-      rgba(112,200,121,0.2) 80%,
-      rgba(112,200,121,0.5) 100%
+      180deg,
+      rgba(112,200,121,0) 0%,
+      rgba(112,200,121,0.4) 20%,
+      rgba(112,200,121,0.8) 50%,
+      rgba(112,200,121,0.4) 80%,
+      rgba(112,200,121,0) 100%
     )
   `
 
   return (
-    <div className="">
+    <div className="pointer-events-none">
+      {/* LEFT PILLAR */}
       <div
         ref={left}
-        className="hidden md:block absolute inset-y-0 left-0 w-[100px] blur-xl pointer-events-none
-+ rounded-r-[999px]"
+        className="hidden md:block absolute inset-y-0 left-0 w-[100px] blur-2xl rounded-r-[999px]"
         style={{
           backgroundImage: gradient,
-          backgroundSize: "200% 100%",
         }}
       />
 
+      {/* RIGHT PILLAR */}
       <div
         ref={right}
-        className="hidden md:block absolute inset-y-0 right-0 w-[100px] blur-xl pointer-events-none
-+ rounded-l-[999px]"
+        className="hidden md:block absolute inset-y-0 right-0 w-[100px] blur-2xl rounded-l-[999px]"
         style={{
           backgroundImage: gradient,
-          backgroundSize: "200% 100%",
         }}
       />
     </div>
