@@ -1,15 +1,22 @@
+"use client";
+
 import React from 'react'
 import Antigravity from '../animation/bg'
 import { SparklesCore } from '../animation/HeroBg'
 import { AnimatedText } from '../animation/AnimatedText'
+import { useLanguage } from '@/context/LanguageContext'
 
 const PrivacyTitleBanner = ({ title, description }) => {
+  const { t } = useLanguage();
+  const displayTitle = title?.toLowerCase().includes("privacy")
+    ? t("footer.links.privacy", title)
+    : title;
   return (
   
     <div className="py-10 lg:py-20   w-full  flex flex-col items-center justify-center overflow-hidden rounded-md">
 
        <AnimatedText 
-      text={title} 
+      text={displayTitle} 
       textClassName="md:text-7xl text-3xl mb-2 font-bold text-center relative z-20"
     
     />

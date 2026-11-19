@@ -6,10 +6,12 @@ import SolutionCard from "./SolutionCard";
 import { solutions } from "@/data/solutionsData";
 import PillerAnimation from "../../animation/PillerAnimation";
 import Container from "../../common/layout/Container";
+import { useLanguage } from "@/context/LanguageContext";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function SolutionsSection() {
+  const { t } = useLanguage();
   const cardsRef = useRef([]);
 
   useEffect(() => {
@@ -55,7 +57,7 @@ export default function SolutionsSection() {
         <div className="relative max-w-7xl mx-auto px-6">
           <div className="solutions-title text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold">
-              Integrated Visual, Digital & AV Solutions
+              {t("solutionsPage.heading", "Integrated Visual, Digital & AV Solutions")}
             </h2>
             <p className="text-white/70 mt-4 max-w-3xl mx-auto">
               NAS PIXELS delivers immersive technology solutions that transform

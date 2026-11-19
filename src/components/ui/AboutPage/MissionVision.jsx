@@ -1,9 +1,12 @@
+"use client";
 import Image from "next/image";
 import Container from "../../common/Layout/Container";
 import PillerAnimation from "@/components/animation/PillerAnimation";
 import SectionTitle from "@/components/common/Headers/SectionTitle";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function MissionVisionSection() {
+    const { t } = useLanguage();
     return (
         <section className="relative w-full   py-10 md:py-20">
             <PillerAnimation />
@@ -15,7 +18,7 @@ export default function MissionVisionSection() {
                         <div className=" rounded-2xl   h-full flex flex-col gap-5">
 
                             <div className="flex items-center gap-3">
-                                <SectionTitle title="Mission" />
+                                <SectionTitle title={t("aboutPage.mission", "Mission")} />
 
                             </div>
 
@@ -45,7 +48,7 @@ export default function MissionVisionSection() {
                         <div className=" rounded-2xl  h-full flex flex-col gap-5">
 
                             <div className="flex items-center gap-3">
-                                <SectionTitle title="Vision" />
+                                <SectionTitle title={t("aboutPage.vision", "Vision")} />
 
 
                             </div>

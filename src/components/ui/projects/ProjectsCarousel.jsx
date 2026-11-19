@@ -1,12 +1,15 @@
-// components/projects/ProjectsCarousel.jsx
 "use client";
+
+// components/projects/ProjectsCarousel.jsx
 
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import ProjectCard from "./ProjectCard";
 import { PROJECTS, slides } from "@/data/projects";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function ProjectsCarousel() {
+  const { t } = useLanguage();
   const trackRef = useRef(null);
 
   useEffect(() => {
@@ -57,9 +60,19 @@ export default function ProjectsCarousel() {
         ref={trackRef}
         className="flex gap-6 will-change-transform"
       >
-        {[...slides, ...slides].map((item, index) => (
-          <ProjectCard key={index} {...item} />
-        ))}
+        {[...slides, ...slides].map((item, index) => {
+          const slideIdx = index % slides.length;
+          const slideTitle = t(`ourProjects.slides.${slideIdx}.title`, item.title);
+          const slideLocation = t(`ourProjects.slides.${slideIdx}.location`, item.location);
+          return (
+            <ProjectCard
+              key={index}
+              {...item}
+              title={slideTitle}
+              location={slideLocation}
+            />
+          );
+        })}
       </div>
     </div>
   );

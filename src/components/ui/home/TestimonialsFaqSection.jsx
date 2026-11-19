@@ -11,10 +11,12 @@ import SectionTitle from "@/components/common/Headers/SectionTitle";
 import { TESTIMONIALS } from "@/data/TestimonialsSection";
 import TestimonialCard from "../testimonials/TestimonialCard";
 import ArrowButton from "../testimonials/ArrowButton";
+import { useLanguage } from "@/context/LanguageContext";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function TestimonialsFaqSection() {
+  const { t } = useLanguage();
   /* ================= TESTIMONIALS ================= */
   const [index, setIndex] = useState(0);
   const cardRef = useRef(null);
@@ -137,7 +139,9 @@ export default function TestimonialsFaqSection() {
 
       {/* ================= TESTIMONIALS ================= */}
       <Container className="relative z-10 py-20">
-        <div className="mb-7 md:mb-24 max-w-7xl mx-auto"> <SectionTitle title="Testimonials" /> </div>
+        <div className="mb-7 md:mb-24 max-w-7xl mx-auto">
+          <SectionTitle title={t("testimonials.title", "Testimonials")} />
+        </div>
         <div
           className="flex justify-center items-center mt-12"
           onMouseEnter={() => clearInterval(timerRef.current)}
@@ -145,7 +149,13 @@ export default function TestimonialsFaqSection() {
         >
           <ArrowButton direction="left" onClick={prev} />
           <div ref={cardRef} className="mx-6">
-            <TestimonialCard data={TESTIMONIALS[index]} />
+            <TestimonialCard
+              data={{
+                ...TESTIMONIALS[index],
+                testimonial: t(`testimonials.items.${index}.testimonial`, TESTIMONIALS[index]?.testimonial),
+                role: t(`testimonials.items.${index}.role`, TESTIMONIALS[index]?.role),
+              }}
+            />
           </div>
           <ArrowButton direction="right" onClick={next} />
         </div>
@@ -163,46 +173,50 @@ export default function TestimonialsFaqSection() {
           >
             {/* Title */}
             <div ref={faqTitleRef} className="pb-7">
-              <SectionTitle title="FAQ" ClrGradet1="#70C879" />
+              <SectionTitle title={t("faq.title", "FAQ")} ClrGradet1="#70C879" />
             </div>
 
             {/* FAQ Items */}
             <div className="space-y-3">
-              {faqs.map((item, idx) => (
-                <div
-                  key={idx}
-                  ref={(el) => (faqItemsRef.current[idx] = el)}
-                  className="rounded-2xl border-2 border-[#70C879] border-dashed w-full max-w-[1050px] mx-auto overflow-hidden"
-                >
-                  <button
-                    onClick={() =>
-                      setOpenIndex(openIndex === idx ? null : idx)
-                    }
-                    className="w-full py-3 md:h-[64px] flex items-center justify-between px-5 sm:px-6 text-left text-white text-sm sm:text-base"
-                  >
-                    <span className="pr-4 leading-relaxed">
-                      {item.q}
-                    </span>
-                    <ChevronDown
-                      className={`w-5 h-5 transition-transform duration-300 ${openIndex === idx ? "rotate-180" : ""
-                        }`}
-                    />
-                  </button>
-
-                  {/* Animated Answer */}
+              {faqs.map((item, idx) => {
+                const faqQuestion = t(`faq.items.${idx}.q`, item.q);
+                const faqAnswer = t(`faq.items.${idx}.a`, item.a);
+                return (
                   <div
-                    ref={(el) => (answerRefs.current[idx] = el)}
-                    className="overflow-hidden h-0 opacity-0"
+                    key={idx}
+                    ref={(el) => (faqItemsRef.current[idx] = el)}
+                    className="rounded-2xl border-2 border-[#70C879] border-dashed w-full max-w-[1050px] mx-auto overflow-hidden"
                   >
-                    <div className="px-5 sm:px-6 pb-5">
-                      <div className="border-t border-dashed border-[#70C879]/40 mb-4" />
-                      <p className="text-white/90 text-sm leading-relaxed">
-                        {item.a}
-                      </p>
+                    <button
+                      onClick={() =>
+                        setOpenIndex(openIndex === idx ? null : idx)
+                      }
+                      className="w-full py-3 md:h-[64px] flex items-center justify-between px-5 sm:px-6 text-left text-white text-sm sm:text-base"
+                    >
+                      <span className="pr-4 leading-relaxed">
+                        {faqQuestion}
+                      </span>
+                      <ChevronDown
+                        className={`w-5 h-5 transition-transform duration-300 ${openIndex === idx ? "rotate-180" : ""
+                          }`}
+                      />
+                    </button>
+
+                    {/* Animated Answer */}
+                    <div
+                      ref={(el) => (answerRefs.current[idx] = el)}
+                      className="overflow-hidden h-0 opacity-0"
+                    >
+                      <div className="px-5 sm:px-6 pb-5">
+                        <div className="border-t border-dashed border-[#70C879]/40 mb-4" />
+                        <p className="text-white/90 text-sm leading-relaxed">
+                          {faqAnswer}
+                        </p>
+                      </div>
                     </div>
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
         </Container>

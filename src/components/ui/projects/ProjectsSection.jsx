@@ -9,10 +9,12 @@ import ProjectsCarousel from "./ProjectsCarousel";
 import { ModernButton } from "@/components/common/button/ModernButton";
 import SectionTitle from "@/components/common/Headers/SectionTitle";
 import { useRouter } from "next/navigation";
+import { useLanguage } from "@/context/LanguageContext";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function ProjectsSection() {
+  const { t, language } = useLanguage();
   // aurora refs (unchanged)
   const topAurora = useRef(null);
   const bottomAurora = useRef(null);
@@ -49,17 +51,6 @@ export default function ProjectsSection() {
   /* ---------------- TEXT ANIMATION ---------------- */
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // Split description into lines
-      const lines = descRef.current.innerHTML
-        .split("<br>")
-        .map(
-          (line) =>
-            `<span class="block overflow-hidden"><span class="line inline-block">${line}</span></span>`
-        )
-        .join("");
-
-      descRef.current.innerHTML = lines;
-
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: sectionRef.current,
@@ -79,12 +70,11 @@ export default function ProjectsSection() {
         },
         0
       ).from(
-        descRef.current.querySelectorAll(".line"),
+        descRef.current,
         {
           y: 24,
           opacity: 0,
-          duration: 0.6,
-          stagger: 0.12,
+          duration: 0.8,
           ease: "power3.out",
         },
         0
@@ -92,7 +82,7 @@ export default function ProjectsSection() {
     }, sectionRef);
 
     return () => ctx.revert();
-  }, []);
+  }, [language]);
 
   return (
     <section
@@ -124,16 +114,15 @@ export default function ProjectsSection() {
             <div className="max-w-5xl mb-12 md:mb-16">
               {/* HEADING */}
               <div ref={headingRef} className="mb-8">
-                <SectionTitle title="Our Projects" />
+                <SectionTitle title={t("ourProjects.title", "Our Projects")} />
               </div>
 
-              {/* DESCRIPTION (use <br> for line control) */}
+              {/* DESCRIPTION */}
               <p
                 ref={descRef}
                 className="text-white text-sm md:text-xl font-medium leading-relaxed"
               >
-                We craft impactful visual solutions that elevate brands, engage audiences,
-                and communicate messages with clarity.Every project reflects our focus on innovation, precision, and design excellence.
+                {t("ourProjects.description", "We craft impactful visual solutions that elevate brands, engage audiences, and communicate messages with clarity. Every project reflects our focus on innovation, precision, and design excellence.")}
               </p>
 
 
@@ -144,7 +133,7 @@ export default function ProjectsSection() {
         <ProjectsCarousel />
 
         <div className="mt-12 md:mt-16 flex justify-center">
-          <ModernButton text="View more" onClick={() => router.push("/projects")} />
+          <ModernButton text={t("ourProjects.viewMore", "View more")} onClick={() => router.push("/projects")} />
         </div>
       </div>
     </section>

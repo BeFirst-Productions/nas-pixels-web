@@ -46,7 +46,7 @@ export default function Page({ params }) {
 
   return (
     <>
-      <Herosection title={product.title} />
+      <Herosection title={product.title} slug={product.slug} />
       <ProductDetails product={product} />
       <ContactSection />
       

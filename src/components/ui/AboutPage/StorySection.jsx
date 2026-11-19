@@ -1,8 +1,10 @@
 "use client";
 import Container from "@/components/common/layout/Container";
 import Image from "next/image";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function StorySection() {
+  const { t } = useLanguage();
   return (
     <section className="relative py-24 overflow-hidden bg-[#050B0A]">
 
@@ -15,7 +17,7 @@ export default function StorySection() {
         {/* Small label */}
         <div className="flex justify-center mb-6">
           <div className="px-5 py-2 border border-[#70C879]/30 rounded-full text-xs tracking-widest uppercase text-[#70C879]">
-            Our Story
+            {t("aboutPage.ourStory", "Our Story")}
           </div>
         </div>
 

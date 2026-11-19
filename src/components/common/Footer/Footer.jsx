@@ -4,8 +4,10 @@ import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaWhatsapp, FaInstagramSquare, 
 import Container from "../layout/Container";
 import Link from "next/link";
 import Aurora from "@/components/animation/Aurora";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function Footer() {
+  const { t } = useLanguage();
   return (
     <footer className="relative  pt-20 overflow-hidden">
 
@@ -38,13 +40,13 @@ export default function Footer() {
               {/* Newsletter */}
               <div className="w-full md:w-1/2">
                 <p className="text-base md:text-xl text-white/80 mb-4 max-w-md">
-                  Ready to turn your vision into reality? Join our newsletter for weekly design insights.
+                  {t("footer.newsletterTitle", "Ready to turn your vision into reality? Join our newsletter for weekly design insights.")}
                 </p>
 
                 <div className="relative max-w-md">
                   <input
                     type="email"
-                    placeholder="Email Address"
+                    placeholder={t("footer.newsletterPlaceholder", "Email Address")}
                     className="w-full bg-transparent border-2 border-dashed border-[#70C879] rounded-full pl-5 pr-[130px] py-3 outline-none text-sm text-white placeholder:text-white/40"
                   />
 
@@ -55,20 +57,20 @@ export default function Footer() {
           flex items-center justify-center
           hover:opacity-90 transition"
                   >
-                    Subscribe
+                    {t("footer.subscribe", "Subscribe")}
                   </button>
                 </div>
               </div>
 
               {/* Quick Links */}
               <div className="w-full md:w-1/4">
-                <h4 className="text-base md:text-lg font-semibold mb-4">Quick Links</h4>
+                <h4 className="text-base md:text-lg font-semibold mb-4">{t("footer.quickLinks", "Quick Links")}</h4>
                 <ul className="space-y-3 text-sm text-white/70">
                   <li>
                     <Link href="/about-us" className="cube-link hover:text-white transition">
                       <span className="cube-text">
-                        <span className="front">About</span>
-                        <span className="top">About</span>
+                        <span className="front">{t("footer.links.about", "About")}</span>
+                        <span className="top">{t("footer.links.about", "About")}</span>
                       </span>
                     </Link>
                   </li>
@@ -76,16 +78,16 @@ export default function Footer() {
                   <li>
                     <Link href="/projects" className="cube-link">
                       <span className="cube-text">
-                        <span className="front">Projects</span>
-                        <span className="top">Projects</span>
+                        <span className="front">{t("footer.links.projects", "Projects")}</span>
+                        <span className="top">{t("footer.links.projects", "Projects")}</span>
                       </span>
                     </Link>
                   </li>
                   <li>
                     <Link href="/products" className="cube-link">
                       <span className="cube-text">
-                        <span className="front">Products</span>
-                        <span className="top">Products</span>
+                        <span className="front">{t("footer.links.products", "Products")}</span>
+                        <span className="top">{t("footer.links.products", "Products")}</span>
                       </span>
                     </Link>
                   </li>
@@ -93,8 +95,8 @@ export default function Footer() {
                   <li>
                     <Link href="/#faq" className="cube-link">
                       <span className="cube-text">
-                        <span className="front">FAQ</span>
-                        <span className="top">FAQ</span>
+                        <span className="front">{t("footer.links.faq", "FAQ")}</span>
+                        <span className="top">{t("footer.links.faq", "FAQ")}</span>
                       </span>
                     </Link>
                   </li>
@@ -102,8 +104,8 @@ export default function Footer() {
                   <li>
                     <Link href="/privacy-policy" className="cube-link">
                       <span className="cube-text">
-                        <span className="front">Privacy & Policy</span>
-                        <span className="top">Privacy & Policy</span>
+                        <span className="front">{t("footer.links.privacy", "Privacy & Policy")}</span>
+                        <span className="top">{t("footer.links.privacy", "Privacy & Policy")}</span>
                       </span>
                     </Link>
                   </li>
@@ -111,8 +113,8 @@ export default function Footer() {
                   <li>
                     <Link href="/blogs" className="cube-link">
                       <span className="cube-text">
-                        <span className="front">Blog</span>
-                        <span className="top">Blog</span>
+                        <span className="front">{t("footer.links.blog", "Blog")}</span>
+                        <span className="top">{t("footer.links.blog", "Blog")}</span>
                       </span>
                     </Link>
                   </li>
@@ -138,8 +140,8 @@ export default function Footer() {
                       }}
                     >
                       <span className="cube-text">
-                        <span className="front">Contact</span>
-                        <span className="top">Contact</span>
+                        <span className="front">{t("footer.links.contact", "Contact")}</span>
+                        <span className="top">{t("footer.links.contact", "Contact")}</span>
                       </span>
                     </Link>
                   </li>
@@ -148,7 +150,7 @@ export default function Footer() {
 
               {/* Contact */}
               <div className="w-full md:w-1/4">
-                <h4 className="text-base md:text-lg font-semibold mb-4">Contact Us</h4>
+                <h4 className="text-base md:text-lg font-semibold mb-4">{t("footer.contactUs", "Contact Us")}</h4>
                 <ul className="space-y-4 text-sm text-white/70">
 
                   <li className="flex gap-3 items-center">

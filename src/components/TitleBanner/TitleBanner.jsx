@@ -1,14 +1,37 @@
+"use client";
+
 import React from 'react'
 import Antigravity from '../animation/bg'
 import { SparklesCore } from '../animation/HeroBg'
 import { AnimatedText } from '../animation/AnimatedText'
 import Container from '../common/layout/Container'
 import { Zen_Dots } from "next/font/google";
+import { useLanguage } from "@/context/LanguageContext";
+import { getLocalizedProductTitle } from "@/data/localizedProducts";
+import { getLocalizedBlogTitle } from "@/data/localizedBlogs";
+
 const zenDots = Zen_Dots({
   subsets: ["latin"],
   weight: "400",
 });
-const Herosection = ({ title, description }) => {
+
+const TITLE_MAP = {
+  "about us": "nav.aboutUs",
+  "solutions": "nav.solutions",
+  "products": "nav.products",
+  "projects": "nav.projects",
+  "blogs": "nav.blogs",
+  "contact": "nav.contact",
+  "home": "nav.home",
+};
+
+const Herosection = ({ title, description, slug }) => {
+  const { t, language } = useLanguage();
+  const rawTitle = title || "";
+  const navKey = TITLE_MAP[rawTitle.trim().toLowerCase()];
+  const productTitle = slug ? getLocalizedProductTitle(slug, language) : null;
+  const blogTitle = slug ? getLocalizedBlogTitle(slug, language) : null;
+  const displayTitle = productTitle || blogTitle || (navKey ? t(navKey, rawTitle) : rawTitle);
   return (
     //   <div className="relative w-full min-h-screen flex items-center justify-center overflow-hidden">
 
@@ -54,7 +77,7 @@ const Herosection = ({ title, description }) => {
         {title}
       </h2> */}
         <AnimatedText
-          text={title}
+          text={displayTitle}
           textClassName={`${zenDots.className} md:text-7xl text-3xl mb-2 text-center relative z-20`}
 
         />

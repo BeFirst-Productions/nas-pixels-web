@@ -5,10 +5,12 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Container from "@/components/common/layout/Container";
 import SectionTitle from "@/components/common/Headers/SectionTitle";
+import { useLanguage } from "@/context/LanguageContext";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function AboutNasPixels() {
+  const { t } = useLanguage();
   const sectionRef = useRef(null);
   const imgRef = useRef(null);
 
@@ -107,7 +109,7 @@ export default function AboutNasPixels() {
 
           {/* LEFT – TEXT */}
           <div className="about-text space-y-6">
-            <SectionTitle title="About NAS PIXELS" />
+            <SectionTitle title={t("homeAbout.title", "About NAS PIXELS")} />
 
             <p className="leading-relaxed">
               At <span className="text-[#70C879] font-semibold">NAS PIXELS</span>,
@@ -119,7 +121,7 @@ export default function AboutNasPixels() {
 
             <div className="pt-4">
               <h3 className="text-xl font-semibold mb-4">
-                Why NAS PIXELS
+                {t("whyChooseUs.title", "Why NAS PIXELS")}
               </h3>
 
               <ul className="about-list space-y-3">

@@ -4,13 +4,15 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Container from "@/components/common/layout/Container";
+import { useLanguage } from "@/context/LanguageContext";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function CoreServices() {
+  const { t } = useLanguage();
   const sectionRef = useRef(null);
 
-  const services = [
+  const defaultServices = [
     {
       title: "Digital Display Solutions",
       tag: "High-Impact Visual Communication",
@@ -55,6 +57,9 @@ export default function CoreServices() {
     },
   ];
 
+  const localizedList = t("aboutPage.servicesList");
+  const services = Array.isArray(localizedList) && localizedList.length > 0 ? localizedList : defaultServices;
+
   useEffect(() => {
     const cards = gsap.utils.toArray(".service-card");
 
@@ -94,10 +99,10 @@ export default function CoreServices() {
 
         <div className=" text-center mb-24">
           <h2 className="text-5xl font-bold text-white">
-            NAS PIXELS <span className="text-[#70C879]">Ecosystem</span>
+            {t("aboutPage.ecosystem.title", "NAS PIXELS Ecosystem")}
           </h2>
           <p className=" mt-6 max-w-3xl mx-auto">
-            A fully connected technology stack for displays, AV, immersive spaces, and experiences.
+            {t("aboutPage.ecosystem.subtitle", "A fully connected technology stack for displays, AV, immersive spaces, and experiences.")}
           </p>
         </div>
 

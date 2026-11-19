@@ -6,9 +6,11 @@ import Container from "../../common/Layout/Container";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import SectionTitle from "@/components/common/Headers/SectionTitle";
+import { useLanguage } from "@/context/LanguageContext";
 
 const AboutSection = () => {
-  const router = useRouter()
+  const router = useRouter();
+  const { t } = useLanguage();
   return (
     <section className="w-full  py-10 md:py-20  flex items-center">
       <Container>
@@ -17,7 +19,7 @@ const AboutSection = () => {
           {/* Left Content */}
           <div className="">
             <div className="flex items-center gap-3">
-              <SectionTitle title="About Us" />
+              <SectionTitle title={t("nav.aboutUs", "About Us")} />
             </div>
 
             <p className=" text-lg md:text-xl  font-medium leading-relaxed  py-4">
@@ -29,14 +31,7 @@ const AboutSection = () => {
 
             </p>
 
-            {/* <Link
-            href="/about"
-            className="inline-flex items-center gap-3 px-6 py-3 bg-green-600 hover:bg-green-700 text-white rounded-full transition"
-          >
-            More About Us
-            <span className="text-lg">→</span>
-          </Link> */}
-            <ModernButton text="Learn Our Story" onClick={() => router.push("#our-story")} />
+            <ModernButton text={t("aboutPage.learnOurStory", "Learn Our Story")} onClick={() => router.push("#our-story")} />
           </div>
 
           {/* Right Image/Card */}

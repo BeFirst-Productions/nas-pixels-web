@@ -4,6 +4,8 @@ import { useState } from "react";
 import Link from "next/link";
 import Container from "../common/layout/Container";
 import { products } from "@/data/Products";
+import { useLanguage } from "@/context/LanguageContext";
+import { getLocalizedProduct } from "@/data/localizedProducts";
 
 /* ================= CATEGORIES ================= */
 
@@ -18,9 +20,21 @@ const categories = [
   "Static Signage & Wayfinding",
 ];
 
+const CATEGORY_MAP = {
+  "Digital Signage Solutions": "products.01.title",
+  "Audio-Visual System Integration": "products.02.title",
+  "Maintenance & Support": "products.03.title",
+  "Home Cinema & Smart Home Automation": "products.04.title",
+  "Static Signage & Wayfinding": "products.05.title",
+  "Content Creation & Management": "products.06.title",
+  "Lighting Solutions": "products.07.title",
+  "Consultation & Project Management": "products.08.title",
+};
+
 /* ================= MAIN COMPONENT ================= */
 
 export default function ProductPipeline() {
+  const { t } = useLanguage();
   const [activeCategory, setActiveCategory] = useState("Digital Signage Solutions");
 
   const filtered =
@@ -48,30 +62,36 @@ export default function ProductPipeline() {
               onChange={(e) => setActiveCategory(e.target.value)}
               className="w-full bg-[#06140b] border-dashed border border-[#70C879] rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-1 focus:ring-[#70C879]"
             >
-              {categories.map((cat) => (
-                <option key={cat} value={cat} className="bg-[#06140b]">
-                  {cat}
-                </option>
-              ))}
+              {categories.map((cat) => {
+                const label = CATEGORY_MAP[cat] ? t(CATEGORY_MAP[cat], cat) : cat;
+                return (
+                  <option key={cat} value={cat} className="bg-[#06140b]">
+                    {label}
+                  </option>
+                );
+              })}
             </select>
           </div>
 
           {/* Desktop (Buttons) */}
           <div className="hidden lg:flex flex-wrap justify-center gap-4 max-w-7xl mx-auto">
-            {categories.map((cat) => (
-              <button
-                key={cat}
-                onClick={() => setActiveCategory(cat)}
-                className={`px-6 py-3 rounded-full text-sm md:text-base font-medium transition border-dashed border border-[#70C879]
-        ${activeCategory === cat
-                    ? "bg-[#16572D] shadow-[0_0_15px_rgba(112,200,121,0.6)]"
-                    : "hover:bg-[#16572D]"
-                  }
-      `}
-              >
-                {cat}
-              </button>
-            ))}
+            {categories.map((cat) => {
+              const label = CATEGORY_MAP[cat] ? t(CATEGORY_MAP[cat], cat) : cat;
+              return (
+                <button
+                  key={cat}
+                  onClick={() => setActiveCategory(cat)}
+                  className={`px-6 py-3 rounded-full text-sm md:text-base font-medium transition border-dashed border border-[#70C879]
+          ${activeCategory === cat
+                      ? "bg-[#16572D] shadow-[0_0_15px_rgba(112,200,121,0.6)]"
+                      : "hover:bg-[#16572D]"
+                    }
+        `}
+                >
+                  {label}
+                </button>
+              );
+            })}
           </div>
 
 
@@ -128,11 +148,14 @@ function Grid({ items }) {
 /* ================= CARD ================= */
 
 function Card({ title, desc, thumbnail, slug }) {
+  const { language } = useLanguage();
+  const localized = getLocalizedProduct({ slug, title, desc }, language);
+  const displayTitle = localized?.title || title;
+  const displayDesc = localized?.desc || desc;
+
   return (
     <Link
       href={`/products/${slug}`}
-      // href={`/products`}
-
       className="block w-full h-[450px] group">
       <div className="relative group w-full h-[450px]">
 
@@ -154,17 +177,17 @@ function Card({ title, desc, thumbnail, slug }) {
             <img
               src={thumbnail}
               className="w-full h-full object-cover rounded-lg"
-              alt={title}
+              alt={displayTitle}
             />
           </div>
 
           {/* Content */}
           <div className="h-[25%] p-4 bg-[#16572D] flex flex-col justify-center">
             <h3 className="text-lg md:text-xl font-semibold mb-1">
-              {title}
+              {displayTitle}
             </h3>
             <p className="text-xs leading-tight">
-              {desc}
+              {displayDesc}
             </p>
           </div>
 

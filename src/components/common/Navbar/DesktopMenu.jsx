@@ -42,8 +42,8 @@ export function DesktopMenu({ isOpen, onToggle }) {
       <div className="flex-1 flex items-center justify-center">
         {isOpen && (
           <div className="flex items-center gap-5">
-            {NAV_ITEMS.map(item => (
-              <NavLink key={item} label={item} />
+            {NAV_ITEMS.map((item, idx) => (
+              <NavLink key={item.href || item.label || idx} label={item} />
             ))}
           </div>
         )}

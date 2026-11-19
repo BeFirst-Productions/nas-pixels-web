@@ -1,6 +1,24 @@
-import Link from "next/link"
+"use client";
+
+import Link from "next/link";
+import { useLanguage } from "@/context/LanguageContext";
+
+const NAV_KEY_MAP = {
+  "home": "nav.home",
+  "about us": "nav.aboutUs",
+  "solutions": "nav.solutions",
+  "products": "nav.products",
+  "projects": "nav.projects",
+  "blogs": "nav.blogs",
+  "contact": "nav.contact",
+};
 
 export function NavLink({ label, onClick, mobile }) {
+  const { t } = useLanguage();
+  const rawLabel = label?.label || "";
+  const navKey = NAV_KEY_MAP[rawLabel.toLowerCase()];
+  const displayLabel = navKey ? t(navKey, rawLabel) : rawLabel;
+
   return (
     <Link
       href={label.href}
@@ -31,7 +49,7 @@ export function NavLink({ label, onClick, mobile }) {
         : "text-[11px] text-white hover:text-[#70C879]"
         }`}
     >
-      {label.label}
+      {displayLabel}
     </Link>
-  )
+  );
 }

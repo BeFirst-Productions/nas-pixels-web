@@ -6,11 +6,13 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Container from "@/components/common/layout/Container";
 import { ModernButton } from "@/components/common/button/ModernButton";
 import { useRouter } from "next/navigation";
+import { useLanguage } from "@/context/LanguageContext";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function BottomBanner() {
   const router = useRouter();
+  const { t } = useLanguage();
   const sectionRef = useRef(null);
 
   useEffect(() => {
@@ -70,7 +72,7 @@ export default function BottomBanner() {
         <div className="relative z-10 max-w-7xl mx-auto  border border-[#70C879] rounded-3xl px-10 py-20 text-center bg-[#06140b]">
 
           <h2 className="cta-title text-4xl md:text-5xl font-bold text-white mb-6">
-            Let’s <span className="text-[#70C879]">Work Together</span>
+            {t("aboutPage.workTogether", "Let’s Work Together")}
           </h2>
 
           <p className="cta-text max-w-3xl mx-auto text-lg leading-relaxed mb-10">
@@ -82,7 +84,7 @@ export default function BottomBanner() {
 
           <div className="cta-button inline-block">
             <ModernButton
-              text="Contact Us Today"
+              text={t("aboutPage.contactToday", "Contact Us Today")}
               onClick={() => router.push("#contact")}
             />
           </div>

@@ -7,8 +7,10 @@ import SectionTitle from "@/components/common/Headers/SectionTitle";
 import Container from "@/components/common/Layout/Container";
 import { ModernButton } from "@/components/common/button/ModernButton";
 import { Input } from "@/components/common/Input/Input";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function ContactSection() {
+  const { t } = useLanguage();
   const sectionRef = useRef(null);
   const leftRef = useRef(null);
   const rightRef = useRef(null);
@@ -164,9 +166,10 @@ Sent from Website Contact Form`;
     >
       <Container>
         <div className="max-w-7xl mx-auto mb-14">
-          <SectionTitle title="Contact Us" />
+          <SectionTitle title={t("contact.title", "Contact Us")} />
           <p className="mt-4 max-w-xl text-gray-400">
-            Have questions or need help choosing the right display solution? Fill out the form and our team will get back to you shortly.          </p>
+            {t("contact.description", "Have questions or need help choosing the right display solution? Fill out the form and our team will get back to you shortly.")}
+          </p>
         </div>
 
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-5">
@@ -193,7 +196,7 @@ Sent from Website Contact Form`;
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <Input
-                    label="Name"
+                    label={t("contact.name", "Name")}
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
@@ -205,7 +208,7 @@ Sent from Website Contact Form`;
 
                 <div>
                   <Input
-                    label="Phone Number"
+                    label={t("contact.phone", "Phone Number")}
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
@@ -218,7 +221,7 @@ Sent from Website Contact Form`;
 
               <div>
                 <Input
-                  label="Email"
+                  label={t("contact.email", "Email")}
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
@@ -229,31 +232,14 @@ Sent from Website Contact Form`;
               </div>
 
               <Input
-                label="Company name & Location"
+                label={t("contact.company", "Company name & Location")}
                 name="company"
                 value={formData.company}
                 onChange={handleChange}
               />
 
-              {/* <div>
-                <label className="block mb-2 text-sm">Select Your Product</label>
-                <select
-                  name="product"
-                  value={formData.product}
-                  onChange={handleChange}
-                  className="w-full bg-transparent neon-dotted rounded-xl px-4 py-3 text-sm focus:outline-none"
-                >
-                  <option value="">Select product</option>
-                  <option value="Product 1">Product 1</option>
-                  <option value="Product 2">Product 2</option>
-                </select>
-                {errors.product && (
-                  <p className="text-red-400 text-xs mt-1">{errors.product}</p>
-                )}
-              </div> */}
-
               <div>
-                <label className="block mb-2 text-sm">Text your message</label>
+                <label className="block mb-2 text-sm">{t("contact.message", "Text your message")}</label>
                 <textarea
                   name="message"
                   rows="4"
@@ -267,7 +253,7 @@ Sent from Website Contact Form`;
               </div>
 
               <div className="mt-8 flex justify-center">
-                <ModernButton text="Send via WhatsApp" arrowClr="#ffffff" />
+                <ModernButton text={t("contact.send", "Send via WhatsApp")} arrowClr="#ffffff" />
               </div>
             </form>
           </div>

@@ -3,8 +3,10 @@
 import SyntheticBackground from "@/components/animation/SyntheticBackground";
 import ImageRing3D from "./ImageRing3D";
 import { myImages } from "@/data/HeroSectionData";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function HeroWithAnimatedBackground() {
+  const { t } = useLanguage();
   return (
     <section className="relative w-screen h-screen overflow-hidden bg-black">
 
@@ -59,8 +61,8 @@ export default function HeroWithAnimatedBackground() {
         <ImageRing3D
           images={myImages}
           backgroundImage="/assets/images/testimonials/testimonial-bg.png"
-          title="Transform Visual Communication with Enterprise-Grade LED Display Solutions"
-          buttonText="Our Products"
+          title={t("homeHero.title", "Transform Visual Communication with Enterprise-Grade LED Display Solutions")}
+          buttonText={t("homeHero.button", "Our Products")}
         />
       </div>
 

@@ -5,6 +5,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ProductsSection from "../ui/home/ProductsSection";
 import { Zen_Dots } from "next/font/google";
+import { useLanguage } from "@/context/LanguageContext";
 const zenDots = Zen_Dots({
   subsets: ["latin"],
   weight: "400",
@@ -12,6 +13,7 @@ const zenDots = Zen_Dots({
 gsap.registerPlugin(ScrollTrigger);
 
 export default function AnimateScrollVideo({ media }) {
+  const { t } = useLanguage();
   const rootRef = useRef(null);
   const videoRef = useRef(null);
   const textRef = useRef(null);
@@ -86,11 +88,10 @@ export default function AnimateScrollVideo({ media }) {
           className="absolute inset-0 z-20 flex flex-col items-center justify-center text-center pointer-events-none"
         >
           <h1 className={`${zenDots.className} text-white text-5xl md:text-8xl font-bold`}>
-            Display the Future
+            {t("scrollVideo.heading", "Display the Future")}
           </h1>
           <p className="text-gray-300 text-lg md:text-xl mt-4 max-w-2xl">
-            Advanced LED display solutions for powerful, immersive visual
-            experiences.
+            {t("scrollVideo.subtitle", "Advanced LED display solutions for powerful, immersive visual experiences.")}
           </p>
         </div>
 

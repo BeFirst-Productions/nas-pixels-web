@@ -5,6 +5,8 @@ import { blogs } from "@/data/blogs";
 import Link from "next/link";
 import Container from "../common/layout/Container";
 import PillerAnimation from "../animation/PillerAnimation";
+import { useLanguage } from "@/context/LanguageContext";
+import { getLocalizedBlog } from "@/data/localizedBlogs";
 
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -12,6 +14,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function BlogPage() {
+  const { language } = useLanguage();
   const sectionRef = useRef(null);
 
   useEffect(() => {
@@ -53,35 +56,38 @@ export default function BlogPage() {
           {/* Blog Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
 
-            {blogs.map((blog) => (
-              <Link
-                key={blog.id}
-                href={`/blog/${blog.slug}`}
-                className="blog-card group rounded-xl overflow-hidden bg-[#16572D]
-                hover:shadow-[0_0_30px_rgba(0,255,120,0.3)] transition"
-              >
-                {/* Image */}
-                <div className="h-56 overflow-hidden">
-                  <img
-                    src={blog.img}
-                    alt={blog.title}
-                    className="w-full h-full object-cover
-                    group-hover:scale-110 transition duration-500"
-                  />
-                </div>
+            {blogs.map((rawBlog, idx) => {
+              const blog = getLocalizedBlog(rawBlog, language) || rawBlog;
+              return (
+                <Link
+                  key={rawBlog.slug || idx}
+                  href={`/blog/${rawBlog.slug}`}
+                  className="blog-card group rounded-xl overflow-hidden bg-[#16572D]
+                  hover:shadow-[0_0_30px_rgba(0,255,120,0.3)] transition"
+                >
+                  {/* Image */}
+                  <div className="h-56 overflow-hidden">
+                    <img
+                      src={blog.img}
+                      alt={blog.title}
+                      className="w-full h-full object-cover
+                      group-hover:scale-110 transition duration-500"
+                    />
+                  </div>
 
-                {/* Content */}
-                <div className="p-6 space-y-4">
-                  <h2 className="text-xl font-semibold">
-                    {blog.title}
-                  </h2>
+                  {/* Content */}
+                  <div className="p-6 space-y-4">
+                    <h2 className="text-xl font-semibold">
+                      {blog.title}
+                    </h2>
 
-                  <p className="text-sm">
-                    {blog.desc}
-                  </p>
-                </div>
-              </Link>
-            ))}
+                    <p className="text-sm">
+                      {blog.desc}
+                    </p>
+                  </div>
+                </Link>
+              );
+            })}
 
           </div>
         </div>

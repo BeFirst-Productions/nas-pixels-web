@@ -1,0 +1,446 @@
+{
+  "nav": {
+    "home": "Home",
+    "aboutUs": "ABOUT US",
+    "solutions": "SOLUTIONS",
+    "products": "PRODUCTS",
+    "projects": "PROJECTS",
+    "blogs": "BLOGS",
+    "contact": "CONTACT",
+    "language": "Language"
+  },
+  "country": {
+    "aboutUsBadge": "About Us",
+    "ourProductsBadge": "Our Products",
+    "productsHeading1": "Morem ipsum dolor",
+    "productsHeading2": "sit amet, condimentum velit.",
+    "heroDefaultHeading": "Dorem ipsum dolor sit amet, consectetur adipiscing elit. aliquet mattis."
+  },
+  "countries": {
+    "thailand": {
+      "badge": "Thailand",
+      "heroHeading": "Dorem ipsum dolor sit amet, consectetur adipiscing elit. aliquet mattis.",
+      "aboutHeading": "Morem ipsum dolor sit amet, consectetur adipiscing",
+      "aboutParagraph1": "Morem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus.",
+      "aboutParagraph2": "Maecenas eget condimentum velit, sit amet feugiat lectus. dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum",
+      "cardDescription": "Morem ipsum dolor sit amet, consectetur dolor adipiscing elit. Etiam eu turpi molestie, dictumest a, mattis tellus."
+    },
+    "malaysia": {
+      "badge": "Malaysia",
+      "heroHeading": "Dorem ipsum dolor sit amet, consectetur adipiscing elit. aliquet mattis.",
+      "aboutHeading": "Morem ipsum dolor sit amet, consectetur adipiscing",
+      "aboutParagraph1": "Morem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus.",
+      "aboutParagraph2": "Maecenas eget condimentum velit, sit amet feugiat lectus. dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum",
+      "cardDescription": "Morem ipsum dolor sit amet, consectetur dolor adipiscing elit. Etiam eu turpi molestie, dictumest a, mattis tellus."
+    },
+    "singapore": {
+      "badge": "Singapore",
+      "heroHeading": "Dorem ipsum dolor sit amet, consectetur adipiscing elit. aliquet mattis.",
+      "aboutHeading": "Morem ipsum dolor sit amet, consectetur adipiscing",
+      "aboutParagraph1": "Morem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus.",
+      "aboutParagraph2": "Maecenas eget condimentum velit, sit amet feugiat lectus. dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum",
+      "cardDescription": "Morem ipsum dolor sit amet, consectetur dolor adipiscing elit. Etiam eu turpi molestie, dictumest a, mattis tellus."
+    },
+    "saudi-arabia": {
+      "badge": "Saudi arabia",
+      "heroHeading": "Dorem ipsum dolor sit amet, consectetur adipiscing elit. aliquet mattis.",
+      "aboutHeading": "Morem ipsum dolor sit amet, consectetur adipiscing",
+      "aboutParagraph1": "Morem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus.",
+      "aboutParagraph2": "Maecenas eget condimentum velit, sit amet feugiat lectus. dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum",
+      "cardDescription": "Morem ipsum dolor sit amet, consectetur dolor adipiscing elit. Etiam eu turpi molestie, dictumest a, mattis tellus."
+    }
+  },
+  "products": {
+    "01": {
+      "title": "Digital Signage Solutions",
+      "description": "We deliver advanced digital signage systems that transform communication and customer engagement.",
+      "bullets": [
+        "Indoor & Outdoor LED Screens",
+        "Video Walls (Fine Pitch, COB, LCD)",
+        "Interactive Digital Kiosks & Touch Displays"
+      ]
+    },
+    "02": {
+      "title": "Audio-Visual System Integration",
+      "description": "From boardrooms to large venues, we integrate cutting-edge AV solutions that enhance communication and experiences.",
+      "bullets": [
+        "Professional Audio & Public Address Systems",
+        "Video Conferencing & Collaboration Solutions",
+        "Projection & Interactive Display Systems"
+      ]
+    },
+    "03": {
+      "title": "Maintenance & Support",
+      "description": "Our dedicated support ensures your systems run seamlessly with minimal downtime and optimal reliability.",
+      "bullets": [
+        "Annual Maintenance Contracts (AMC)",
+        "Preventive & Corrective Maintenance",
+        "24/7 Remote Monitoring & Rapid Response"
+      ]
+    },
+    "04": {
+      "title": "Home Cinema & Smart Home Automation",
+      "description": "We bring technology and lifestyle together with bespoke private cinema and personalized smart home solutions.",
+      "bullets": [
+        "Dedicated Home Cinema & Theater Rooms",
+        "Multiroom Audio & Video Distribution",
+        "Smart Home Automation (Lighting, Curtains, HVAC, Security)"
+      ]
+    },
+    "05": {
+      "title": "Static Signage & Wayfinding",
+      "description": "We design and implement effective static signage and architectural wayfinding systems to guide, inform, and inspire.",
+      "bullets": [
+        "Architectural & Branding Physical Signage",
+        "Illuminated & Non-Illuminated Solutions",
+        "Wayfinding & Directional Signage Systems"
+      ]
+    },
+    "06": {
+      "title": "Content Creation & Management",
+      "description": "We offer creative and technical expertise to keep your screens dynamic, engaging, and always on brand.",
+      "bullets": [
+        "Motion Graphics & Animations (2D/3D)",
+        "Digital Menu Design & Management",
+        "Dynamic Scheduling & Cloud-Based Updates"
+      ]
+    },
+    "07": {
+      "title": "Lighting Solutions",
+      "description": "We provide innovative lighting designs and intelligent controls that enhance architectural aesthetics and functionality.",
+      "bullets": [
+        "Architectural & Decorative Lighting",
+        "Facade & Outdoor LED Illumination",
+        "Smart Lighting Controls (DALI, DMX, KNX)"
+      ]
+    },
+    "08": {
+      "title": "Consultation & Project Management",
+      "description": "We work with clients at every stage, from concept feasibility studies to turnkey system engineering and execution.",
+      "bullets": [
+        "Site Surveys & Feasibility Studies",
+        "End-to-End Project Management",
+        "Custom Solutions for Corporate, Retail, Hospitality & Government"
+      ]
+    }
+  },
+  "homeHero": {
+    "title": "Transform Visual Communication with Enterprise-Grade LED Display Solutions",
+    "button": "Our Products"
+  },
+  "homeAbout": {
+    "title": "About NAS Pixels",
+    "description": "NAS Pixels is a Dubai-based digital innovation company delivering advanced LED screen and digital signage solutions across the Middle East. Backed by strong technical expertise and proven business capabilities, we provide reliable, scalable, and performance-driven visual communication systems tailored to diverse industries.",
+    "moreAboutUs": "More About Us",
+    "cards": {
+      "innovation": {
+        "title": "Innovation",
+        "desc": "We deliver forward-looking digital display solutions that enhance communication, audience engagement, and brand visibility across diverse environments."
+      },
+      "technology": {
+        "title": "Technology",
+        "desc": "Our solutions are powered by advanced LED and AV technologies, ensuring high performance, long-term reliability, and scalable system design."
+      },
+      "support": {
+        "title": "Support",
+        "desc": "We offer continuous pre- and post-deployment support to ensure seamless operation, minimal downtime, and lasting client satisfaction."
+      },
+      "quality": {
+        "title": "Quality",
+        "desc": "Every project adheres to strict quality standards, covering design, installation, testing, and ongoing system optimization."
+      }
+    }
+  },
+  "scene": {
+    "startA": "START A",
+    "project": "PROJECT"
+  },
+  "solutions": {
+    "title": "Solutions",
+    "description": "Advanced visual solutions engineered to improve communication, elevate engagement, and deliver consistent performance across industries.",
+    "exploreButton": "Explore Solutions",
+    "items": [
+      {
+        "title": "Events & Exhibitions"
+      },
+      {
+        "title": "Government & Corporate"
+      },
+      {
+        "title": "Hospitality & Entertainment"
+      },
+      {
+        "title": "Education & Conference"
+      },
+      {
+        "title": "Transportation & Airports"
+      },
+      {
+        "title": "Retail & Shopping Malls"
+      }
+    ]
+  },
+  "whyChooseUs": {
+    "title": "Why Choose Us",
+    "description": "We supply high-performance commercial display solutions built for clarity, reliability, and long-term use. From offices and retail spaces to control rooms and large installations, our screens are designed to deliver consistent visual impact. With certified products, expert installation, and responsive after-sales support, we ensure your display systems perform at their best.",
+    "features": [
+      {
+        "title": "24/7 Support Service",
+        "description": "Our dedicated support team is available 24/7 to assist you. Contact us anytime for fast and reliable support."
+      },
+      {
+        "title": "Certified & International Quality Standards",
+        "description": "We follow internationally recognized quality standards to ensure reliability and performance."
+      },
+      {
+        "title": "Trade & Corporate Experience",
+        "description": "Extensive experience working with trade partners and corporate clients across industries."
+      },
+      {
+        "title": "Professional Installation Team",
+        "description": "Our certified technicians ensure safe and precise installation every time."
+      },
+      {
+        "title": "Custom LED Design & Engineering",
+        "description": "Tailor-made LED solutions designed by expert engineers to fit your exact needs."
+      },
+      {
+        "title": "Fast Delivery & Maintenance",
+        "description": "Quick turnaround times with reliable maintenance and after-sales support."
+      }
+    ]
+  },
+  "ourProjects": {
+    "title": "Our Projects",
+    "description": "We craft impactful visual solutions that elevate brands, engage audiences, and communicate messages with clarity. Every project reflects our focus on innovation, precision, and design excellence.",
+    "viewMore": "View more",
+    "slides": [
+      {
+        "title": "P1.5 Cob HD Screen at Bahrain",
+        "location": "Bahrain"
+      },
+      {
+        "title": "P1.8 Flexible Indoor Led screen at Qatar",
+        "location": "Qatar"
+      },
+      {
+        "title": "P2.5 Outdoor LED screen at Abudhabi",
+        "location": "Abu Dhabi, UAE"
+      },
+      {
+        "title": "P3.9 outdoor Transparent led screen at Difc Dubai",
+        "location": "Dubai, UAE"
+      },
+      {
+        "title": "P5 7000 nits outdoor led screen at Umm ul qain",
+        "location": "Umm Al Quwain, UAE"
+      }
+    ]
+  },
+  "latestNews": {
+    "title": "Latest News",
+    "description": "Explore updates, trends, and expert insights in digital signage, AV systems, smart automation, lighting, and content technologies.",
+    "readMore": "Read More",
+    "blogs": [
+      {
+        "title": "Digital Signage Trends Transforming Brand Communication Dubai",
+        "desc": "Discover the newest digital signage Dubai trends that are changing the communication of the brand. Get to know how to use intelligent displays, LED screens, and interactive signages."
+      },
+      {
+        "title": "Smart Home Automation Trends 2026 in UAE | Naspixels",
+        "desc": "Examine smart home 2026 automation in the UAE. Naspixels makes publications on AI-powered homes, intelligent security, energy efficiency and connected living."
+      },
+      {
+        "title": "Audio Visual Integration in Corporate Offices Dubai",
+        "desc": "Learn how modern AV systems and smart conference rooms improve corporate workplace collaboration and communication across Dubai."
+      },
+      {
+        "title": "LED Video Wall Solutions for Events & Exhibitions",
+        "desc": "How high-resolution fine-pitch LED video walls create unforgettable visual experiences for global expos, events, and trade shows."
+      }
+    ]
+  },
+  "partners": {
+    "title": "Our Trusted Partners"
+  },
+  "testimonials": {
+    "title": "Testimonials",
+    "items": [
+      {
+        "name": "Stella",
+        "role": "Business Owner",
+        "testimonial": "The LED video wall installed by NAS Pixels transformed our commercial showroom. The visual clarity and vibrant colors exceeded our expectations."
+      },
+      {
+        "name": "Daniel",
+        "role": "Startup Founder",
+        "testimonial": "Excellent service and smooth communication. Highly recommended for growing businesses looking for enterprise digital displays."
+      },
+      {
+        "name": "Ayesha",
+        "role": "Marketing Lead",
+        "testimonial": "Professional approach with great attention to detail. Loved working with the team from design to final calibration."
+      }
+    ]
+  },
+  "faq": {
+    "title": "FAQ",
+    "items": [
+      {
+        "q": "What services do you offer in digital signage and smart technology?",
+        "a": "We provide end-to-end digital signage, AV integration, smart home automation, lighting, content creation, and ongoing support services."
+      },
+      {
+        "q": "Do you provide complete design installation content and maintenance solutions?",
+        "a": "Yes, we handle everything from concept, design, installation, content management, to long-term maintenance and support."
+      },
+      {
+        "q": "Which industries benefit most from your audiovisual and digital signage solutions?",
+        "a": "Corporate, retail, hospitality, healthcare, education, government, and residential sectors benefit from our solutions."
+      },
+      {
+        "q": "Can solutions be customized based on project requirements and available budgets?",
+        "a": "Absolutely. All solutions are tailored to client goals, technical needs, budgets, and future scalability."
+      },
+      {
+        "q": "Do you offer ongoing support and annual maintenance after project completion?",
+        "a": "Yes, we provide AMC contracts, preventive maintenance, remote monitoring, and dedicated technical support."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact Us",
+    "description": "Have questions or need help choosing the right display solution? Fill out the form and our team will get back to you shortly.",
+    "name": "Name",
+    "phone": "Phone Number",
+    "email": "Email",
+    "company": "Company name & Location",
+    "message": "Text your message",
+    "send": "Send via WhatsApp",
+    "errors": {
+      "nameRequired": "Name is required",
+      "nameLength": "Name must be at least 2 characters",
+      "phoneRequired": "Phone number is required",
+      "phoneValid": "Enter a valid phone number",
+      "emailRequired": "Email is required",
+      "emailValid": "Enter a valid email address",
+      "messageRequired": "Message is required"
+    }
+  },
+  "footer": {
+    "newsletterTitle": "Ready to turn your vision into reality? Join our newsletter for weekly design insights.",
+    "newsletterPlaceholder": "Email Address",
+    "subscribe": "Subscribe",
+    "quickLinks": "Quick Links",
+    "links": {
+      "about": "About",
+      "projects": "Projects",
+      "products": "Products",
+      "faq": "FAQ",
+      "privacy": "Privacy & Policy",
+      "blog": "Blog",
+      "contact": "Contact"
+    },
+    "contactUs": "Contact Us",
+    "address": "ARZOO BUILDING, 101 - Al Nahda St - Al Twar 5 - Dubai",
+    "copyright": "© 2026 Nas Pixels. Published by Next Media. All Rights Reserved."
+  },
+  "aboutPage": {
+    "learnOurStory": "Learn Our Story",
+    "mission": "Mission",
+    "vision": "Vision",
+    "ourStory": "Our Story",
+    "coreServices": "Core Services",
+    "workTogether": "Let’s Work Together",
+    "contactToday": "Contact Us Today",
+    "ecosystem": {
+      "title": "NAS PIXELS Ecosystem",
+      "subtitle": "A fully connected technology stack for displays, AV, immersive spaces, and experiences."
+    },
+    "servicesList": [
+      {
+        "title": "Digital Display Solutions",
+        "tag": "High-Impact Visual Communication",
+        "desc": "LED video walls, digital signage, and commercial displays engineered for visibility, clarity, and efficiency.",
+        "list": [
+          "Retail & malls",
+          "Corporate offices",
+          "Public spaces",
+          "Events & exhibitions"
+        ]
+      },
+      {
+        "title": "AV & System Integration",
+        "tag": "Seamless AV Experiences",
+        "desc": "Complete audiovisual integration delivering crystal-clear sound, visuals, and intelligent control.",
+        "list": [
+          "Boardrooms",
+          "Auditoriums",
+          "PA systems",
+          "Automation systems"
+        ]
+      },
+      {
+        "title": "Immersive & Interactive",
+        "tag": "Engage. Inspire. Transform.",
+        "desc": "Projection, LED, and XR-powered immersive experiences that audiences can see, feel, and explore.",
+        "list": [
+          "Immersive rooms",
+          "Experience centers",
+          "Interactive displays",
+          "XR environments"
+        ]
+      },
+      {
+        "title": "Education & Corporate",
+        "tag": "Smarter Collaboration",
+        "desc": "Smart classrooms and collaboration spaces designed to improve engagement and productivity.",
+        "list": [
+          "Universities",
+          "Training centers",
+          "Offices",
+          "Conference halls"
+        ]
+      },
+      {
+        "title": "Events & Special Projects",
+        "tag": "Technology That Elevates Events",
+        "desc": "AV, lighting, projection mapping, and LED systems for events of every scale.",
+        "list": [
+          "Event AV",
+          "Projection mapping",
+          "Temporary LED",
+          "Live support"
+        ]
+      },
+      {
+        "title": "Home & Building Automation",
+        "tag": "INTELLIGENT LIVING & WORKSPACES",
+        "desc": "Smart automation solutions that seamlessly control lighting, climate, security, and audiovisual systems for enhanced comfort, efficiency, and control.",
+        "list": [
+          "Smart homes",
+          "Lighting & climate control",
+          "Security & surveillance systems",
+          "Centralized control panels",
+          "Energy management solutions"
+        ]
+      }
+    ]
+  },
+  "solutionsPage": {
+    "heading": "Integrated Visual, Digital & AV Solutions"
+  },
+  "scrollVideo": {
+    "heading": "Display the Future",
+    "subtitle": "Advanced LED display solutions for powerful, immersive visual experiences."
+  },
+  "common": {
+    "viewMore": "View More",
+    "serviceType": "Service Type",
+    "keyFeatures": "Key Features",
+    "backToBlog": "← Back to Blog"
+  },
+  "home": {
+    "productsTitle": "Our Products"
+  }
+}

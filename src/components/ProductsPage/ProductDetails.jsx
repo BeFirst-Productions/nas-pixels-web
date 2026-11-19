@@ -8,6 +8,8 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ArrowLeft, CheckCircle2, ChevronRight, ArrowUpRight, ChevronLeft } from "lucide-react";
 import { slides } from "@/data/projects";
+import { useLanguage } from "@/context/LanguageContext";
+import { getLocalizedProduct } from "@/data/localizedProducts";
 
 // Swiper Imports
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -21,6 +23,8 @@ if (typeof window !== "undefined") {
 }
 
 export default function ProductDetails({ product }) {
+  const { t, language } = useLanguage();
+  const currentProduct = getLocalizedProduct(product, language) || product;
   const containerRef = useRef(null);
   const imageRef = useRef(null);
   const infoRef = useRef(null);
@@ -135,8 +139,8 @@ export default function ProductDetails({ product }) {
               <div className="absolute inset-0 bg-gradient-to-tr from-green-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none mix-blend-overlay" />
 
               <Image
-                src={product.thumbnail}
-                alt={product.title}
+                src={currentProduct.thumbnail}
+                alt={currentProduct.title}
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
                 priority
@@ -145,17 +149,19 @@ export default function ProductDetails({ product }) {
               {/* Category Badge Floating */}
               <div className="absolute top-4 left-4 bg-black/60 backdrop-blur-md border border-white/10 px-4 py-2 rounded-full">
                 <span className="text-green-400 text-xs font-bold uppercase tracking-wider">
-                  {product.category}
+                  {currentProduct.category}
                 </span>
               </div>
             </div>
 
             {/* Spec Highlight Card - Floating below image */}
-            {product.specs?.Service && (
+            {currentProduct.specs?.Service && (
               <div className="absolute -bottom-6 -right-6 hidden sm:block bg-[#0A0A0A] border border-green-500/30 p-6 rounded-xl shadow-xl max-w-xs z-20">
-                <p className="text-gray-400 text-xs uppercase tracking-wider mb-1">Service Type</p>
+                <p className="text-gray-400 text-xs uppercase tracking-wider mb-1">
+                  {t("common.serviceType", "Service Type")}
+                </p>
                 <p className="text-xl font-bold text-white bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
-                  {product.specs.Service}
+                  {currentProduct.specs.Service}
                 </p>
               </div>
             )}
@@ -166,26 +172,24 @@ export default function ProductDetails({ product }) {
 
             <div className="space-y-4">
               <h1 className="text-4xl lg:text-5xl font-bold text-white leading-tight">
-                {product.title}
+                {currentProduct.title}
               </h1>
               <p className="text-xl text-gray-400 font-light leading-relaxed border-l-2 border-green-500/50 pl-4">
-                {product.shortDescription}
+                {currentProduct.shortDescription}
               </p>
             </div>
 
             <div className="prose prose-invert prose-p:text-gray-300 prose-p:leading-7 max-w-none bg-white/5 p-6 rounded-xl border border-white/5">
-              {/* <h3 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-green-500"></span>
-                Overview
-              </h3> */}
-              <p>{product.details?.overview}</p>
+              <p>{currentProduct.details?.overview}</p>
             </div>
 
             {/* Key Features Grid */}
             <div className="space-y-4">
-              <h3 className="text-sm font-bold text-gray-500 uppercase tracking-widest">Key Features</h3>
+              <h3 className="text-sm font-bold text-gray-500 uppercase tracking-widest">
+                {t("common.keyFeatures", "Key Features")}
+              </h3>
               <div ref={featuresRef} className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                {product.details?.keyFeatures?.map((feature, idx) => (
+                {currentProduct.details?.keyFeatures?.map((feature, idx) => (
                   <div
                     key={idx}
                     className="flex items-start gap-3 p-3 rounded-lg hover:bg-white/5 transition-colors border border-transparent hover:border-white/5 group/feature"

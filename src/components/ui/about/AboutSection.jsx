@@ -7,6 +7,7 @@ import SectionTitle from "@/components/common/Headers/SectionTitle";
 import Container from "@/components/common/Layout/Container";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useLanguage } from "@/context/LanguageContext";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -94,6 +95,7 @@ const QualityIcon = () => (
 ======================= */
 
 export default function AboutSection() {
+  const { t } = useLanguage();
   const sectionRef = useRef(null);
   const titleRef = useRef(null);
   const textRef = useRef(null);
@@ -207,18 +209,18 @@ const router =useRouter()
           {/* LEFT CONTENT */}
           <div className="flex flex-col justify-center">
             <div ref={titleRef}>
-              <SectionTitle title="About NAS Pixels" ClrGradet1="#70C879" />
+              <SectionTitle title={t("homeAbout.title", "About NAS Pixels")} ClrGradet1="#70C879" />
             </div>
 
             <p
               ref={textRef}
               className="mt-6 text-sm leading-relaxed text-gray-400 md:text-base lg:text-lg"
             >
-            NAS Pixels is a Dubai-based digital innovation company delivering advanced LED screen and digital signage solutions across the Middle East. Backed by strong technical expertise and proven business capabilities, we provide reliable, scalable, and performance-driven visual communication systems tailored to diverse industries.
+              {t("homeAbout.description", "NAS Pixels is a Dubai-based digital innovation company delivering advanced LED screen and digital signage solutions across the Middle East. Backed by strong technical expertise and proven business capabilities, we provide reliable, scalable, and performance-driven visual communication systems tailored to diverse industries.")}
             </p>
 
             <div ref={buttonRef} className="mt-8">
-              <ModernButton text="More About Us" onClick={()=>router.push("/about-us")} />
+              <ModernButton text={t("homeAbout.moreAboutUs", "More About Us")} onClick={()=>router.push("/about-us")} />
             </div>
           </div>
 
@@ -226,25 +228,25 @@ const router =useRouter()
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
           {[
             {
-              title: "Innovation",
+              title: t("homeAbout.cards.innovation.title", "Innovation"),
               icon: <InnovationIcon />,
-              description:
-"We deliver forward-looking digital display solutions that enhance communication, audience engagement, and brand visibility across diverse environments."            },
+              description: t("homeAbout.cards.innovation.desc", "We deliver forward-looking digital display solutions that enhance communication, audience engagement, and brand visibility across diverse environments.")
+            },
             {
-              title: "Technology",
+              title: t("homeAbout.cards.technology.title", "Technology"),
               icon: <TechnologyIcon />,
-              description:
-  "Our solutions are powered by advanced LED and AV technologies, ensuring high performance, long-term reliability, and scalable system design."            },
+              description: t("homeAbout.cards.technology.desc", "Our solutions are powered by advanced LED and AV technologies, ensuring high performance, long-term reliability, and scalable system design.")
+            },
             {
-              title: "Support",
+              title: t("homeAbout.cards.support.title", "Support"),
               icon: <SupportIcon />,
-              description:
-   "We offer continuous pre- and post-deployment support to ensure seamless operation, minimal downtime, and lasting client satisfaction.",            },
+              description: t("homeAbout.cards.support.desc", "We offer continuous pre- and post-deployment support to ensure seamless operation, minimal downtime, and lasting client satisfaction.")
+            },
             {
-              title: "Quality",
+              title: t("homeAbout.cards.quality.title", "Quality"),
               icon: <QualityIcon />,
-              description:
- "Every project adheres to strict quality standards, covering design, installation, testing, and ongoing system optimization.",            },
+              description: t("homeAbout.cards.quality.desc", "Every project adheres to strict quality standards, covering design, installation, testing, and ongoing system optimization.")
+            },
             ].map((item, i) => (
               <AboutCard
                 key={item.title}

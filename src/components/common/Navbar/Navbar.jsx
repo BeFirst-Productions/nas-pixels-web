@@ -7,6 +7,7 @@ import { MobileMenuButton } from './MobileMenuButton';
 import { DesktopMenu } from './DesktopMenu';
 import { MobileDropdown } from './MobileDropdown';
 import Link from 'next/link';
+import LanguageSwitcher from '../LanguageSwitcher';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -37,7 +38,7 @@ export default function Navbar() {
 
   return (
 <nav
-  className={`fixed top-0 left-0 right-0 z-50 transition-transform duration-500 ease-in-out overflow-hidden ${
+  className={`fixed top-0 left-0 right-0 z-50 transition-transform duration-500 ease-in-out ${
     isVisible ? "translate-y-0" : "-translate-y-full"
   }`}
 >
@@ -73,11 +74,16 @@ export default function Navbar() {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden mx-auto">
+          <div className="md:hidden mx-auto flex items-center gap-3">
             <MobileMenuButton
               isOpen={isMenuOpen}
               onToggle={() => setIsMenuOpen(v => !v)}
             />
+          </div>
+
+          {/* Right Zone (Desktop Language Switcher) */}
+          <div className="hidden md:flex items-center">
+            <LanguageSwitcher />
           </div>
 
         </div>

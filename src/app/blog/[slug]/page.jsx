@@ -62,7 +62,7 @@ export default function BlogDetailPage({ params }) {
 
   return (
     <>
-      <Herosection title={blog.title} />
+      <Herosection title={blog.title} slug={blog.slug} />
       <BlogDetails blog={blog} />
     </>
   );

@@ -1,0 +1,446 @@
+{
+  "nav": {
+    "home": "Laman Utama",
+    "aboutUs": "TENTANG KAMI",
+    "solutions": "PENYELESAIAN",
+    "products": "PRODUK",
+    "projects": "PROJEK",
+    "blogs": "BLOG",
+    "contact": "HUBUNGI KAMI",
+    "language": "Bahasa"
+  },
+  "country": {
+    "aboutUsBadge": "Tentang Kami",
+    "ourProductsBadge": "Produk Kami",
+    "productsHeading1": "Inovasi & Teknologi",
+    "productsHeading2": "Untuk Komunikasi Masa Hadapan",
+    "heroDefaultHeading": "Peneraju global dalam teknologi paparan LED dan papan tanda digital pintar."
+  },
+  "countries": {
+    "thailand": {
+      "badge": "Thailand",
+      "heroHeading": "Peneraju teknologi paparan LED dan papan tanda digital canggih di Thailand.",
+      "aboutHeading": "Integrasi Paparan LED Premium di Thailand",
+      "aboutParagraph1": "NAS Pixels Thailand menyediakan sistem paparan LED bertaraf dunia, dinding video resolusi tinggi dan papan tanda pintar untuk perusahaan dan perniagaan.",
+      "aboutParagraph2": "Disokong oleh kepakaran teknikal yang kukuh, kami memastikan pelaksanaan projek yang berkualiti tinggi dan sokongan berterusan.",
+      "cardDescription": "Penyedia terkemuka bagi paparan LED dan penyelesaian papan tanda digital di Thailand."
+    },
+    "malaysia": {
+      "badge": "Malaysia",
+      "heroHeading": "Inovasi Paparan LED & Integrasi Sistem AV Menyeluruh di Malaysia",
+      "aboutHeading": "Penyelesaian Paparan Digital Gred Perusahaan di Malaysia",
+      "aboutParagraph1": "NAS Pixels Malaysia menawarkan paparan LED komersial termaju, dinding video dan penyelesaian papan tanda interaktif untuk pusat membeli-belah, korporat dan sektor awam.",
+      "aboutParagraph2": "Kami komited untuk memberikan kualiti visual terbaik dengan kebolehpercayaan tinggi dan perkhidmatan profesional.",
+      "cardDescription": "Peneraju teknologi paparan LED dan papan tanda digital gred perusahaan di Malaysia."
+    },
+    "singapore": {
+      "badge": "Singapura",
+      "heroHeading": "Penyelesaian Paparan LED Pintar Bertaraf Dunia di Singapura",
+      "aboutHeading": "Teknologi Visual Termaju untuk Bandar Pintar",
+      "aboutParagraph1": "NAS Pixels Singapura membawakan teknologi paparan LED berketumpatan piksel ultra halus (Fine Pitch & COB) untuk pusat kawalan dan perniagaan mewah.",
+      "aboutParagraph2": "Kami mematuhi piawaian antarabangsa untuk kecekapan tenaga, ketahanan dan prestasi visual yang tiada tandingan.",
+      "cardDescription": "Penyelesaian paparan LED pintar bertaraf antarabangsa di Singapura."
+    },
+    "saudi-arabia": {
+      "badge": "Arab Saudi",
+      "heroHeading": "Projek Paparan LED Utama dan Papan Tanda Digital di Arab Saudi",
+      "aboutHeading": "Inovasi Visual untuk Projek Mega dan Seni Bina",
+      "aboutParagraph1": "NAS Pixels Arab Saudi merupakan rakan kongsi dipercayai dalam mereka bentuk dan membina dinding video berskala besar untuk projek mercu tanda.",
+      "aboutParagraph2": "Pasukan pakar kami menyediakan penyelesaian kejuruteraan canggih yang memenuhi piawaian tertinggi.",
+      "cardDescription": "Pakar sistem paparan LED dan dinding video berskala besar di Arab Saudi."
+    }
+  },
+  "products": {
+    "01": {
+      "title": "Penyelesaian Papan Tanda Digital (Digital Signage)",
+      "description": "Kami membawakan sistem papan tanda digital termaju yang mengubah komunikasi dan penglibatan pelanggan.",
+      "bullets": [
+        "Skrin LED Dalaman & Luaran (Indoor & Outdoor)",
+        "Dinding Video (Fine Pitch, COB, LCD)",
+        "Kiosk Digital Interaktif & Paparan Sentuh"
+      ]
+    },
+    "02": {
+      "title": "Integrasi Sistem Audio-Visual (AV)",
+      "description": "Dari bilik mesyuarat hingga ke dewan berskala besar, kami mengintegrasikan penyelesaian AV terkini untuk mempertingkatkan komunikasi.",
+      "bullets": [
+        "Sistem Audio Profesional & Pengumuman Awam",
+        "Penyelesaian Sidang Video & Kolaborasi",
+        "Sistem Unjuran & Paparan Interaktif"
+      ]
+    },
+    "03": {
+      "title": "Penyelenggaraan & Sokongan Teknikal",
+      "description": "Sokongan berdedikasi kami memastikan sistem anda beroperasi lancar dengan masa henti minimum dan kebolehpercayaan optimum.",
+      "bullets": [
+        "Kontrak Penyelenggaraan Tahunan (AMC)",
+        "Penyelenggaraan Pencegahan & Pembetulan",
+        "Pemantauan Jarak Jauh 24/7 & Tindak Balas Pantas"
+      ]
+    },
+    "04": {
+      "title": "Pawagam Rumah & Automasi Rumah Pintar",
+      "description": "Kami menggabungkan teknologi dan gaya hidup melalui reka bentuk pawagam peribadi dan penyelesaian rumah pintar khusus.",
+      "bullets": [
+        "Bilik Pawagam Rumah Khusus",
+        "Pengedaran Audio & Video Pelbagai Bilik",
+        "Automasi Rumah Pintar (Pencahayaan, Tirai, HVAC, Keselamatan)"
+      ]
+    },
+    "05": {
+      "title": "Papan Tanda Statik & Penunjuk Arah",
+      "description": "Kami mereka bentuk dan memasang sistem papan tanda arkitek dan penunjuk arah yang berkesan untuk membimbing dan memberi maklumat.",
+      "bullets": [
+        "Papan Tanda Fizikal Arkitek & Penjenamaan",
+        "Penyelesaian Berlampu & Tanpa Lampu",
+        "Sistem Papan Tanda Navigasi & Arah"
+      ]
+    },
+    "06": {
+      "title": "Penciptaan & Pengurusan Kandungan",
+      "description": "Kepakaran kreatif dan teknikal kami memastikan skrin anda sentiasa dinamik, menarik dan selaras dengan jenama anda.",
+      "bullets": [
+        "Grafik Gerakan & Animasi (2D/3D)",
+        "Reka Bentuk & Pengurusan Menu Digital",
+        "Penjadualan Dinamik & Kemas Kini Berasaskan Awan"
+      ]
+    },
+    "07": {
+      "title": "Penyelesaian Pencahayaan (Lighting Solutions)",
+      "description": "Kami menyediakan reka bentuk pencahayaan inovatif dan kawalan pintar yang meningkatkan estetika serta fungsi seni bina.",
+      "bullets": [
+        "Pencahayaan Arkitek & Hiasan",
+        "Pencahayaan LED Fasad & Luaran",
+        "Kawalan Pencahayaan Pintar (DALI, DMX, KNX)"
+      ]
+    },
+    "08": {
+      "title": "Konsultasi & Pengurusan Projek",
+      "description": "Kami bekerjasama dengan pelanggan pada setiap fasa, daripada kajian kebolehlaksanaan konsep hingga penyerahan sistem sedia guna.",
+      "bullets": [
+        "Tinjauan Tapak & Kajian Kebolehlaksanaan",
+        "Pengurusan Projek Menyeluruh dari Awal hingga Akhir",
+        "Penyelesaian Khusus untuk Korporat, Peruncitan, Hospitaliti & Kerajaan"
+      ]
+    }
+  },
+  "homeHero": {
+    "title": "Ubah Komunikasi Visual dengan Penyelesaian Paparan LED Gred Perusahaan",
+    "button": "Produk Kami"
+  },
+  "homeAbout": {
+    "title": "Mengenai NAS Pixels",
+    "description": "NAS Pixels ialah syarikat inovasi digital berpangkalan di Dubai yang menyediakan penyelesaian skrin LED dan papan tanda digital termaju di seluruh Timur Tengah dan Asia. Disokong oleh kepakaran teknikal yang kukuh dan keupayaan perniagaan terbukti, kami menyediakan sistem komunikasi visual yang boleh dipercayai, berskala dan berprestasi tinggi untuk pelbagai industri.",
+    "moreAboutUs": "Ketahui Lebih Lanjut",
+    "cards": {
+      "innovation": {
+        "title": "Inovasi",
+        "desc": "Kami membawakan penyelesaian paparan digital berpandangan ke hadapan yang mempertingkatkan komunikasi, penglibatan audiens dan keterlihatan jenama merentasi pelbagai persekitaran."
+      },
+      "technology": {
+        "title": "Teknologi",
+        "desc": "Penyelesaian kami dikuasakan oleh teknologi LED dan AV terkini, memastikan prestasi tinggi, kebolehpercayaan jangka panjang dan reka bentuk sistem yang berskala."
+      },
+      "support": {
+        "title": "Sokongan",
+        "desc": "Kami menawarkan sokongan pra dan pasca pemasangan berterusan untuk memastikan operasi lancar, masa henti minimum dan kepuasan pelanggan yang berpanjangan."
+      },
+      "quality": {
+        "title": "Kualiti",
+        "desc": "Setiap projek mematuhi piawaian kualiti yang ketat, meliputi reka bentuk, pemasangan, pengujian dan pengoptimuman sistem berterusan."
+      }
+    }
+  },
+  "scene": {
+    "startA": "MULAKAN",
+    "project": "PROJEK"
+  },
+  "solutions": {
+    "title": "Penyelesaian",
+    "description": "Penyelesaian visual termaju yang direka untuk meningkatkan komunikasi, mempertingkatkan penglibatan dan memberikan prestasi konsisten merentasi pelbagai industri.",
+    "exploreButton": "Terokai Penyelesaian",
+    "items": [
+      {
+        "title": "Acara & Pameran"
+      },
+      {
+        "title": "Kerajaan & Korporat"
+      },
+      {
+        "title": "Hospitaliti & Hiburan"
+      },
+      {
+        "title": "Pendidikan & Persidangan"
+      },
+      {
+        "title": "Pengangkutan & Lapangan Terbang"
+      },
+      {
+        "title": "Peruncitan & Pusat Beli-belah"
+      }
+    ]
+  },
+  "whyChooseUs": {
+    "title": "Mengapa Memilih Kami",
+    "description": "Kami membekalkan penyelesaian paparan komersial berprestasi tinggi yang dibina untuk kejelasan, kebolehpercayaan dan penggunaan jangka panjang. Dari pejabat dan ruang runcit hingga bilik kawalan dan pemasangan berskala besar, skrin kami direka untuk memberikan impak visual yang konsisten. Dengan produk yang diperakui, pemasangan pakar dan sokongan selepas jualan yang responsif, kami memastikan sistem paparan anda berfungsi pada tahap terbaik.",
+    "features": [
+      {
+        "title": "Perkhidmatan Sokongan 24/7",
+        "description": "Pasukan sokongan berdedikasi kami tersedia 24/7 untuk membantu anda pada bila-bila masa dengan pantas dan boleh dipercayai."
+      },
+      {
+        "title": "Piawaian Kualiti Antarabangsa & Diperakui",
+        "description": "Kami mematuhi standard kualiti yang diiktiraf di peringkat antarabangsa untuk menjamin kebolehpercayaan dan prestasi."
+      },
+      {
+        "title": "Pengalaman Perdagangan & Korporat",
+        "description": "Pengalaman luas bekerjasama dengan rakan kongsi perdagangan dan pelanggan korporat merentasi pelbagai sektor."
+      },
+      {
+        "title": "Pasukan Pemasangan Profesional",
+        "description": "Juruteknik bertauliah kami memastikan pemasangan yang selamat dan tepat pada setiap masa."
+      },
+      {
+        "title": "Reka Bentuk & Kejuruteraan LED Khusus",
+        "description": "Penyelesaian LED yang ditempah khas, direka oleh jurutera pakar mengikut keperluan tepat anda."
+      },
+      {
+        "title": "Penghantaran & Penyelenggaraan Pantas",
+        "description": "Masa penyelesaian yang pantas dengan penyelenggaraan yang boleh dipercayai dan sokongan selepas jualan."
+      }
+    ]
+  },
+  "ourProjects": {
+    "title": "Projek Kami",
+    "description": "Kami mencipta penyelesaian visual berimpak tinggi yang memperkasakan jenama, menarik minat audiens dan menyampaikan mesej dengan jelas. Setiap projek mencerminkan komitmen kami terhadap inovasi, ketepatan dan kecemerlangan reka bentuk.",
+    "viewMore": "Lihat lagi",
+    "slides": [
+      {
+        "title": "Skrin HD P1.5 Cob di Bahrain",
+        "location": "Bahrain"
+      },
+      {
+        "title": "Skrin LED Dalaman Fleksibel P1.8 di Qatar",
+        "location": "Qatar"
+      },
+      {
+        "title": "Skrin LED Luaran P2.5 di Abu Dhabi",
+        "location": "Abu Dhabi, UAE"
+      },
+      {
+        "title": "Skrin LED Lutsinar Luaran P3.9 di DIFC Dubai",
+        "location": "Dubai, UAE"
+      },
+      {
+        "title": "Skrin LED Luaran P5 7000 nits di Umm Al Quwain",
+        "location": "Umm Al Quwain, UAE"
+      }
+    ]
+  },
+  "latestNews": {
+    "title": "Berita Terkini",
+    "description": "Terokai perkembangan terkini, trend dan pandangan pakar dalam papan tanda digital, sistem AV, automasi pintar, pencahayaan dan teknologi kandungan.",
+    "readMore": "Baca Lagi",
+    "blogs": [
+      {
+        "title": "Trend Papan Tanda Digital yang Mengubah Komunikasi Jenama di Dubai",
+        "desc": "Ketahui trend papan tanda digital terkini di Dubai yang sedang mengubah cara komunikasi jenama. Ketahui cara memanfaatkan paparan pintar, skrin LED dan papan tanda interaktif."
+      },
+      {
+        "title": "Trend Automasi Rumah Pintar 2026 di UAE | Naspixels",
+        "desc": "Terokai automasi rumah pintar 2026 di UAE. Rumah berkuasa AI, keselamatan pintar, kecekapan tenaga dan kehidupan berhubung."
+      },
+      {
+        "title": "Integrasi Audio Visual di Pejabat Korporat Dubai",
+        "desc": "Ketahui cara sistem AV moden dan bilik persidangan pintar meningkatkan kolaborasi dan komunikasi tempat kerja di Dubai."
+      },
+      {
+        "title": "Penyelesaian Dinding Video LED untuk Acara & Pameran",
+        "desc": "Bagaimana dinding video LED resolusi tinggi mencipta pengalaman visual yang tidak dapat dilupakan untuk ekspo dan acara global."
+      }
+    ]
+  },
+  "partners": {
+    "title": "Rakan Kongsi Dipercayai Kami"
+  },
+  "testimonials": {
+    "title": "Testimoni",
+    "items": [
+      {
+        "name": "Stella",
+        "role": "Pemilik Perniagaan",
+        "testimonial": "Dinding video LED yang dipasang oleh NAS Pixels telah mengubah bilik pameran komersial kami sepenuhnya. Kejelasan visual dan warna yang terang melebihi jangkaan kami."
+      },
+      {
+        "name": "Daniel",
+        "role": "Pengasas Syarikat Pemula",
+        "testimonial": "Perkhidmatan yang sangat baik dan komunikasi yang lancar. Sangat disyorkan untuk perniagaan yang mencari paparan digital gred perusahaan."
+      },
+      {
+        "name": "Ayesha",
+        "role": "Ketua Pemasaran",
+        "testimonial": "Pendekatan profesional dengan perhatian luar biasa terhadap perincian. Sangat gembira bekerjasama dengan pasukan dari fasa reka bentuk hingga kalibrasi akhir."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Soalan Lazim (FAQ)",
+    "items": [
+      {
+        "q": "Apakah perkhidmatan yang anda tawarkan dalam papan tanda digital dan teknologi pintar?",
+        "a": "Kami menyediakan papan tanda digital menyeluruh, integrasi AV, automasi rumah pintar, pencahayaan, penciptaan kandungan dan perkhidmatan sokongan berterusan."
+      },
+      {
+        "q": "Adakah anda menyediakan penyelesaian lengkap dari reka bentuk, pemasangan hingga penyelenggaraan?",
+        "a": "Ya, kami mengendalikan segala-galanya daripada konsep, reka bentuk, pemasangan, pengurusan kandungan hingga penyelenggaraan dan sokongan jangka panjang."
+      },
+      {
+        "q": "Industri manakah yang paling mendapat manfaat daripada penyelesaian visual dan papan tanda anda?",
+        "a": "Sektor korporat, peruncitan, hospitaliti, penjagaan kesihatan, pendidikan, agensi kerajaan dan kediaman mewah mendapat manfaat besar daripada penyelesaian kami."
+      },
+      {
+        "q": "Bolehkah penyelesaian disesuaikan mengikut keperluan projek dan belanjawan?",
+        "a": "Sudah tentu. Semua penyelesaian disesuaikan mengikut objektif, keperluan teknikal, belanjawan dan kebolehskalaan masa depan pelanggan."
+      },
+      {
+        "q": "Adakah anda menawarkan sokongan berterusan dan kontrak penyelenggaraan tahunan selepas projek selesai?",
+        "a": "Ya, kami menyediakan kontrak AMC, penyelenggaraan pencegahan, pemantauan jarak jauh dan sokongan teknikal berdedikasi."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Hubungi Kami",
+    "description": "Ada soalan atau perlukan bantuan memilih penyelesaian paparan yang tepat? Isi borang ini dan pasukan kami akan menghubungi anda tidak lama lagi.",
+    "name": "Nama",
+    "phone": "Nombor Telefon",
+    "email": "E-mel",
+    "company": "Nama Syarikat & Lokasi",
+    "message": "Tulis mesej anda",
+    "send": "Hantar melalui WhatsApp",
+    "errors": {
+      "nameRequired": "Sila masukkan nama anda",
+      "nameLength": "Nama mestilah sekurang-kurangnya 2 aksara",
+      "phoneRequired": "Nombor telefon diperlukan",
+      "phoneValid": "Sila masukkan nombor telefon yang sah",
+      "emailRequired": "E-mel diperlukan",
+      "emailValid": "Sila masukkan alamat e-mel yang sah",
+      "messageRequired": "Sila masukkan mesej anda"
+    }
+  },
+  "footer": {
+    "newsletterTitle": "Bersedia merealisasikan visi anda? Langgan buletin kami untuk pandangan reka bentuk mingguan.",
+    "newsletterPlaceholder": "Alamat E-mel",
+    "subscribe": "Langgan",
+    "quickLinks": "Pautan Pantas",
+    "links": {
+      "about": "Tentang Kami",
+      "projects": "Projek",
+      "products": "Produk",
+      "faq": "Soalan Lazim",
+      "privacy": "Dasar Privasi",
+      "blog": "Blog",
+      "contact": "Hubungi Kami"
+    },
+    "contactUs": "Hubungi Kami",
+    "address": "ARZOO BUILDING, 101 - Al Nahda St - Al Twar 5 - Dubai",
+    "copyright": "© 2026 Nas Pixels. Diterbitkan oleh Next Media. Hak Cipta Terpelihara."
+  },
+  "aboutPage": {
+    "learnOurStory": "Ketahui Kisah Kami",
+    "mission": "Misi",
+    "vision": "Visi",
+    "ourStory": "Kisah Kami",
+    "coreServices": "Perkhidmatan Teras",
+    "workTogether": "Mari Bekerjasama",
+    "contactToday": "Hubungi Kami Hari Ini",
+    "ecosystem": {
+      "title": "Ekosistem NAS PIXELS",
+      "subtitle": "Timbunan teknologi berhubung sepenuhnya untuk paparan, AV, ruang imersif dan pengalaman visual."
+    },
+    "servicesList": [
+      {
+        "title": "Penyelesaian Paparan Digital",
+        "tag": "Komunikasi Visual Berimpak Tinggi",
+        "desc": "Dinding video LED, papan tanda digital dan paparan komersial direka untuk keterlihatan, kejelasan dan kecekapan.",
+        "list": [
+          "Peruncitan & pusat beli-belah",
+          "Pejabat korporat",
+          "Ruang awam",
+          "Acara & pameran"
+        ]
+      },
+      {
+        "title": "Integrasi Sistem & AV",
+        "tag": "Pengalaman AV yang Lancar",
+        "desc": "Integrasi audiovisual lengkap menyampaikan bunyi jernih, visual tajam dan kawalan pintar.",
+        "list": [
+          "Bilik mesyuarat lembaga",
+          "Auditorium",
+          "Sistem siaran awam (PA)",
+          "Sistem automasi"
+        ]
+      },
+      {
+        "title": "Imersif & Interaktif",
+        "tag": "Libatkan. Inspirasikan. Tranformasikan.",
+        "desc": "Pengalaman imersif unjuran, LED dan berkuasa XR yang dapat dilihat, dirasai dan diterokai oleh audiens.",
+        "list": [
+          "Bilik imersif",
+          "Pusat pengalaman",
+          "Paparan interaktif",
+          "Persekitaran XR"
+        ]
+      },
+      {
+        "title": "Pendidikan & Korporat",
+        "tag": "Kolaborasi Lebih Pintar",
+        "desc": "Bilik darjah pintar dan ruang kolaborasi direka untuk meningkatkan penglibatan serta produktiviti.",
+        "list": [
+          "Universiti",
+          "Pusat latihan",
+          "Pejabat",
+          "Dewan persidangan"
+        ]
+      },
+      {
+        "title": "Acara & Projek Khas",
+        "tag": "Teknologi yang Mengangkat Martabat Acara",
+        "desc": "Sistem AV, pencahayaan, pemetaan unjuran dan paparan LED untuk acara pelbagai skala.",
+        "list": [
+          "AV Acara",
+          "Pemetaan unjuran (Projection mapping)",
+          "LED sewaan sementara",
+          "Sokongan teknikal langsung"
+        ]
+      },
+      {
+        "title": "Automasi Rumah & Bangunan",
+        "tag": "KEDIAMAN & RUANG KERJA PINTAR",
+        "desc": "Penyelesaian automasi pintar yang mengawal pencahayaan, iklim, keselamatan dan sistem audiovisual dengan lancar untuk keselesaan dan kawalan optimum.",
+        "list": [
+          "Rumah pintar",
+          "Kawalan pencahayaan & iklim",
+          "Sistem keselamatan & pengawasan",
+          "Panel kawalan berpusat",
+          "Penyelesaian pengurusan tenaga"
+        ]
+      }
+    ]
+  },
+  "solutionsPage": {
+    "heading": "Penyelesaian Visual, Digital & AV Bersepadu"
+  },
+  "scrollVideo": {
+    "heading": "Mempamerkan Masa Depan",
+    "subtitle": "Penyelesaian paparan LED canggih untuk pengalaman visual yang hebat dan mendalam."
+  },
+  "common": {
+    "viewMore": "Lihat Lagi",
+    "serviceType": "Jenis Perkhidmatan",
+    "keyFeatures": "Ciri-ciri Utama",
+    "backToBlog": "← Kembali ke Blog"
+  },
+  "home": {
+    "productsTitle": "Produk Kami"
+  }
+}

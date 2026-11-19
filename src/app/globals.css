@@ -348,6 +348,18 @@
 
 
 
+@font-face {
+  font-family: 'Orbitron';
+  src: url('/fonts/orbitron.ttf') format('truetype');
+  font-weight: 400 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+.font-orbitron {
+  font-family: 'Orbitron', 'Prompt', 'Host Grotesk', system-ui, sans-serif;
+}
+
 .font-host {
   font-family: "Host Grotesk", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }

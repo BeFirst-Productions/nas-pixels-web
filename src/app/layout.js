@@ -8,6 +8,7 @@ import Footer from "@/components/common/Footer/Footer";
 import PixelCursor from "@/components/animation/PixelCursor";
 
 import WhatsAppButton from "@/components/common/WhatsAppButton";
+import { LanguageProvider } from "@/context/LanguageContext";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -66,21 +67,23 @@ export default function RootLayout({ children }) {
     >
       <head>
         <link
-          href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@100;200;300;400;500;600;700;800;900&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@100;200;300;400;500;600;700;800;900&family=Prompt:wght@300;400;500;600;700&display=swap"
           rel="stylesheet"
         />
       </head>
       <body className="antialiased" suppressHydrationWarning>
         <SmoothScrollProvider>
-          <Navbar />
-          <main className="app-content">
-            <EcoPopup />
-            <PixelCursor />
-            {children}
-            <WhatsAppButton />
-            <ScrollToTop />
-          </main>
-          <Footer />
+          <LanguageProvider>
+            <Navbar />
+            <main className="app-content">
+              <EcoPopup />
+              <PixelCursor />
+              {children}
+              <WhatsAppButton />
+              <ScrollToTop />
+            </main>
+            <Footer />
+          </LanguageProvider>
         </SmoothScrollProvider>
       </body>
     </html>

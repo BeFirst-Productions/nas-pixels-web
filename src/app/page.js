@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { useLenis } from '@/components/providers/smooth-scroll-provider';
 import AnimateScrollVideo from '@/components/animation/scroll-animated-video';
 import AboutSection from '@/components/ui/about/AboutSection';
+import CountriesCarousel from '@/components/ui/countries/CountriesCarousel';
 import ContactSection from '@/components/ui/contact/ContactSection';
 import WhyChooseUs from '@/components/ui/home/WhyChooseUs';
 import LatestNewsSection from '@/components/ui/home/LatestNewsSection';
@@ -91,6 +92,7 @@ export default function Home() {
         buttonText="Our Products"
       />  */}
       <AboutSection />
+      <CountriesCarousel />
       <AnimateScrollVideo
         media={{
           mp4: "/assets/videos/screen-installation-and-configuration.mp4",

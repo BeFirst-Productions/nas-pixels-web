@@ -8,10 +8,12 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SectionTitle from "@/components/common/Headers/SectionTitle";
 import Container from "@/components/common/Layout/Container";
 import { FEATURES } from "@/data/featuresData";
+import { useLanguage } from "@/context/LanguageContext";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function WhyChooseUs() {
+  const { t } = useLanguage();
   const [openIndex, setOpenIndex] = useState(null);
 
   const sectionRef = useRef(null);
@@ -85,11 +87,11 @@ export default function WhyChooseUs() {
           {/* LEFT */}
           <div className="flex flex-col justify-self-center lg:justify-self-start">
             <div ref={titleBlockRef} className="mb-5">
-              <SectionTitle title="Why Choose Us" />
+              <SectionTitle title={t("whyChooseUs.title", "Why Choose Us")} />
             </div>
 
             <p className="text-gray-300 max-w-[520px] mb-10 text-sm md:text-base leading-relaxed">
-              We supply high-performance commercial display solutions built for clarity, reliability, and long-term use. From offices and retail spaces to control rooms and large installations, our screens are designed to deliver consistent visual impact. With certified products, expert installation, and responsive after-sales support, we ensure your display systems perform at their best.
+              {t("whyChooseUs.description", "We supply high-performance commercial display solutions built for clarity, reliability, and long-term use. From offices and retail spaces to control rooms and large installations, our screens are designed to deliver consistent visual impact. With certified products, expert installation, and responsive after-sales support, we ensure your display systems perform at their best.")}
             </p>
 
             <div
@@ -112,6 +114,8 @@ export default function WhyChooseUs() {
             <div className="flex flex-col gap-4 flex-1 justify-end">
               {FEATURES.map((item, idx) => {
                 const isOpen = openIndex === idx;
+                const featureTitle = t(`whyChooseUs.features.${idx}.title`, item.title);
+                const featureDesc = t(`whyChooseUs.features.${idx}.description`, item.description);
 
                 return (
                   <div
@@ -127,13 +131,13 @@ export default function WhyChooseUs() {
                         <div className="relative w-9 h-9 flex-shrink-0">
                           <Image
                             src={item.icon}
-                            alt={item.title}
+                            alt={featureTitle}
                             fill
                             className="object-contain"
                           />
                         </div>
                         <span className="font-medium text-sm md:text-base">
-                          {item.title}
+                          {featureTitle}
                         </span>
                       </div>
                       <span className="text-white text-xl font-light">
@@ -149,7 +153,7 @@ export default function WhyChooseUs() {
                     >
                       <div className="overflow-hidden">
                         <div className="px-5 pb-5 text-gray-300 text-sm leading-relaxed">
-                          {item.description}
+                          {featureDesc}
                         </div>
                       </div>
                     </div>

@@ -11,6 +11,7 @@ import gsap from "gsap";
 const ROW_HEIGHT = 120;
 import { Zen_Antique_Soft } from "next/font/google";
 import Link from "next/link";
+import { useLanguage } from "@/context/LanguageContext";
 
 const zenAntiqueSoft = Zen_Antique_Soft({
   subsets: ["latin"],
@@ -19,6 +20,7 @@ const zenAntiqueSoft = Zen_Antique_Soft({
 
 const products = [
   {
+    key: "01",
     title: "Digital Signage Solutions",
     image: "/assets/images/home-products/Digital Signage Solutions.jpg",
     row: 0,
@@ -40,6 +42,7 @@ const products = [
   },
 
   {
+    key: "05",
     title: "Static Signage & Wayfinding",
     image: "/assets/images/home-products/Static Signage & Wayfinding.jpg",
     row: 0,
@@ -60,6 +63,7 @@ const products = [
   },
 
   {
+    key: "02",
     title: "Audio-Visual System Integration",
     image: "/assets/images/home-products/Audio-Visual System Integration.jpg",
     row: 1,
@@ -81,6 +85,7 @@ const products = [
   },
 
   {
+    key: "06",
     title: "Content Creation & Management",
     image: "/assets/images/home-products/Content Creation & Management.jpg",
     row: 1,
@@ -101,6 +106,7 @@ const products = [
   },
 
   {
+    key: "03",
     title: "Maintenance & Support",
     image: "/assets/images/home-products/Maintenance & Support.jpg",
     row: 2,
@@ -121,6 +127,7 @@ const products = [
   },
 
   {
+    key: "07",
     title: "Lighting Solutions",
     image: "/assets/images/home-products/Stage & Event Lighting Systems.jpg",
     row: 2,
@@ -141,6 +148,7 @@ const products = [
   },
 
   {
+    key: "04",
     title: "Home Cinema & Smart Home Automation",
     image: "/assets/images/home-products/Home Cinema & Smart Home Automation.jpg",
     row: 3,
@@ -162,6 +170,7 @@ const products = [
   },
 
   {
+    key: "08",
     title: "Consultation & Project Management",
     image: "/assets/images/home-products/Consultation & Project Management.jpg",
     row: 3,
@@ -184,7 +193,25 @@ const products = [
 
 
 export default function ProductsSection() {
-  const [active, setActive] = useState(products[0]);
+  const { t } = useLanguage();
+  const router = useRouter();
+  const [activeKey, setActiveKey] = useState(products[0].key);
+
+  const getProductItem = (p) => {
+    if (!p) return null;
+    const title = t(`products.${p.key}.title`, p.title);
+    const description = t(`products.${p.key}.description`, p.description);
+    const bullets = t(`products.${p.key}.bullets`, p.subCategories);
+    return {
+      ...p,
+      title,
+      description,
+      subCategories: Array.isArray(bullets) && bullets.length > 0 ? bullets : p.subCategories,
+    };
+  };
+
+  const rawActive = products.find((p) => p.key === activeKey) || products[0];
+  const active = getProductItem(rawActive);
 
   const rows = [...new Set(products.map((p) => p.row))];
   const flipRef = useRef(null);
@@ -195,7 +222,7 @@ export default function ProductsSection() {
       <PillerAnimation />
       <Container>
         <div className="flex justify-center pb-8">
-          <SectionTitle ref={flipRef} title="Our Products" />
+          <SectionTitle ref={flipRef} title={t("home.productsTitle", "Our Products")} />
         </div>
 
         <div className="max-w-7xl mx-auto">
@@ -205,7 +232,14 @@ export default function ProductsSection() {
             {/* LEFT */}
             <div className="space-y-[120px] pt-2">
               {rows.map((row) => (
-                <Row key={row} row={row} side="left" active={active} setActive={setActive} />
+                <Row
+                  key={row}
+                  row={row}
+                  side="left"
+                  activeKey={activeKey}
+                  setActiveKey={setActiveKey}
+                  getProductItem={getProductItem}
+                />
               ))}
             </div>
 
@@ -217,7 +251,14 @@ export default function ProductsSection() {
             {/* RIGHT */}
             <div className="space-y-[120px] pt-2 text-right">
               {rows.map((row) => (
-                <Row key={row} row={row} side="right" active={active} setActive={setActive} />
+                <Row
+                  key={row}
+                  row={row}
+                  side="right"
+                  activeKey={activeKey}
+                  setActiveKey={setActiveKey}
+                  getProductItem={getProductItem}
+                />
               ))}
             </div>
           </div>
@@ -225,13 +266,14 @@ export default function ProductsSection() {
           {/* MOBILE VIEW (Accordion) */}
 
           <div className="md:hidden space-y-4 ">
-            {products.map((p, i) => {
-              const isOpen = active.title === p.title;
+            {products.map((rawP) => {
+              const p = getProductItem(rawP);
+              const isOpen = activeKey === rawP.key;
 
               return (
-                <div key={i} className="rounded-lg border border-[#70C879]/20 overflow-hidden">
+                <div key={rawP.key} className="rounded-lg border border-[#70C879]/20 overflow-hidden">
                   <button
-                    onClick={() => setActive(p)}
+                    onClick={() => setActiveKey(rawP.key)}
                     className={`${zenAntiqueSoft.className} w-full px-4 py-3 text-left transition ${isOpen ? "text-[#70C879]" : "text-white/80"
                       }`}
                   >
@@ -249,27 +291,10 @@ export default function ProductsSection() {
                         <Image src={p.image} alt={p.title} fill className="object-cover rounded-2xl" />
                       </div>
 
-                      {/* Category */}
-                      {/* <div className="text-[#70C879] text-xs uppercase tracking-wider">
-              {p.category}
-            </div> */}
-
-                      {/* Sub Categories */}
-                      {/* <div className="flex flex-wrap gap-2">
-              {p.subCategories.map((s, i) => (
-                <span
-                  key={i}
-                  className="px-3 py-1 text-xs rounded-full border border-[#70C879]/40 text-[#70C879]"
-                >
-                  {s}
-                </span>
-              ))}
-            </div> */}
-
                       {/* Description */}
                       <p className="text-sm text-white/80">{p.description}</p>
                       <div className="flex flex-wrap gap-2">
-                        {active.subCategories.slice(0, 3).map((s, i) => (
+                        {p.subCategories.slice(0, 3).map((s, i) => (
                           <span
                             key={i}
                             className="px-3 py-1 text-sm rounded-full border border-[#70C879]/60 bg-[#70C879]/10 text-[#70C879]"
@@ -278,23 +303,9 @@ export default function ProductsSection() {
                           </span>
                         ))}
                       </div>
-                      {/* Specs */}
-                      {/* <div className="grid grid-cols-2 gap-3 text-xs text-white/80">
-                        <div>
-                          <span className="text-white/50">Pixel Pitch</span>
-                          <div><span className="text-base">{p.pixelPitch.join(", ")}</span></div>
-                        </div>
-                        <div>
-                          <span className="text-white/50">Cabinet Size</span>
-                          <div>{p.cabinet}</div>
-                        </div>
-                        <div>
-                          <span className="text-white/50">Brightness</span>
-                          <div>{p.brightness}</div>
-                        </div>
-                      </div> */}
+
                       <div>
-                        <ModernButton text="View More" onClick={() => router.push("/products")} />
+                        <ModernButton text={t("common.viewMore", "View More")} onClick={() => router.push("/products")} />
                       </div>
 
                     </div>
@@ -314,6 +325,7 @@ export default function ProductsSection() {
 /* ---------- Desktop Helpers ---------- */
 
 function CenterImage({ active }) {
+  const { t } = useLanguage();
   const router = useRouter();
   const subCatsRef = useRef(null);
 
@@ -334,7 +346,6 @@ function CenterImage({ active }) {
           duration: 0.5,
           stagger: 0.1,
           ease: "power3.out",
-          // Removed clearProps so opacity stays at 1
         }
       );
     }
@@ -362,13 +373,6 @@ function CenterImage({ active }) {
       {/* DETAILS SCROLL BELOW IMAGE */}
       <div className="mt-3 space-y-4 text-sm text-white/80">
 
-        {/* Category */}
-        {/* <div className="text-[#70C879] text-xs uppercase tracking-wider">
-          {active.category}
-        </div> */}
-
-        {/* Sub Categories */}
-
         {/* Description */}
         <p className="text-xl">{active.description}</p>
         <div ref={subCatsRef} className="flex flex-wrap gap-x-6 gap-y-2">
@@ -376,7 +380,7 @@ function CenterImage({ active }) {
             <Link
               key={i}
               href="/products"
-              className="flex items-center gap-2 text-sm text-[#70C879] font-medium opacity-0" // Start hidden for animation
+              className="flex items-center gap-2 text-sm text-[#70C879] font-medium opacity-0"
             >
               {/* Arrow */}
               <span className="text-white">➜</span>
@@ -389,26 +393,8 @@ function CenterImage({ active }) {
           ))}
         </div>
 
-
-        {/* Specs */}
-        {/* <div className="grid grid-cols-2 gap-2 text-xs p-1">
-          <div>
-            <span className="text-white/50 text-xl">Pixel Pitch</span>
-            <div className="text-white"><span className="text-xl">{active.pixelPitch.join(", ")}</span></div>
-          </div>
-
-          <div>
-            <span className="text-white/50 text-xl">Cabinet Size</span>
-            <div className="text-white"><span className="text-xl">{active.cabinet}</span></div>
-          </div>
-
-          <div>
-            <span className="text-white/50 text-xl">Brightness</span>
-            <div className="text-white "><span className="text-xl">{active.brightness}</span></div>
-          </div>
-        </div> */}
         <div className="flex justify-center">
-          <ModernButton text="View More" onClick={() => router.push("/products")} />
+          <ModernButton text={t("common.viewMore", "View More")} onClick={() => router.push("/products")} />
         </div>
 
       </div>
@@ -419,15 +405,16 @@ function CenterImage({ active }) {
 
 
 
-function Row({ row, side, active, setActive }) {
-  const item = products.find((p) => p.row === row && p.side === side);
-  if (!item) return <div className="h-[32px]" />;
+function Row({ row, side, activeKey, setActiveKey, getProductItem }) {
+  const rawItem = products.find((p) => p.row === row && p.side === side);
+  if (!rawItem) return <div className="h-[32px]" />;
 
-  const isActive = active.title === item.title;
+  const item = getProductItem(rawItem);
+  const isActive = activeKey === rawItem.key;
 
   return (
     <div
-      onMouseEnter={() => setActive(item)}
+      onMouseEnter={() => setActiveKey(rawItem.key)}
       className={`cursor-pointer transition ${isActive ? "text-[#70C879]" : "text-white/70"
         }`}
     >

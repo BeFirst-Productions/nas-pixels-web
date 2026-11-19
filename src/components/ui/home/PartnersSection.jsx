@@ -6,6 +6,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Image from 'next/image';
 import React, { useEffect, useRef } from 'react'
+import { useLanguage } from '@/context/LanguageContext';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -45,7 +46,8 @@ const BRANDS = [
 const ARC_Y = [-6, -3, 0, 3, 6, 3, 0, -3];
 
 const PartnersSection = () => {
-      const sectionRef = useRef(null);
+  const { t } = useLanguage();
+  const sectionRef = useRef(null);
         const titleRef = useRef(null);
   const pillRef = useRef(null);
   const trackRef = useRef(null);
@@ -152,7 +154,7 @@ const PartnersSection = () => {
           ref={titleRef}
           className="w-full flex justify-center mb-8 "
         >
-          <SectionTitle title="Our Trusted Partners" ClrGradet1="#70C879" />
+          <SectionTitle title={t("partners.title", "Our Trusted Partners")} ClrGradet1="#70C879" />
         </div>
 
         {/* Pill Container */}
