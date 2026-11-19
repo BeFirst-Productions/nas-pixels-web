@@ -1,8 +1,10 @@
 "use client";
 import { useEffect, useState } from "react";
+import { useLenis } from "@/components/providers/smooth-scroll-provider";
 
 export default function ScrollToTop() {
   const [visible, setVisible] = useState(false);
+  const { lenis } = useLenis();
 
   useEffect(() => {
     const toggleVisibility = () => {
@@ -18,16 +20,21 @@ export default function ScrollToTop() {
   }, []);
 
   const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
+    if (lenis) {
+      lenis.scrollTo(0, { duration: 1.2 });
+    } else {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }
   };
 
   return (
     <button
       onClick={scrollToTop}
-    className={`fixed bottom-14 right-6 z-50 
+      aria-label="Scroll to top"
+      className={`fixed bottom-14 right-6 z-50 
   w-14 h-14 
   flex items-center justify-center 
   rounded-full 
@@ -44,7 +51,6 @@ export default function ScrollToTop() {
       ? "opacity-100 translate-y-0"
       : "opacity-0 translate-y-10 pointer-events-none"
   }`}
-
     >
       ↑
     </button>

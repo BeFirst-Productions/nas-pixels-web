@@ -1,5 +1,5 @@
 import Footer from '@/components/common/Footer/Footer'
-import TestFooter from '@/components/common/Footer/testFooter'
+import TestFooter from '@/components/common/Footer/TestFooter'
 import Herosection from '@/components/TitleBanner/TitleBanner'
 import ContactSection from '@/components/ui/contact/ContactSection'
 import IndoorSlider from '@/components/ui/ProjectPage/IndoorSlide'
