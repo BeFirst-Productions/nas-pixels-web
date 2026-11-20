@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
-import Container from '../Layout/Container';
+import Container from '../layout/Container';
 import { MobileMenuButton } from './MobileMenuButton';
 import { DesktopMenu } from './DesktopMenu';
 import { MobileDropdown } from './MobileDropdown';

@@ -1,7 +1,7 @@
 "use client";
 
 import { NAV_ITEMS } from "@/data/nav";
-import Container from "../Layout/Container";
+import Container from "../layout/Container";
 import { NavLink } from "./NavLink";
 import LanguageSwitcher from "../LanguageSwitcher";
 import { useLanguage } from "@/context/LanguageContext";

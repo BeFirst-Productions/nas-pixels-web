@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ArrowRight } from "lucide-react";
-import { ModernButton } from "@/components/common/Button/ModernButton";
+import { ModernButton } from "@/components/common/button/ModernButton";
 import { Zen_Dots } from "next/font/google";
 const zenDots = Zen_Dots({
   subsets: ["latin"],

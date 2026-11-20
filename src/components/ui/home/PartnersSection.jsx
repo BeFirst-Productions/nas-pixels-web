@@ -1,7 +1,7 @@
 "use client";
 
 import SectionTitle from '@/components/common/Headers/SectionTitle';
-import Container from '@/components/common/Layout/Container';
+import Container from '@/components/common/layout/Container';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Image from 'next/image';

@@ -1,6 +1,6 @@
 import React from 'react'
 import { useEffect, useRef, useState } from "react";
-import Container from '@/components/common/Layout/Container';
+import Container from '@/components/common/layout/Container';
 import { PRIVACY_POLICY_SECTIONS } from '@/data/PrivacyPolicyData';
 import { AnimatedSection } from '@/components/animation/AnimationSection';
 

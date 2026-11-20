@@ -1,8 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import Container from "@/components/common/Layout/Container";
-import { ModernButton } from "@/components/common/Button/ModernButton";
+import Container from "@/components/common/layout/Container";
+import { ModernButton } from "@/components/common/button/ModernButton";
 import SectionTitle from "@/components/common/Headers/SectionTitle";
 
 const PROJECTS = [

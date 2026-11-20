@@ -12,42 +12,43 @@
   "country": {
     "aboutUsBadge": "About Us",
     "ourProductsBadge": "Our Products",
-    "productsHeading1": "Morem ipsum dolor",
-    "productsHeading2": "sit amet, condimentum velit.",
+    "productsHeading1": "Discover Our",
+    "productsHeading2": "Technology & Solutions",
+    "productsHeading": "Discover Our Technology & Solutions",
     "heroDefaultHeading": "Dorem ipsum dolor sit amet, consectetur adipiscing elit. aliquet mattis."
   },
   "countries": {
     "thailand": {
       "badge": "Thailand",
-      "heroHeading": "Dorem ipsum dolor sit amet, consectetur adipiscing elit. aliquet mattis.",
-      "aboutHeading": "Morem ipsum dolor sit amet, consectetur adipiscing",
-      "aboutParagraph1": "Morem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus.",
-      "aboutParagraph2": "Maecenas eget condimentum velit, sit amet feugiat lectus. dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum",
-      "cardDescription": "Morem ipsum dolor sit amet, consectetur dolor adipiscing elit. Etiam eu turpi molestie, dictumest a, mattis tellus."
+      "heroHeading": "Innovative LED Display Solutions for Thailand",
+      "aboutHeading": "Visual Technology Solutions Across Thailand",
+      "aboutParagraph1": "NAS Pixels provides modern LED display and digital signage solutions for commercial spaces, shopping destinations, events, and corporate environments in Thailand.",
+      "aboutParagraph2": "Our solutions include LED screens, video walls, interactive displays, and audio-visual integration, supported by project-focused planning, installation, and ongoing technical assistance.",
+      "cardDescription": "Discover professional LED screens, interactive displays, and audio-visual solutions designed to enhance business communication and customer experiences in Thailand."
     },
     "malaysia": {
       "badge": "Malaysia",
-      "heroHeading": "Dorem ipsum dolor sit amet, consectetur adipiscing elit. aliquet mattis.",
-      "aboutHeading": "Morem ipsum dolor sit amet, consectetur adipiscing",
-      "aboutParagraph1": "Morem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus.",
-      "aboutParagraph2": "Maecenas eget condimentum velit, sit amet feugiat lectus. dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum",
-      "cardDescription": "Morem ipsum dolor sit amet, consectetur dolor adipiscing elit. Etiam eu turpi molestie, dictumest a, mattis tellus."
+      "heroHeading": "Advanced LED Display Solutions for Malaysia",
+      "aboutHeading": "Reliable Digital Display Solutions in Malaysia",
+      "aboutParagraph1": "NAS Pixels delivers advanced LED display and digital signage solutions for businesses, retail spaces, events, and commercial environments across Malaysia.",
+      "aboutParagraph2": "From indoor and outdoor LED screens to video walls and AV integration, we help brands communicate clearly with tailored technology, professional installation, and dependable support.",
+      "cardDescription": "Explore innovative LED display systems, digital signage, and video walls that bring modern visual communication to businesses across Malaysia."
     },
     "singapore": {
       "badge": "Singapore",
-      "heroHeading": "Dorem ipsum dolor sit amet, consectetur adipiscing elit. aliquet mattis.",
-      "aboutHeading": "Morem ipsum dolor sit amet, consectetur adipiscing",
-      "aboutParagraph1": "Morem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus.",
-      "aboutParagraph2": "Maecenas eget condimentum velit, sit amet feugiat lectus. dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum",
-      "cardDescription": "Morem ipsum dolor sit amet, consectetur dolor adipiscing elit. Etiam eu turpi molestie, dictumest a, mattis tellus."
+      "heroHeading": "Smart LED Display Solutions for Singapore",
+      "aboutHeading": "Next-Generation Display Solutions in Singapore",
+      "aboutParagraph1": "NAS Pixels offers advanced LED display and digital signage solutions for businesses, retail environments, events, and modern commercial spaces in Singapore.",
+      "aboutParagraph2": "We combine LED screen technology, video walls, interactive kiosks, and AV integration to create clear, engaging visual experiences, backed by careful project planning and technical support.",
+      "cardDescription": "Experience advanced LED screens, digital signage, and integrated AV solutions for engaging visual experiences in Singapore's commercial environments."
     },
     "saudi-arabia": {
       "badge": "Saudi arabia",
-      "heroHeading": "Dorem ipsum dolor sit amet, consectetur adipiscing elit. aliquet mattis.",
-      "aboutHeading": "Morem ipsum dolor sit amet, consectetur adipiscing",
-      "aboutParagraph1": "Morem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus.",
-      "aboutParagraph2": "Maecenas eget condimentum velit, sit amet feugiat lectus. dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum",
-      "cardDescription": "Morem ipsum dolor sit amet, consectetur dolor adipiscing elit. Etiam eu turpi molestie, dictumest a, mattis tellus."
+      "heroHeading": "Professional LED Display Solutions in Saudi Arabia",
+      "aboutHeading": "Advanced Visual Solutions for Saudi Arabia",
+      "aboutParagraph1": "NAS Pixels delivers professional LED display and digital signage solutions for commercial, corporate, retail, and event environments across Saudi Arabia.",
+      "aboutParagraph2": "From high-brightness outdoor screens to fine-pitch video walls and integrated AV systems, we provide tailored display solutions with expert installation and responsive technical support.",
+      "cardDescription": "NAS Pixels delivers advanced LED display, video wall, and digital signage solutions for commercial and corporate spaces across Saudi Arabia."
     }
   },
   "products": {
@@ -71,56 +72,56 @@
     },
     "03": {
       "title": "Maintenance & Support",
-      "description": "Our dedicated support ensures your systems run seamlessly with minimal downtime and optimal reliability.",
+      "description": "Our dedicated support ensures your systems run seamlessly with minimal downtime.",
       "bullets": [
-        "Annual Maintenance Contracts (AMC)",
-        "Preventive & Corrective Maintenance",
-        "24/7 Remote Monitoring & Rapid Response"
+        "Preventive System Maintenance",
+        "Technical Troubleshooting & Repairs",
+        "Ongoing Monitoring & After-Sales Support"
       ]
     },
     "04": {
       "title": "Home Cinema & Smart Home Automation",
-      "description": "We bring technology and lifestyle together with bespoke private cinema and personalized smart home solutions.",
+      "description": "We bring technology and lifestyle together with personalized smart home solutions.",
       "bullets": [
-        "Dedicated Home Cinema & Theater Rooms",
-        "Multiroom Audio & Video Distribution",
-        "Smart Home Automation (Lighting, Curtains, HVAC, Security)"
+        "Dedicated Home Cinema Systems",
+        "Multiroom Audio & Video Solutions",
+        "Integrated Smart Home Automation"
       ]
     },
     "05": {
       "title": "Static Signage & Wayfinding",
-      "description": "We design and implement effective static signage and architectural wayfinding systems to guide, inform, and inspire.",
+      "description": "We design and implement effective static signage and wayfinding systems to guide, inform, and inspire.",
       "bullets": [
-        "Architectural & Branding Physical Signage",
-        "Illuminated & Non-Illuminated Solutions",
-        "Wayfinding & Directional Signage Systems"
+        "Indoor & Outdoor Static Signage",
+        "Directional & Wayfinding Displays",
+        "Custom Signage & Branding Solutions"
       ]
     },
     "06": {
       "title": "Content Creation & Management",
-      "description": "We offer creative and technical expertise to keep your screens dynamic, engaging, and always on brand.",
+      "description": "We offer creative and technical expertise to keep your screens dynamic and engaging.",
       "bullets": [
-        "Motion Graphics & Animations (2D/3D)",
-        "Digital Menu Design & Management",
-        "Dynamic Scheduling & Cloud-Based Updates"
+        "Digital Graphics & Visual Content",
+        "Motion Graphics & Promotional Media",
+        "Digital Content Management Systems"
       ]
     },
     "07": {
       "title": "Lighting Solutions",
-      "description": "We provide innovative lighting designs and intelligent controls that enhance architectural aesthetics and functionality.",
+      "description": "We provide innovative lighting designs that enhance aesthetics and functionality.",
       "bullets": [
         "Architectural & Decorative Lighting",
-        "Facade & Outdoor LED Illumination",
-        "Smart Lighting Controls (DALI, DMX, KNX)"
+        "Stage & Event Lighting Systems",
+        "Energy-Efficient LED Lighting Solutions"
       ]
     },
     "08": {
       "title": "Consultation & Project Management",
-      "description": "We work with clients at every stage, from concept feasibility studies to turnkey system engineering and execution.",
+      "description": "We work with clients at every stage, from concept to completion.",
       "bullets": [
-        "Site Surveys & Feasibility Studies",
-        "End-to-End Project Management",
-        "Custom Solutions for Corporate, Retail, Hospitality & Government"
+        "Project Consultation & Planning",
+        "Technical Design & Coordination",
+        "Installation & Project Execution"
       ]
     }
   },

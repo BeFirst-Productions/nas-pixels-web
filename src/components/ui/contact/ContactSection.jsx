@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import gsap from "gsap";
 import SectionTitle from "@/components/common/Headers/SectionTitle";
-import Container from "@/components/common/Layout/Container";
+import Container from "@/components/common/layout/Container";
 import { ModernButton } from "@/components/common/button/ModernButton";
 import { Input } from "@/components/common/Input/Input";
 import { useLanguage } from "@/context/LanguageContext";

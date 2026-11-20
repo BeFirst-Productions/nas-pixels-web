@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import TestimonialCard from "./TestimonialCard";
 import ArrowButton from "./ArrowButton";
-import Container from "@/components/common/Layout/Container";
+import Container from "@/components/common/layout/Container";
 import SectionTitle from "@/components/common/Headers/SectionTitle";
 import Image from "next/image";
 import gsap from "gsap";

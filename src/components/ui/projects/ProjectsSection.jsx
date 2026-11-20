@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-import Container from "@/components/common/Layout/Container";
+import Container from "@/components/common/layout/Container";
 import ProjectsCarousel from "./ProjectsCarousel";
 import { ModernButton } from "@/components/common/button/ModernButton";
 import SectionTitle from "@/components/common/Headers/SectionTitle";

@@ -1,8 +1,8 @@
 "use client"
 import React from "react";
 import Link from "next/link";
-import { ModernButton } from "../../common/Button/ModernButton";
-import Container from "../../common/Layout/Container";
+import { ModernButton } from "@/components/common/button/ModernButton";
+import Container from "@/components/common/layout/Container";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import SectionTitle from "@/components/common/Headers/SectionTitle";

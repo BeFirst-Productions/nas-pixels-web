@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import Container from "../../common/Layout/Container";
+import Container from "../../common/layout/Container";
 import PillerAnimation from "@/components/animation/PillerAnimation";
 import SectionTitle from "@/components/common/Headers/SectionTitle";
 import { useLanguage } from "@/context/LanguageContext";

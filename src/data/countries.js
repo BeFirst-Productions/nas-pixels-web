@@ -8,21 +8,21 @@ export const COUNTRIES_DATA = [
     badge: "Saudi arabia",
     image: "/assets/images/countries/soudi-img.jpg",
     description:
-      "Morem ipsum dolor sit amet, consectetur dolor adipiscing elit. Etiam eu turpi molestie, dictumest a, mattis tellus.",
+      "NAS Pixels delivers advanced LED display, video wall, and digital signage solutions for commercial and corporate spaces across Saudi Arabia.",
     alt: "Saudi Arabia digital display and LED solutions",
     hero: {
       badge: "Saudi arabia",
-      heading: "Dorem ipsum dolor sit amet, consectetur adipiscing elit. aliquet mattis.",
+      heading: "Professional LED Display Solutions in Saudi Arabia",
       image: "/assets/images/countries/banner/soudi-arabia.png",
       alt: "Saudi Arabia NAS Pixels Flagship LED Display Project",
     },
     about: {
       badge: "About Us",
-      heading: "Morem ipsum dolor sit amet, consectetur adipiscing",
+      heading: "Advanced Visual Solutions for Saudi Arabia",
       paragraph1:
-        "Morem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus.",
+        "NAS Pixels delivers professional LED display and digital signage solutions for commercial, corporate, retail, and event environments across Saudi Arabia.",
       paragraph2:
-        "Maecenas eget condimentum velit, sit amet feugiat lectus. dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum",
+        "From high-brightness outdoor screens to fine-pitch video walls and integrated AV systems, we provide tailored display solutions with expert installation and responsive technical support.",
       image: "/assets/images/countries/saudi-about.jpg",
       alt: "NAS Pixels Saudi Arabia Experience Center and LED Display Showroom",
     },
@@ -36,21 +36,21 @@ export const COUNTRIES_DATA = [
     badge: "Thailand",
     image: "/assets/images/countries/thailand-img.jpg",
     description:
-      "Morem ipsum dolor sit amet, consectetur dolor adipiscing elit. Etiam eu turpi molestie, dictumest a, mattis tellus.",
+      "Discover professional LED screens, interactive displays, and audio-visual solutions designed to enhance business communication and customer experiences in Thailand.",
     alt: "Thailand digital display and LED solutions",
     hero: {
       badge: "Thailand",
-      heading: "Dorem ipsum dolor sit amet, consectetur adipiscing elit. aliquet mattis.",
+      heading: "Innovative LED Display Solutions for Thailand",
       image: "/assets/images/countries/banner/thailand.png",
       alt: "Thailand NAS Pixels Digital Signage and LED Solutions",
     },
     about: {
       badge: "About Us",
-      heading: "Morem ipsum dolor sit amet, consectetur adipiscing",
+      heading: "Visual Technology Solutions Across Thailand",
       paragraph1:
-        "Morem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus.",
+        "NAS Pixels provides modern LED display and digital signage solutions for commercial spaces, shopping destinations, events, and corporate environments in Thailand.",
       paragraph2:
-        "Maecenas eget condimentum velit, sit amet feugiat lectus. dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum",
+        "Our solutions include LED screens, video walls, interactive displays, and audio-visual integration, supported by project-focused planning, installation, and ongoing technical assistance.",
       image: "/assets/images/countries/saudi-about.jpg",
       alt: "NAS Pixels Thailand Experience Center and LED Solutions",
     },
@@ -64,21 +64,21 @@ export const COUNTRIES_DATA = [
     badge: "Malaysia",
     image: "/assets/images/countries/malaysia-img.jpg",
     description:
-      "Morem ipsum dolor sit amet, consectetur dolor adipiscing elit. Etiam eu turpi molestie, dictumest a, mattis tellus.",
+      "Explore innovative LED display systems, digital signage, and video walls that bring modern visual communication to businesses across Malaysia.",
     alt: "Malaysia digital display and LED solutions",
     hero: {
       badge: "Malaysia",
-      heading: "Dorem ipsum dolor sit amet, consectetur adipiscing elit. aliquet mattis.",
+      heading: "Advanced LED Display Solutions for Malaysia",
       image: "/assets/images/countries/banner/malaysia.png",
       alt: "Malaysia NAS Pixels Digital Signage and LED Solutions",
     },
     about: {
       badge: "About Us",
-      heading: "Morem ipsum dolor sit amet, consectetur adipiscing",
+      heading: "Reliable Digital Display Solutions in Malaysia",
       paragraph1:
-        "Morem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus.",
+        "NAS Pixels delivers advanced LED display and digital signage solutions for businesses, retail spaces, events, and commercial environments across Malaysia.",
       paragraph2:
-        "Maecenas eget condimentum velit, sit amet feugiat lectus. dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum",
+        "From indoor and outdoor LED screens to video walls and AV integration, we help brands communicate clearly with tailored technology, professional installation, and dependable support.",
       image: "/assets/images/countries/saudi-about.jpg",
       alt: "NAS Pixels Malaysia Experience Center and LED Solutions",
     },
@@ -92,21 +92,21 @@ export const COUNTRIES_DATA = [
     badge: "Singapore",
     image: "/assets/images/countries/singapore-img.jpg",
     description:
-      "Morem ipsum dolor sit amet, consectetur dolor adipiscing elit. Etiam eu turpi molestie, dictumest a, mattis tellus.",
+      "Experience advanced LED screens, digital signage, and integrated AV solutions for engaging visual experiences in Singapore's commercial environments.",
     alt: "Singapore digital display and LED solutions",
     hero: {
       badge: "Singapore",
-      heading: "Dorem ipsum dolor sit amet, consectetur adipiscing elit. aliquet mattis.",
+      heading: "Smart LED Display Solutions for Singapore",
       image: "/assets/images/countries/banner/singapore.png",
       alt: "Singapore NAS Pixels Digital Signage and LED Solutions",
     },
     about: {
       badge: "About Us",
-      heading: "Morem ipsum dolor sit amet, consectetur adipiscing",
+      heading: "Next-Generation Display Solutions in Singapore",
       paragraph1:
-        "Morem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus.",
+        "NAS Pixels offers advanced LED display and digital signage solutions for businesses, retail environments, events, and modern commercial spaces in Singapore.",
       paragraph2:
-        "Maecenas eget condimentum velit, sit amet feugiat lectus. dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum",
+        "We combine LED screen technology, video walls, interactive kiosks, and AV integration to create clear, engaging visual experiences, backed by careful project planning and technical support.",
       image: "/assets/images/countries/saudi-about.jpg",
       alt: "NAS Pixels Singapore Experience Center and LED Solutions",
     },

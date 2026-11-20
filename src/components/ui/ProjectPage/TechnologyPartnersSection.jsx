@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import Image from "next/image";
-import Container from "@/components/common/Layout/Container";
+import Container from "@/components/common/layout/Container";
 import gsap from "gsap";
 
 const LOGOS = [

@@ -6,7 +6,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ChevronDown } from "lucide-react";
 
-import Container from "@/components/common/Layout/Container";
+import Container from "@/components/common/layout/Container";
 import SectionTitle from "@/components/common/Headers/SectionTitle";
 import { TESTIMONIALS } from "@/data/TestimonialsSection";
 import TestimonialCard from "../testimonials/TestimonialCard";

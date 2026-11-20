@@ -44,11 +44,11 @@ export const DEFAULT_COUNTRY_PRODUCTS = [
     number: "03",
     title: "Maintenance & Support",
     description:
-      "Our dedicated support ensures your systems run seamlessly with minimal downtime and optimal reliability.",
+      "Our dedicated support ensures your systems run seamlessly with minimal downtime.",
     bullets: [
-      "Annual Maintenance Contracts (AMC)",
-      "Preventive & Corrective Maintenance",
-      "24/7 Remote Monitoring & Rapid Response",
+      "Preventive System Maintenance",
+      "Technical Troubleshooting & Repairs",
+      "Ongoing Monitoring & After-Sales Support",
     ],
     image: "/assets/images/countries/products/Maintenance-&-Support.png",
     alt: "Maintenance & Support",
@@ -58,11 +58,11 @@ export const DEFAULT_COUNTRY_PRODUCTS = [
     number: "04",
     title: "Home Cinema & Smart Home Automation",
     description:
-      "We bring technology and lifestyle together with bespoke private cinema and personalized smart home solutions.",
+      "We bring technology and lifestyle together with personalized smart home solutions.",
     bullets: [
-      "Dedicated Home Cinema & Theater Rooms",
-      "Multiroom Audio & Video Distribution",
-      "Smart Home Automation (Lighting, Curtains, HVAC, Security)",
+      "Dedicated Home Cinema Systems",
+      "Multiroom Audio & Video Solutions",
+      "Integrated Smart Home Automation",
     ],
     image:
       "/assets/images/countries/products/Home-Cinema-&-Smart-Home-Automation.png",
@@ -73,11 +73,11 @@ export const DEFAULT_COUNTRY_PRODUCTS = [
     number: "05",
     title: "Static Signage & Wayfinding",
     description:
-      "We design and implement effective static signage and architectural wayfinding systems to guide, inform, and inspire.",
+      "We design and implement effective static signage and wayfinding systems to guide, inform, and inspire.",
     bullets: [
-      "Architectural & Branding Physical Signage",
-      "Illuminated & Non-Illuminated Solutions",
-      "Wayfinding & Directional Signage Systems",
+      "Indoor & Outdoor Static Signage",
+      "Directional & Wayfinding Displays",
+      "Custom Signage & Branding Solutions",
     ],
     image:
       "/assets/images/countries/products/Static-Signage-&-Wayfinding.png",
@@ -88,11 +88,11 @@ export const DEFAULT_COUNTRY_PRODUCTS = [
     number: "06",
     title: "Content Creation & Management",
     description:
-      "We offer creative and technical expertise to keep your screens dynamic, engaging, and always on brand.",
+      "We offer creative and technical expertise to keep your screens dynamic and engaging.",
     bullets: [
-      "Motion Graphics & Animations (2D/3D)",
-      "Digital Menu Design & Management",
-      "Dynamic Scheduling & Cloud-Based Updates",
+      "Digital Graphics & Visual Content",
+      "Motion Graphics & Promotional Media",
+      "Digital Content Management Systems",
     ],
     image:
       "/assets/images/countries/products/Content-Creation-&-Management.png",
@@ -103,11 +103,11 @@ export const DEFAULT_COUNTRY_PRODUCTS = [
     number: "07",
     title: "Lighting Solutions",
     description:
-      "We provide innovative lighting designs and intelligent controls that enhance architectural aesthetics and functionality.",
+      "We provide innovative lighting designs that enhance aesthetics and functionality.",
     bullets: [
       "Architectural & Decorative Lighting",
-      "Facade & Outdoor LED Illumination",
-      "Smart Lighting Controls (DALI, DMX, KNX)",
+      "Stage & Event Lighting Systems",
+      "Energy-Efficient LED Lighting Solutions",
     ],
     image: "/assets/images/countries/products/Lighting-Solutions.png",
     alt: "Lighting Solutions",
@@ -117,11 +117,11 @@ export const DEFAULT_COUNTRY_PRODUCTS = [
     number: "08",
     title: "Consultation & Project Management",
     description:
-      "We work with clients at every stage, from concept feasibility studies to turnkey system engineering and execution.",
+      "We work with clients at every stage, from concept to completion.",
     bullets: [
-      "Site Surveys & Feasibility Studies",
-      "End-to-End Project Management",
-      "Custom Solutions for Corporate, Retail, Hospitality & Government",
+      "Project Consultation & Planning",
+      "Technical Design & Coordination",
+      "Installation & Project Execution",
     ],
     image:
       "/assets/images/countries/products/Consultation-&-Project-Management.png",
@@ -147,10 +147,10 @@ export default function CountryProducts({ country }) {
 
   const rawProducts = country?.productsList || DEFAULT_COUNTRY_PRODUCTS;
   const badgeText = t("country.ourProductsBadge", country?.productsBadge || "Our Products");
-  const headingLine1 = t("country.productsHeading1", country?.productsHeading1 || "Morem ipsum dolor");
+  const headingLine1 = t("country.productsHeading1", country?.productsHeading1 || "Discover Our");
   const headingLine2 = t(
     "country.productsHeading2",
-    country?.productsHeading2 || "sit amet, condimentum velit."
+    country?.productsHeading2 || "Technology & Solutions"
   );
 
   // Map each product to its translated title, description, and bullets
